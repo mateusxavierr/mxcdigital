@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- SEO -->
+  <title>Portfólio de Sites Exclusivos | MXC Digital</title>
+  <meta name="description" content="Veja projetos de sites com design moderno, identidade única e foco em conversão. Cada projeto é pensado do zero para gerar resultados reais." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mxcdigital.com.br/portfolio.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MXC Digital" />
+  <meta property="og:url" content="https://mxcdigital.com.br/portfolio.html" />
+  <meta property="og:title" content="Trabalhos da MXC Digital — Prova visual do que entregamos" />
+  <meta property="og:description" content="Sites criados do zero e remodelagens que transformaram a presença digital de negócios reais. Veja o antes e depois." />
+  <meta property="og:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trabalhos da MXC Digital — Prova visual do que entregamos" />
+  <meta name="twitter:description" content="Sites criados do zero e remodelagens que transformaram a presença digital de negócios reais." />
+  <meta name="twitter:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/icone.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icone.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2f67fc',
+            cyan: '#03f0fc',
+            surface: '#0d1520',
+            bg: '#111827',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Epilogue', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'brand-glow': '0 0 30px rgba(47,103,252,0.35)',
+            'cyan-glow': '0 0 30px rgba(3,240,252,0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(28px); filter: blur(8px); }
+      100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    @keyframes beamFall {
+      0% { transform: translateY(-100%); opacity: 0; }
+      5% { opacity: 0.7; }
+      50% { opacity: 1; }
+      95% { opacity: 0.7; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+    @keyframes shimmerSweep {
+      0% { transform: translateX(-150%) skewX(-15deg); }
+      100% { transform: translateX(350%) skewX(-15deg); }
+    }
+    @keyframes wordUp {
+      0% { transform: translateY(110%); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes auroraFloat1 {
+      0%, 100% { transform: translate(0,0) scale(1); }
+      33% { transform: translate(80px,-60px) scale(1.1); }
+      66% { transform: translate(-40px,40px) scale(0.95); }
+    }
+    @keyframes auroraFloat2 {
+      0%, 100% { transform: translate(0,0) scale(1); }
+      33% { transform: translate(-100px,50px) scale(1.05); }
+      66% { transform: translate(60px,-80px) scale(1.1); }
+    }
+    @keyframes auroraFloat3 {
+      0%, 100% { transform: translate(0,0) scale(1); opacity: 0.2; }
+      50% { transform: translate(50px,30px) scale(1.15); opacity: 0.4; }
+    }
+    @keyframes horizonSweep {
+      0% { transform: scaleX(0); transform-origin: left; opacity: 0; }
+      30% { transform: scaleX(1); transform-origin: left; opacity: 1; }
+      70% { transform: scaleX(1); transform-origin: right; opacity: 1; }
+      100% { transform: scaleX(0); transform-origin: right; opacity: 0; }
+    }
+    @keyframes caretBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    @keyframes pulseRing {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      100% { transform: scale(1.8); opacity: 0; }
+    }
+    @keyframes marqueeScroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ═══ NOVOS KEYFRAMES — Reveals únicos por seção ═══ */
+    @keyframes splitFromLeft {
+      0%   { transform: translateX(-50px); opacity: 0; clip-path: inset(0 100% 0 0); }
+      100% { transform: translateX(0);     opacity: 1; clip-path: inset(0 0% 0 0); }
+    }
+    @keyframes splitFromRight {
+      0%   { transform: translateX(50px);  opacity: 0; clip-path: inset(0 0 0 100%); }
+      100% { transform: translateX(0);     opacity: 1; clip-path: inset(0 0 0 0%); }
+    }
+    @keyframes scaleSnap {
+      0%   { transform: scale(1.14); opacity: 0; filter: blur(14px); }
+      55%  { transform: scale(0.97); opacity: 1; filter: blur(0); }
+      75%  { transform: scale(1.01); }
+      100% { transform: scale(1);    opacity: 1; filter: blur(0); }
+    }
+    @keyframes elegantRise {
+      0%   { opacity: 0; transform: translateY(22px); filter: blur(6px); }
+      100% { opacity: 1; transform: translateY(0);    filter: blur(0);   }
+    }
+    @keyframes diagWipe {
+      0%   { clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); opacity: 0.6; }
+      100% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 1; }
+    }
+    @keyframes blurSnap {
+      0%   { filter: blur(24px); opacity: 0; transform: translateY(12px); }
+      60%  { filter: blur(2px);  opacity: 0.9; }
+      100% { filter: blur(0);    opacity: 1;   transform: translateY(0); }
+    }
+    @keyframes spinReveal3D {
+      0%   { transform: perspective(700px) rotateY(-85deg); opacity: 0; }
+      100% { transform: perspective(700px) rotateY(0deg);   opacity: 1; }
+    }
+
+    /* ═══ MEIA LUA — Hero ═══ */
+    @keyframes moonPulse {
+      0%, 100% { box-shadow:
+        0 0 80px  rgba(47, 103, 252, 0.20),
+        0 0 160px rgba(47, 103, 252, 0.10),
+        0 0 40px  rgba(3,  240, 252, 0.08),
+        inset 0 0 120px rgba(47, 103, 252, 0.06); }
+      50% { box-shadow:
+        0 0 120px rgba(47, 103, 252, 0.30),
+        0 0 240px rgba(47, 103, 252, 0.15),
+        0 0 80px  rgba(3,  240, 252, 0.15),
+        inset 0 0 160px rgba(47, 103, 252, 0.10); }
+    }
+    .hero-moon {
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1000px, 130vw);
+      height: min(1000px, 130vw);
+      border-radius: 50%;
+      border: 1px solid rgba(47, 103, 252, 0.18);
+      box-shadow:
+        0 0 80px  rgba(47, 103, 252, 0.20),
+        0 0 160px rgba(47, 103, 252, 0.10),
+        0 0 40px  rgba(3,  240, 252, 0.08),
+        inset 0 0 120px rgba(47, 103, 252, 0.06);
+      background: radial-gradient(
+        ellipse at 50% 0%,
+        rgba(47, 103, 252, 0.12) 0%,
+        rgba(3,  240, 252, 0.06) 30%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+      animation: moonPulse 8s ease-in-out infinite;
+    }
+    .hero-moon-ring {
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1000px, 130vw);
+      height: min(1000px, 130vw);
+      border-radius: 50%;
+      border: 1.5px solid transparent;
+      background: transparent;
+      box-shadow:
+        0 -2px 30px  rgba(3, 240, 252, 0.55),
+        0 -1px 80px  rgba(47, 103, 252, 0.35),
+        0 -1px 160px rgba(47, 103, 252, 0.20);
+      outline: 1px solid rgba(3, 240, 252, 0.25);
+      outline-offset: 0px;
+      pointer-events: none;
+      z-index: 2;
+      animation: moonRingPulse 6s ease-in-out infinite;
+    }
+    .hero-moon-apex {
+      display: none;
+      position: absolute;
+      bottom: calc(min(500px, 65vw) - 45% - 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 12px;
+      background: radial-gradient(ellipse at center,
+        rgba(3, 240, 252, 0.9) 0%,
+        rgba(47, 103, 252, 0.5) 40%,
+        transparent 100%
+      );
+      filter: blur(4px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+      animation: moonApexPulse 6s ease-in-out infinite;
+    }
+    @keyframes moonRingPulse {
+      0%, 100% {
+        box-shadow:
+          0 -2px 30px  rgba(3, 240, 252, 0.55),
+          0 -1px 80px  rgba(47, 103, 252, 0.35),
+          0 -1px 160px rgba(47, 103, 252, 0.20);
+      }
+      50% {
+        box-shadow:
+          0 -2px 50px  rgba(3, 240, 252, 0.80),
+          0 -1px 120px rgba(47, 103, 252, 0.50),
+          0 -1px 220px rgba(47, 103, 252, 0.30);
+      }
+    }
+    @keyframes moonApexPulse {
+      0%, 100% { opacity: 0.7; transform: translateX(-50%) scaleX(1); }
+      50%       { opacity: 1.0; transform: translateX(-50%) scaleX(1.3); }
+    }
+    .animate-on-scroll { animation-play-state: paused !important; }
+    .animate-on-scroll.animate { animation-play-state: running !important; }
+
+    .word-mask  { display: inline-block; overflow: hidden; vertical-align: bottom; }
+    .word-inner { display: inline-block; will-change: transform; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+    .word-inner.is-visible { animation: wordUp 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+    #hero .word-inner { transform: translateY(110%); opacity: 0; }
+    /* Descendentes (p, q, g) sem cortar; distância entre linhas = mesmo 8px (mb-2) */
+    #hero h1 { line-height: normal; }
+    #hero h1 > .overflow-hidden { padding-bottom: 0.05em; }
+    #hero h1 > .overflow-hidden:not(:last-child) {
+      margin-bottom: calc(0.5rem - 0.22em);
+    }
+    #hero h1 .word-inner {
+      line-height: 1.1;
+    }
+
+    [style*="--border-gradient"]::before {
+      content: ""; position: absolute; inset: 0; padding: 1px;
+      border-radius: var(--border-radius-before, inherit);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      background: var(--border-gradient); pointer-events: none;
+    }
+
+    .btn-shimmer::after,
+    .btn-shimmer-cyan::after {
+      content: ""; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-150%) skewX(-15deg); pointer-events: none; z-index: 5;
+      border-radius: 9999px;
+    }
+    .btn-shimmer-cyan::after {
+      background: linear-gradient(90deg, transparent, rgba(3,240,252,0.25), transparent);
+    }
+    .btn-shimmer:hover::after,
+    .btn-shimmer-cyan:hover::after { animation: shimmerSweep 0.75s ease forwards; }
+
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 200; pointer-events: none;
+      opacity: 0.032;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");
+      background-size: 200px 200px;
+    }
+
+    /* ═══ CURSOR — Apenas anel, sem ponto, sem lerp ═══ */
+    .cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(3, 240, 252, 0.55);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      will-change: transform;
+      transform: translate(-100px, -100px);
+      transition: width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  height 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  border-color 0.2s ease,
+                  background 0.2s ease,
+                  opacity 0.3s ease;
+    }
+    .cursor-ring.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(3, 240, 252, 0.85);
+      background: rgba(3, 240, 252, 0.04);
+    }
+    /* Esconder cursor padrão em TUDO */
+    @media (pointer: fine) {
+      *, *::before, *::after,
+      a, button, input, select, textarea,
+      [role="button"], [data-cursor-hover],
+      label, summary {
+        cursor: none !important;
+      }
+    }
+    @media (pointer: coarse) { .cursor-ring { display: none; } }
+
+    .scroll-progress {
+      position: fixed; top: 0; left: 0; height: 2px; width: 0%;
+      background: linear-gradient(90deg, #2f67fc, #03f0fc);
+      z-index: 300; transition: width 0.08s linear;
+    }
+
+    ::selection { background: rgba(47,103,252,0.35); color: #fff; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: rgba(47,103,252,0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(47,103,252,0.6); }
+    .dot-grid {
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+
+    /* Form fields */
+    .field {
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-family: 'Epilogue', sans-serif;
+      font-size: 14px;
+      color: #F0F4FF;
+      outline: none;
+      transition: all 0.3s;
+    }
+    .field::placeholder { color: rgba(255,255,255,0.25); }
+    .field:focus {
+      border-color: rgba(47,103,252,0.6);
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 0 0 3px rgba(47,103,252,0.1);
+    }
+
+    /* ═══ CARDS PROBLEMA — todos em ciano com tilt 3D ═══ */
+    .card-problema {
+      background: rgba(13, 21, 32, 0.6);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      padding: 2rem;
+      position: relative;
+      transform-style: preserve-3d;
+      overflow: hidden;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .card-problema:hover {
+      border-color: rgba(3, 240, 252, 0.35);
+      box-shadow: 0 0 40px rgba(3, 240, 252, 0.12), 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .problema-card,
+    .card-problema {
+      opacity: 0;
+      transform: translateY(22px);
+      filter: blur(6px);
+      transition: none;
+    }
+    .problema-card.animate,
+    .card-problema.animate {
+      animation: elegantRise 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    .problema-card:nth-child(1), .card-problema:nth-child(1) { animation-delay: 0ms; }
+    .problema-card:nth-child(2), .card-problema:nth-child(2) { animation-delay: 120ms; }
+    .problema-card:nth-child(3), .card-problema:nth-child(3) { animation-delay: 240ms; }
+    .problema-card:nth-child(4), .card-problema:nth-child(4) { animation-delay: 360ms; }
+    .problema-card:nth-child(5), .card-problema:nth-child(5) { animation-delay: 480ms; }
+    .problema-card:nth-child(6), .card-problema:nth-child(6) { animation-delay: 600ms; }
+
+    /* ═══ TILT 3D universal — glow interno cursor-driven ═══ */
+    [data-tilt] {
+      position: relative;
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+    [data-tilt]::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        200px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+        rgba(3, 240, 252, 0.10),
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    [data-tilt]:hover::after { opacity: 1; }
+    [data-tilt] > * { position: relative; z-index: 2; }
+
+    .nav-explore-card {
+      --accent: #03f0fc;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      height: 200px;
+      width: 100%;
+      max-width: 100%;
+      padding: 0.6rem 1rem;
+      border-radius: 1rem;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid color-mix(in srgb, var(--accent) 32%, rgba(255,255,255,0.1));
+      overflow: hidden;
+      text-decoration: none;
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .nav-explore-card:hover {
+      background: rgba(255,255,255,0.06);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent);
+    }
+    .nav-explore-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      width: 100%;
+      max-width: 100%;
+      min-height: 0;
+      text-align: center;
+      transition: transform 0.45s cubic-bezier(0.16,1,0.3,1);
+      transform: translateY(0.2rem);
+    }
+    .nav-explore-card:hover .nav-explore-inner {
+      transform: translateY(-0.5rem);
+    }
+    .nav-explore-icon {
+      font-size: 2rem;
+      line-height: 1;
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+    .nav-explore-name {
+      font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: #F0F4FF;
+      text-align: center;
+      line-height: 1.2;
+    }
+    .nav-explore-reveal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.3rem;
+      width: 100%;
+      max-height: 0;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: max-height 0.5s cubic-bezier(0.16,1,0.3,1), opacity 0.35s ease 0.06s, transform 0.45s cubic-bezier(0.16,1,0.3,1) 0.04s;
+      pointer-events: none;
+    }
+    .nav-explore-card:hover .nav-explore-reveal {
+      max-height: 7.5rem;
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .nav-explore-reveal p {
+      font-family: var(--font-body, 'Epilogue', sans-serif);
+      font-size: 0.75rem;
+      color: rgba(240,244,255,0.6);
+      line-height: 1.4;
+      margin: 0;
+    }
+    .nav-explore-cta {
+      font-family: var(--font-display, 'Plus Jakarta Sans', sans-serif);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.02em;
+    }
+
+    /* ═══ CARDS DE SERVIÇO PRINCIPAIS — expansão vertical ao hover ═══ */
+    .card-servico-principal {
+      height: auto;
+      max-height: 360px;
+      overflow: hidden;
+      transition: max-height 0.6s cubic-bezier(0.16,1,0.3,1),
+                  box-shadow 0.4s ease,
+                  border-color 0.4s ease;
+    }
+    .card-servico-principal:hover {
+      max-height: 560px;
+    }
+    .card-servico-extra {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+    }
+    .card-servico-principal:hover .card-servico-extra {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .card-servico-desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      min-height: 5.6rem;
+    }
+    .card-servico:nth-child(1),
+    .card-servico:nth-child(2) {
+      max-height: none !important;
+      height: auto !important;
+      overflow: visible !important;
+    }
+    .card-servico:nth-child(1):hover,
+    .card-servico:nth-child(2):hover {
+      max-height: none !important;
+      height: auto !important;
+    }
+    .card-servico:nth-child(1) .card-servico-extra,
+    .card-servico:nth-child(2) .card-servico-extra {
+      display: none !important;
+    }
+
+    /* ═══ Seção trabalhos — mesmo padrão da home (#portfolio): PB + texto no hover ═══ */
+    .portfolio-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+    .portfolio-card:hover {
+      cursor: pointer;
+    }
+    .portfolio-thumb {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+    }
+    .portfolio-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+    }
+    .portfolio-card:hover .portfolio-thumb img {
+      filter: grayscale(0%);
+    }
+    .portfolio-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 24px 28px;
+      z-index: 1;
+    }
+    .portfolio-card:hover .portfolio-card-overlay {
+      opacity: 1;
+    }
+    .portfolio-card-arrow {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.05s;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .portfolio-card:hover .portfolio-card-arrow {
+      opacity: 1;
+    }
+    .portfolio-card-info {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+    }
+    .portfolio-card:hover .portfolio-card-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .portfolio-card-type {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(3, 240, 252, 0.75);
+      display: block;
+    }
+    .portfolio-card-type--zero {
+      color: rgba(47, 103, 252, 0.9);
+    }
+    .portfolio-card-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
+      margin: 0;
+      margin-top: 6px;
+    }
+    .portfolio-card-segment {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 4px 0 0;
+    }
+
+    /* ═══ STATS — overlay total ao hover ═══ */
+    .stats-wrapper { position: relative; }
+    .stat-card { min-height: 140px; }
+    .stat-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(13, 21, 32, 0.97);
+      border: 1px solid rgba(47, 103, 252, 0.3);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 20;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 60px rgba(47, 103, 252, 0.15), inset 0 0 60px rgba(47, 103, 252, 0.04);
+      transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .stat-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .stat-overlay-number {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-weight: 800;
+      font-size: clamp(64px, 8vw, 96px);
+      line-height: 1;
+      color: #F0F4FF;
+      margin-bottom: 0.5rem;
+    }
+    .stat-overlay[data-for="satisfacao"] .stat-overlay-number {
+      background: linear-gradient(90deg, #2f67fc, #03f0fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-overlay[data-for="suporte"] .stat-overlay-number { color: #03f0fc; }
+    .stat-overlay-label {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(240,244,255,0.35);
+      margin-bottom: 1.5rem;
+    }
+    .stat-overlay-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(47, 103, 252, 0.4);
+      margin-bottom: 1.5rem;
+    }
+    .stat-overlay-text {
+      font-family: "Epilogue", sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(240,244,255,0.55);
+      max-width: 480px;
+    }
+    .stat-overlay-quote {
+      font-family: "Epilogue", sans-serif;
+      font-size: 1.1rem;
+      line-height: 1.65;
+      color: rgba(240,244,255,0.65);
+      font-style: italic;
+      margin-bottom: 1rem;
+      max-width: 480px;
+    }
+    .stat-overlay-author {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: rgba(240,244,255,0.25);
+    }
+
+    /* ═══ PLANOS — altura padrão + spotlight ao hover ═══ */
+    .plan-card {
+      min-height: 480px;
+      transition: transform 0.35s cubic-bezier(0.16,1,0.3,1),
+                  opacity 0.35s ease,
+                  border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    .plans-grid:hover .plan-card:not(:hover) {
+      opacity: 0.5;
+      transform: scale(0.975);
+    }
+    .plan-card:hover {
+      transform: scale(1.03);
+      z-index: 10;
+      position: relative;
+    }
+
+    /* Plano Profissional (R$899) — glow natural igual ao card go-live (criacao-de-sites) */
+    .plan-card--final-glow {
+      border: 1px solid rgba(3, 240, 252, 0.34) !important;
+      box-shadow:
+        0 0 0 1px rgba(3, 240, 252, 0.14),
+        0 0 28px rgba(3, 240, 252, 0.16),
+        0 0 64px rgba(3, 240, 252, 0.2),
+        0 0 100px rgba(3, 240, 252, 0.1),
+        0 8px 44px rgba(0, 0, 0, 0.38);
+    }
+
+    .plan-card--final-glow::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        ellipse 95% 75% at 50% 0%,
+        rgba(3, 240, 252, 0.14) 0%,
+        rgba(3, 240, 252, 0.04) 42%,
+        transparent 70%
+      );
+      pointer-events: none;
+    }
+
+    .plan-card--final-glow > * {
+      z-index: 1;
+    }
+
+    .plan-card--final-glow:hover {
+      border-color: rgba(3, 240, 252, 0.35) !important;
+    }
+
+    /* ═══ Filtros portfolio — estado ativo ═══ */
+    .portfolio-filter.active {
+      background: rgba(47, 103, 252, 0.14);
+      border-color: rgba(47, 103, 252, 0.45) !important;
+      color: #F0F4FF !important;
+      box-shadow: 0 0 0 1px rgba(47, 103, 252, 0.2);
+    }
+    .portfolio-filter {
+      transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    /* ═══ Quick nav — esconder scrollbar ═══ */
+    .scrollbar-none::-webkit-scrollbar { display: none; }
+    .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
+
+    /* ═══ Performance: GPU layers para animações contínuas ═══ */
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } }
+    [style*="auroraFloat"] { will-change: transform; }
+    [style*="beamFall"]    { will-change: transform, opacity; }
+    .grain-overlay         { will-change: unset; transform: translateZ(0); }
+  </style>
+  <link rel="stylesheet" href="assets/mobile-layout.css" />
+</head>
+<body class="page-portfolio bg-bg text-[#F0F4FF] font-body antialiased overflow-x-hidden">
+
+  <!-- Grain overlay -->
+  <div class="grain-overlay"></div>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Custom cursor — apenas o anel -->
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- WhatsApp floating button — encostado no canto inferior direito -->
+  <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20entender%20melhor%20como%20voc%C3%AAs%20trabalham." target="_blank" rel="noopener noreferrer"
+     class="fixed z-[500] group"
+     style="bottom: 0; right: 0; padding: 16px;"
+     aria-label="Falar no WhatsApp">
+    <div class="relative">
+      <span class="absolute inset-0 w-14 h-14 rounded-full bg-[#25D366]/30 animate-ping"></span>
+      <div class="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-transform duration-300 group-hover:scale-110">
+        <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </div>
+    </div>
+  </a>
+
+  <!-- Pill navigation -->
+  <div id="site-pill-header" class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="pointer-events-auto bg-surface/90 backdrop-blur-md border border-white/10 rounded-full py-2.5 px-5 flex items-center gap-6 shadow-xl shadow-black/50 [animation:fadeSlideIn_0.8s_cubic-bezier(0.2,0.8,0.2,1)_0.1s_both]">
+      <a href="index.html" class="flex items-center mr-2">
+        <img src="assets/logo.png" alt="MXC Digital" class="h-8 object-contain">
+      </a>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="index.html#servicos"  class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Serviços</a>
+        <a href="index.html#portfolio" class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Portfolio</a>
+        <a href="index.html#sobre"     class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#planos"    class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Planos</a>
+      </div>
+      <a href="contato.html"
+         class="btn-shimmer relative overflow-hidden text-[10px] font-display font-bold uppercase tracking-widest text-white rounded-full px-4 py-2 ml-2 transition-all duration-300"
+         style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%);
+                box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 8px 20px -4px rgba(47,103,252,0.4);
+                --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6));
+                --border-radius-before: 9999px;">
+        <span class="relative z-10">Iniciar Projeto</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Aurora background -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none" style="transform:translateZ(0);">
+    <div class="absolute inset-0 dot-grid"></div>
+    <div class="absolute w-[700px] h-[700px] rounded-full bg-brand/20 blur-[70px] -top-48 -left-48"
+         style="animation: auroraFloat1 22s ease-in-out infinite;"></div>
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-cyan/[0.12] blur-[70px] -bottom-32 -right-32"
+         style="animation: auroraFloat2 28s ease-in-out infinite;"></div>
+    <div class="absolute w-[500px] h-[500px] rounded-full bg-brand/[0.08] blur-[55px] top-[40%] left-[50%]"
+         style="animation: auroraFloat3 18s ease-in-out infinite;"></div>
+    <div id="mouse-glow" class="absolute inset-0"
+         style="background: radial-gradient(700px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(47,103,252,0.06), transparent 40%);"></div>
+    <div class="absolute top-0 left-[10%] w-px h-48 bg-gradient-to-b from-transparent via-cyan/50 to-transparent" style="animation: beamFall 7s linear infinite; animation-delay: 0s;"></div>
+    <div class="absolute top-0 left-[42%] w-px h-56 bg-gradient-to-b from-transparent via-cyan/60 to-transparent" style="animation: beamFall 8s linear infinite; animation-delay: 4.5s;"></div>
+    <div class="absolute top-0 left-[73%] w-px h-60 bg-gradient-to-b from-transparent via-cyan/55 to-transparent" style="animation: beamFall 9s linear infinite; animation-delay: 6s;"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden z-10">
+    <div class="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/80 to-transparent" style="top: 50%; animation: horizonSweep 1.2s cubic-bezier(0.4,0,0.2,1) 0.3s both;"></div>
+
+    <div id="hero-moon" class="hero-moon"></div>
+    <div class="hero-moon-ring"></div>
+    <div class="hero-moon-apex"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+      
+      <h1 class="font-display font-extrabold tracking-[-0.04em] text-white mb-8" style="font-size: clamp(52px, 7.5vw, 104px);">
+        <div class="overflow-hidden mb-2">
+          <span class="word-inner block" style="animation-delay: 1.0s;">O resultado</span>
+        </div>
+        <div class="overflow-hidden">
+          <span class="word-inner block bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent" style="animation-delay: 1.15s; padding-bottom: 0.2em; -webkit-box-decoration-break: clone; box-decoration-break: clone;">fala por si.</span>
+        </div>
+      </h1>
+
+      <div class="max-w-xl mx-auto mb-12 [animation:fadeSlideIn_1s_ease_1.5s_both]">
+        <p class="text-white/50 font-body text-lg md:text-xl leading-relaxed">
+          Sites criados do zero e reformulações que transformaram a presença digital de negócios reais. Cada projeto único, sem template, sem terceirização.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 [animation:fadeSlideIn_1s_ease_1.7s_both]">
+        <a href="#trabalhos-portfolio"
+           class="btn-shimmer relative overflow-hidden font-display font-bold text-xs uppercase tracking-widest text-white rounded-full px-8 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-[1.03]"
+           style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 16px 40px -8px rgba(47,103,252,0.55); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+          <span class="relative z-10 flex items-center gap-2">Ver os trabalhos <i data-lucide="arrow-down" class="w-4 h-4"></i></span>
+        </a>
+        <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20MXC%20Digital%20e%20quero%20come%C3%A7ar%20meu%20projeto." target="_blank" rel="noopener noreferrer"
+           class="btn-shimmer relative overflow-hidden font-display font-bold text-xs uppercase tracking-widest text-white/70 rounded-full px-6 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white"
+           style="background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.08) 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); --border-gradient: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(47,103,252,0.12), rgba(255,255,255,0.08)); --border-radius-before: 9999px;">
+          <span class="relative z-10 flex items-center gap-2">Iniciar meu projeto <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+<!-- Título da seção -->
+<section id="trabalhos-portfolio" class="relative z-10 px-6 md:px-10 pt-40 pb-16">
+  <div class="max-w-6xl mx-auto">
+    <div class="animate-on-scroll [animation:splitFromLeft_0.9s_cubic-bezier(0.16,1,0.3,1)_both]">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">Portfolio</span>
+      </div>
+      <h2 class="font-display font-extrabold leading-[0.9] tracking-tight text-white mb-6" style="font-size: clamp(48px, 7vw, 96px);">
+        Trabalhos<br/>selecionados
+      </h2>
+      <p class="text-white/45 font-body text-lg max-w-xl leading-relaxed">
+        Sites pensados do zero e reformulações que transformaram o que já existia. Cada projeto único, sem template.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Grid completo -->
+<section class="relative z-10 px-6 md:px-10 py-12 pb-32">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Filtros -->
+    <div class="flex items-center gap-3 mb-12 animate-on-scroll [animation:fadeSlideIn_0.7s_ease_0.2s_both]">
+      <button type="button" onclick="filterPortfolio('todos')" data-filter="todos"
+              class="portfolio-filter active text-[10px] font-display font-bold uppercase tracking-[0.2em] rounded-full px-4 py-2 border border-white/15 text-white/60 hover:text-white hover:border-white/30 transition-all">
+        Todos
+      </button>
+      <button type="button" onclick="filterPortfolio('zero')" data-filter="zero"
+              class="portfolio-filter text-[10px] font-display font-bold uppercase tracking-[0.2em] rounded-full px-4 py-2 border border-white/10 text-white/40 hover:text-white hover:border-white/25 transition-all">
+        Criado do Zero
+      </button>
+      <button type="button" onclick="filterPortfolio('remodelagem')" data-filter="remodelagem"
+              class="portfolio-filter text-[10px] font-display font-bold uppercase tracking-[0.2em] rounded-full px-4 py-2 border border-white/10 text-white/40 hover:text-white hover:border-white/25 transition-all">
+        Reformulação
+      </button>
+    </div>
+
+    <!-- Projetos -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5" id="portfolio-grid">
+
+      <!-- Cruzeiro -->
+      <div data-tipo="zero">
+        <a href="portfolio/cruzeiro.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/cruzeiro-card-criacao-de-sites.png" alt="Cruzeiro Agropecuária"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type portfolio-card-type--zero">CRIADO DO ZERO</span>
+                <h3 class="portfolio-card-name">Cruzeiro Agropecuária</h3>
+                <p class="portfolio-card-segment">Agronegócio · Pernambuco</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Wallach -->
+      <div data-tipo="zero">
+        <a href="portfolio/wallach.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/wallach-card-home.png" alt="Wallach Assessoria Jurídica"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type portfolio-card-type--zero">CRIADO DO ZERO</span>
+                <h3 class="portfolio-card-name">Wallach Assessoria Jurídica</h3>
+                <p class="portfolio-card-segment">Direito · Recife, PE</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Mr. Boxes -->
+      <div data-tipo="remodelagem">
+        <a href="portfolio/mrboxes.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0.2s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/mrboxes-card-home.png" alt="Mr. Boxes"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type">REFORMULAÇÃO</span>
+                <h3 class="portfolio-card-name">Mr. Boxes</h3>
+                <p class="portfolio-card-segment">Self Storage · Recife, PE</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- QDelícia -->
+      <div data-tipo="remodelagem">
+        <a href="portfolio/qdelicia.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0.3s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/qdelicia-card-reformulacao-de-sites.png" alt="QDelícia Frutas"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type">REFORMULAÇÃO</span>
+                <h3 class="portfolio-card-name">QDelícia Frutas</h3>
+                <p class="portfolio-card-segment">Distribuição de Alimentos · PE</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA FINAL
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-32">
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand/10 blur-[55px] rounded-full pointer-events-none"></div>
+      <div class="relative z-10">
+        <span class="text-[10px] font-display uppercase tracking-[0.2em] text-brand/70 block mb-6">Começar agora</span>
+        <h2 class="animate-on-scroll font-display font-extrabold text-white leading-[0.9] tracking-tight mb-6 [animation:fadeSlideIn_0.8s_ease_0s_both]"
+            style="font-size: clamp(40px, 6vw, 84px);">
+          O próximo case<br/>
+          <span class="bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent">pode ser o seu.</span>
+        </h2>
+        <p class="text-white/45 font-body text-lg max-w-lg mx-auto leading-relaxed mb-12">
+          Envie uma mensagem. Em até 2h você recebe uma proposta personalizada, sem compromisso.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Vi%20o%20portf%C3%B3lio%20da%20MXC%20Digital%20e%20quero%20come%C3%A7ar%20meu%20projeto." target="_blank" rel="noopener noreferrer"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white rounded-full px-10 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-[1.03]"
+             style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 20px 50px -8px rgba(47,103,252,0.6); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+            <span class="relative z-10 flex items-center gap-2">Falar no WhatsApp</span>
+          </a>
+          <a href="contato.html"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white/60 rounded-full px-8 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white"
+             style="background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.07) 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); --border-gradient: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(47,103,252,0.1), rgba(255,255,255,0.07)); --border-radius-before: 9999px;">
+            <span class="relative z-10">Enviar mensagem</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ -->
+  <footer class="relative z-10 px-6 md:px-10 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="assets/logo.png" alt="MXC Digital" class="h-12 object-contain">
+          </div>
+          <p class="text-white/35 font-body text-sm leading-relaxed max-w-xs">
+            Sites que vendem, impressionam e representam. Entrega em 14 dias. Sem template, sem terceirização.
+          </p>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Navegação</p>
+          <div class="space-y-3">
+            <a href="criacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Criação de Sites</a>
+            <a href="reformulacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Reformulação</a>
+            <a href="portfolio.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Portfólio</a>
+            <a href="index.html#planos" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Planos de Manutenção</a>
+            <a href="contato.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Contato</a>
+            <a href="/politica-de-privacidade.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Política de Privacidade</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Contato</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="mailto:contato@mxcdigital.com.br" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i> contato@mxcdigital.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/20 font-body text-xs">© 2026 MXC Digital. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          <span class="text-white/20 font-body text-xs">Disponível para novos projetos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       GLOBAL JS
+       ═══════════════════════════════════════════════════════════ -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+    // ═══ Custom cursor — apenas anel, instantâneo, sem lerp ═══
+    (function() {
+      const ring = document.getElementById('cursor-ring');
+      if (!ring) return;
+
+      var _cx=0,_cy=0;
+      function _rp(){var h=ring.classList.contains('hovering')?28:16;ring.style.transform='translate('+(_cx-h)+'px,'+(_cy-h)+'px)';}
+      document.addEventListener('mousemove', e => { _cx=e.clientX;_cy=e.clientY;_rp(); });
+
+      document.addEventListener('mouseleave', () => { ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { ring.style.opacity = '1'; });
+
+      const hoverTargets = 'a, button, [data-cursor-hover], input, textarea, select, label';
+      document.querySelectorAll(hoverTargets).forEach(el => {
+        el.addEventListener('mouseenter', () => { ring.classList.add('hovering'); _rp(); });
+        el.addEventListener('mouseleave', () => { ring.classList.remove('hovering'); _rp(); });
+      });
+    })();
+
+    // ═══ Tilt 3D universal — para qualquer [data-tilt] ═══
+    document.querySelectorAll('[data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r    = card.getBoundingClientRect();
+        const cx   = r.left + r.width  / 2;
+        const cy   = r.top  + r.height / 2;
+        const dx   = (e.clientX - cx) / (r.width  / 2);
+        const dy   = (e.clientY - cy) / (r.height / 2);
+        const rotY =  dx * 12;
+        const rotX = -dy * 8;
+        const glowX = ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%';
+        const glowY = ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%';
+        card.style.transform  = `perspective(700px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.025)`;
+        card.style.setProperty('--glow-x', glowX);
+        card.style.setProperty('--glow-y', glowY);
+        card.style.transition = 'transform 0.08s ease, box-shadow 0.4s ease, border-color 0.4s ease';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform  = 'perspective(700px) rotateX(0) rotateY(0) scale(1)';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease, border-color 0.4s ease';
+      });
+    });
+
+    // ═══ Hero typewriter ═══
+    (function() {
+      const el = document.getElementById('hero-typewriter');
+      if (!el) return;
+      const words = ['convertem.', 'impressionam.', 'vendem.', 'encantam.', 'transformam.'];
+      let wi = 0, ci = 0, deleting = false;
+
+      setTimeout(function tick() {
+        const word = words[wi];
+        if (!deleting) {
+          el.textContent = word.slice(0, ++ci);
+          if (ci === word.length) {
+            deleting = true;
+            setTimeout(tick, 2200);
+            return;
+          }
+          setTimeout(tick, 90 + Math.random() * 35);
+        } else {
+          el.textContent = word.slice(0, --ci);
+          if (ci === 0) {
+            deleting = false;
+            wi = (wi + 1) % words.length;
+            setTimeout(tick, 350);
+            return;
+          }
+          setTimeout(tick, 48);
+        }
+      }, 2400);
+    })();
+
+    /* ── Barra de progresso — via rAF para máxima fluidez ── */
+    (function progressLoop() {
+      const bar = document.getElementById('scroll-progress');
+      if (bar) {
+        const totalScrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const pct = totalScrollable > 0
+          ? Math.min(100, (window.scrollY / totalScrollable) * 100)
+          : 0;
+        bar.style.width = pct + '%';
+      }
+      requestAnimationFrame(progressLoop);
+    })();
+
+    // Mouse glow
+    // Mouse glow com rAF throttle — evita repaint a cada pixel (Safari fix)
+    (function(){
+      var ticking=false;
+      document.addEventListener('mousemove',function(e){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            document.documentElement.style.setProperty('--mouse-x',(e.clientX/window.innerWidth*100).toFixed(1)+'%');
+            document.documentElement.style.setProperty('--mouse-y',(e.clientY/window.innerHeight*100).toFixed(1)+'%');
+            ticking=false;
+          });
+          ticking=true;
+        }
+      });
+    })();
+
+    // Scroll reveal
+    (function(){
+      var _ao=document.querySelectorAll('.animate-on-scroll');
+      function _ck(){_ao.forEach(function(el){if(el.classList.contains('animate'))return;var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.95&&r.bottom>0)el.classList.add('animate');});}
+      window.addEventListener('scroll',_ck,{passive:true});
+      window.addEventListener('resize',_ck,{passive:true});
+      if(document.readyState==='complete'){setTimeout(_ck,80);}else{window.addEventListener('load',function(){setTimeout(_ck,80);});}
+    })();
+
+    /* ── Problema cards: elegantRise ao entrar na viewport ── */
+    (function () {
+      const problemaCards = document.querySelectorAll('.problema-card, .card-problema');
+      if (!problemaCards.length) return;
+
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      problemaCards.forEach(card => obs.observe(card));
+    })();
+
+    // Text scramble
+    function scramble(el) {
+      const final = el.dataset.scramble || el.textContent;
+      if (!el.dataset.scramble) el.dataset.scramble = final;
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      let i = 0;
+      const iv = setInterval(() => {
+        el.textContent = final.split('').map((c, j) =>
+          j < i ? final[j] : chars[Math.floor(Math.random() * chars.length)]
+        ).join('');
+        if (i >= final.length) { el.textContent = final; clearInterval(iv); }
+        i += 0.4;
+      }, 25);
+    }
+    document.querySelectorAll('[data-scramble]').forEach(el => {
+      el.dataset.scramble = el.textContent;
+      el.addEventListener('mouseenter', () => scramble(el));
+    });
+
+    // Counter animation
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || '';
+        const dur = 1800;
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / dur, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          el.textContent = Math.floor(ease * target) + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        counterObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+    // Stats overlay — hover cobre os 4 cards
+    (function() {
+      const cards = document.querySelectorAll('.stat-card');
+      const overlays = document.querySelectorAll('.stat-overlay');
+
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+          const key = card.dataset.stat;
+          const overlay = document.querySelector(`.stat-overlay[data-for="${key}"]`);
+          if (overlay) overlay.classList.add('active');
+        });
+        card.addEventListener('mouseleave', e => {
+          const key = card.dataset.stat;
+          const overlay = document.querySelector(`.stat-overlay[data-for="${key}"]`);
+          if (overlay && !overlay.contains(e.relatedTarget)) {
+            overlay.classList.remove('active');
+          }
+        });
+      });
+
+      overlays.forEach(overlay => {
+        overlay.addEventListener('mouseleave', () => {
+          overlay.classList.remove('active');
+        });
+      });
+    })();
+
+
+    // Pausa animações quando aba está em background (economia de CPU/GPU)
+    document.addEventListener('visibilitychange',function(){
+      var s=document.hidden?'paused':'running';
+      document.querySelectorAll('[style*="auroraFloat"],[style*="beamFall"],[style*="moonPulse"],[style*="moonRingPulse"]').forEach(function(el){
+        el.style.animationPlayState=s;
+      });
+    });
+
+    // Hero wordUp auto-trigger
+    setTimeout(() => {
+      document.querySelectorAll('#hero .word-inner').forEach(el => el.classList.add('is-visible'));
+    }, 100);
+
+  </script>
+
+<script>
+function filterPortfolio(tipo) {
+  document.querySelectorAll('[data-filter]').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.filter === tipo);
+    btn.classList.toggle('text-white', btn.dataset.filter === tipo);
+    btn.classList.toggle('border-white/30', btn.dataset.filter === tipo);
+    btn.classList.toggle('text-white/40', btn.dataset.filter !== tipo);
+    btn.classList.toggle('border-white/10', btn.dataset.filter !== tipo);
+  });
+  document.querySelectorAll('#portfolio-grid [data-tipo]').forEach(card => {
+    if (tipo === 'todos' || card.dataset.tipo === tipo) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+filterPortfolio('todos');
+</script>
+
+</body>
+</html>

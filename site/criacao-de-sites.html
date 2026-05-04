@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- SEO -->
+  <title>Sites Profissionais Sob Medida | MXC Digital</title>
+  <meta name="description" content="Desenvolvemos sites exclusivos, sem templates, com design estratégico e foco em conversão. Ideal para empresas que querem crescer online." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mxcdigital.com.br/criacao-de-sites.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MXC Digital" />
+  <meta property="og:url" content="https://mxcdigital.com.br/criacao-de-sites.html" />
+  <meta property="og:title" content="Criação de Sites Sob Medida, Sem Templates | MXC Digital" />
+  <meta property="og:description" content="Cada site que construímos começa do zero. Design único, código limpo e estratégia de conversão do primeiro ao último pixel." />
+  <meta property="og:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Criação de Sites Sob Medida, Sem Templates | MXC Digital" />
+  <meta name="twitter:description" content="Cada site que construímos começa do zero. Design único, código limpo e estratégia de conversão." />
+  <meta name="twitter:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/icone.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icone.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Epilogue:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#2f67fc',
+            cyan: '#03f0fc',
+            surface: '#0d1520',
+            bg: '#111827',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Epilogue', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'brand-glow': '0 0 30px rgba(47,103,252,0.35)',
+            'cyan-glow': '0 0 30px rgba(3,240,252,0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeSlideIn { 0% { opacity: 0; transform: translateY(28px); filter: blur(8px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); } }
+    @keyframes beamFall { 0% { transform: translateY(-100%); opacity: 0; } 5% { opacity: 0.7; } 50% { opacity: 1; } 95% { opacity: 0.7; } 100% { transform: translateY(110vh); opacity: 0; } }
+    @keyframes shimmerSweep { 0% { transform: translateX(-150%) skewX(-15deg); } 100% { transform: translateX(350%) skewX(-15deg); } }
+    @keyframes wordUp { 0% { transform: translateY(110%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(80px,-60px) scale(1.1); } 66% { transform: translate(-40px,40px) scale(0.95); } }
+    @keyframes auroraFloat2 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(-100px,50px) scale(1.05); } 66% { transform: translate(60px,-80px) scale(1.1); } }
+    @keyframes auroraFloat3 { 0%, 100% { transform: translate(0,0) scale(1); opacity: 0.2; } 50% { transform: translate(50px,30px) scale(1.15); opacity: 0.4; } }
+    @keyframes horizonSweep { 0% { transform: scaleX(0); transform-origin: left; opacity: 0; } 30% { transform: scaleX(1); transform-origin: left; opacity: 1; } 70% { transform: scaleX(1); transform-origin: right; opacity: 1; } 100% { transform: scaleX(0); transform-origin: right; opacity: 0; } }
+    @keyframes pulseRing { 0% { transform: scale(0.9); opacity: 0.6; } 100% { transform: scale(1.8); opacity: 0; } }
+
+    /* ── Keyframes de entrada — scroll reveal ───────────── */
+    @keyframes splitFromLeft {
+      from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-18px); }
+      to   { opacity: 1; clip-path: inset(0 0% 0 0);   transform: translateX(0); }
+    }
+    @keyframes splitFromRight {
+      from { opacity: 0; clip-path: inset(0 0 0 100%);  transform: translateX(18px); }
+      to   { opacity: 1; clip-path: inset(0 0 0 0%);    transform: translateX(0); }
+    }
+    @keyframes scaleSnap {
+      from { opacity: 0; transform: scale(0.88); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes elegantRise {
+      from { opacity: 0; transform: translateY(22px); filter: blur(6px); }
+      to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+    }
+    @keyframes diagWipe {
+      from { opacity: 0; clip-path: inset(0 100% 100% 0); }
+      to   { opacity: 1; clip-path: inset(0 0% 0% 0); }
+    }
+    @keyframes blurSnap {
+      from { opacity: 0; filter: blur(12px); transform: scale(1.04); }
+      to   { opacity: 1; filter: blur(0);    transform: scale(1); }
+    }
+    @keyframes spinReveal3D {
+      from { opacity: 0; transform: perspective(600px) rotateY(-55deg) translateX(-30px); }
+      to   { opacity: 1; transform: perspective(600px) rotateY(0deg)   translateX(0); }
+    }
+    @keyframes caretBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ═══ MEIA LUA — Hero (igual index; sem Netuno) ═══ */
+    @keyframes moonPulse {
+      0%, 100% { box-shadow:
+        0 0 80px  rgba(47, 103, 252, 0.20),
+        0 0 160px rgba(47, 103, 252, 0.10),
+        0 0 40px  rgba(3,  240, 252, 0.08),
+        inset 0 0 120px rgba(47, 103, 252, 0.06); }
+      50% { box-shadow:
+        0 0 120px rgba(47, 103, 252, 0.30),
+        0 0 240px rgba(47, 103, 252, 0.15),
+        0 0 80px  rgba(3,  240, 252, 0.15),
+        inset 0 0 160px rgba(47, 103, 252, 0.10); }
+    }
+    .hero-moon {
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1000px, 130vw);
+      height: min(1000px, 130vw);
+      border-radius: 50%;
+      border: 1px solid rgba(47, 103, 252, 0.18);
+      box-shadow:
+        0 0 80px  rgba(47, 103, 252, 0.20),
+        0 0 160px rgba(47, 103, 252, 0.10),
+        0 0 40px  rgba(3,  240, 252, 0.08),
+        inset 0 0 120px rgba(47, 103, 252, 0.06);
+      background: radial-gradient(
+        ellipse at 50% 0%,
+        rgba(47, 103, 252, 0.12) 0%,
+        rgba(3,  240, 252, 0.06) 30%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+      animation: moonPulse 8s ease-in-out infinite;
+    }
+    .hero-moon-ring {
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1000px, 130vw);
+      height: min(1000px, 130vw);
+      border-radius: 50%;
+      border: 1.5px solid transparent;
+      background: transparent;
+      box-shadow:
+        0 -2px 30px  rgba(3, 240, 252, 0.55),
+        0 -1px 80px  rgba(47, 103, 252, 0.35),
+        0 -1px 160px rgba(47, 103, 252, 0.20);
+      outline: 1px solid rgba(3, 240, 252, 0.25);
+      outline-offset: 0px;
+      pointer-events: none;
+      z-index: 2;
+      animation: moonRingPulse 6s ease-in-out infinite;
+    }
+    .hero-moon-apex {
+      display: none;
+      position: absolute;
+      bottom: calc(min(500px, 65vw) - 45% - 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 12px;
+      background: radial-gradient(ellipse at center,
+        rgba(3, 240, 252, 0.9) 0%,
+        rgba(47, 103, 252, 0.5) 40%,
+        transparent 100%
+      );
+      filter: blur(4px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+      animation: moonApexPulse 6s ease-in-out infinite;
+    }
+    @keyframes moonRingPulse {
+      0%, 100% {
+        box-shadow:
+          0 -2px 30px  rgba(3, 240, 252, 0.55),
+          0 -1px 80px  rgba(47, 103, 252, 0.35),
+          0 -1px 160px rgba(47, 103, 252, 0.20);
+      }
+      50% {
+        box-shadow:
+          0 -2px 50px  rgba(3, 240, 252, 0.80),
+          0 -1px 120px rgba(47, 103, 252, 0.50),
+          0 -1px 220px rgba(47, 103, 252, 0.30);
+      }
+    }
+    @keyframes moonApexPulse {
+      0%, 100% { opacity: 0.7; transform: translateX(-50%) scaleX(1); }
+      50%       { opacity: 1.0; transform: translateX(-50%) scaleX(1.3); }
+    }
+
+    .animate-on-scroll { animation-play-state: paused !important; }
+    .animate-on-scroll.animate { animation-play-state: running !important; }
+
+    .word-inner { display: inline-block; will-change: transform; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+    .word-inner.is-visible { animation: wordUp 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+    #hero .word-inner { transform: translateY(110%); opacity: 0; }
+    /* Descendentes (vírgula, etc.) sem cortar; distância entre linhas = mesmo 8px (mb-2) */
+    #hero h1 { line-height: normal; }
+    #hero h1 > .overflow-hidden { padding-bottom: 0.05em; }
+    #hero h1 > .overflow-hidden:not(:last-child) {
+      margin-bottom: calc(0.5rem - 0.22em);
+    }
+    #hero h1 > .overflow-hidden:first-of-type {
+      margin-bottom: calc(0.2rem - 0.22em - 0.18rem);
+    }
+    #hero h1 .word-inner {
+      line-height: 1.1;
+    }
+
+    [style*="--border-gradient"]::before {
+      content: ""; position: absolute; inset: 0; padding: 1px;
+      border-radius: var(--border-radius-before, inherit);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      background: var(--border-gradient); pointer-events: none;
+    }
+
+    .btn-shimmer::after, .btn-shimmer-cyan::after {
+      content: ""; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-150%) skewX(-15deg); pointer-events: none; z-index: 5; border-radius: 9999px;
+    }
+    .btn-shimmer-cyan::after { background: linear-gradient(90deg, transparent, rgba(3,240,252,0.25), transparent); }
+    .btn-shimmer:hover::after, .btn-shimmer-cyan:hover::after { animation: shimmerSweep 0.75s ease forwards; }
+
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 200; pointer-events: none; opacity: 0.032;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");
+      background-size: 200px 200px;
+    }
+
+    /* ── Custom cursor — anel único ──────────────────────── */
+    .cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(3, 240, 252, 0.55);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      will-change: transform;
+      transform: translate(-100px, -100px);
+      transition: width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  height 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  border-color 0.2s ease,
+                  background 0.2s ease,
+                  opacity 0.3s ease;
+    }
+    .cursor-ring.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(3, 240, 252, 0.85);
+      background: rgba(3, 240, 252, 0.04);
+    }
+    @media (pointer: fine) {
+      *, *::before, *::after,
+      a, button, input, select, textarea,
+      [role="button"], [data-cursor-hover],
+      label, summary {
+        cursor: none !important;
+      }
+    }
+    @media (pointer: coarse) { .cursor-ring { display: none; } }
+
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: linear-gradient(90deg, #2f67fc, #03f0fc); z-index: 300; transition: width 0.08s linear; }
+
+    ::selection { background: rgba(47,103,252,0.35); color: #fff; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: rgba(47,103,252,0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(47,103,252,0.6); }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px; }
+
+    /* Cards "O que está incluso" — mesmo esquema que O Problema (index) + luz com o cursor */
+    #incluso .card-incluso {
+      background: rgba(13, 21, 32, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      position: relative;
+      transform-style: preserve-3d;
+      overflow: hidden;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.08s ease;
+    }
+    #incluso .card-incluso:hover {
+      border-color: rgba(3, 240, 252, 0.35);
+      box-shadow: 0 0 40px rgba(3, 240, 252, 0.12), 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    #incluso [data-tilt] { will-change: transform; }
+    #incluso [data-tilt]::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        200px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+        rgba(3, 240, 252, 0.1),
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    #incluso [data-tilt]:hover::after { opacity: 1; }
+    #incluso [data-tilt] > * { position: relative; z-index: 2; }
+
+    /* ══════════════════════════════════════════════════════
+       Para quem — cards interativos
+    ══════════════════════════════════════════════════════ */
+    .pq-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .pq-card {
+      position: relative;
+      background: rgba(13, 21, 32, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 1.25rem;
+      padding: 2rem 1.75rem 1.75rem;
+      cursor: default;
+      overflow: hidden;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .pq-card:hover {
+      border-color: rgba(3, 240, 252, 0.35);
+    }
+
+    .pq-icon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 1.25rem;
+      line-height: 0;
+    }
+
+    .pq-icon :is(svg) {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .pq-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+    .pq-sub {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.45);
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+    .pq-tags {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      min-height: 80px;
+      align-content: flex-start;
+    }
+    .pq-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+    .pq-tag.pq-problem {
+      background: rgba(239, 68, 68, 0.12);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: rgba(252, 165, 165, 0.9);
+      opacity: 1;
+      animation: tagFloat 2.8s ease-in-out infinite alternate;
+      animation-delay: var(--delay, 0s);
+    }
+    @keyframes tagFloat {
+      from { transform: translateY(0); }
+      to { transform: translateY(calc(-1 * var(--drift, 7px))); }
+    }
+    .pq-tag.pq-solution {
+      background: rgba(3, 240, 252, 0.1);
+      border: 1px solid rgba(3, 240, 252, 0.35);
+      color: rgba(3, 240, 252, 0.95);
+      opacity: 0;
+      position: absolute;
+      width: max-content;
+      max-width: 100%;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+    }
+    .pq-card:hover .pq-tag.pq-problem {
+      display: none;
+    }
+    .pq-card:hover .pq-tag.pq-solution {
+      opacity: 1;
+      position: relative;
+      left: auto;
+      top: auto;
+      width: auto;
+      max-width: none;
+    }
+    .pq-card:hover .pq-tag.pq-solution:nth-of-type(4) { transition-delay: 0s; }
+    .pq-card:hover .pq-tag.pq-solution:nth-of-type(5) { transition-delay: 0.07s; }
+    .pq-card:hover .pq-tag.pq-solution:nth-of-type(6) { transition-delay: 0.14s; }
+
+    /* ══════════════════════════════════════════════════════
+       Processo — cards editoriais
+    ══════════════════════════════════════════════════════ */
+
+    .proc-card {
+      position: relative;
+      background: rgba(13, 21, 32, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 1.25rem;
+      padding: 2rem;
+      display: block;
+      overflow: hidden;
+      transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    /* Borda no hover: mesmo tom que “O que está incluso” (apenas borda, sem sombra extra) */
+    .proc-card:hover {
+      border-color: rgba(3, 240, 252, 0.35);
+    }
+
+    /* ── Número marca d'água ── */
+    .proc-watermark {
+      position: absolute;
+      top: -0.5rem;
+      right: 1rem;
+      font-size: 7rem;
+      font-weight: 900;
+      line-height: 1;
+      color: rgba(255,255,255,0.04);
+      pointer-events: none;
+      user-select: none;
+      font-family: inherit;
+      letter-spacing: -0.04em;
+    }
+
+    .proc-heading {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.55);
+      margin: 0 0 0.5rem 0;
+      line-height: 1.3;
+      transition: color 0.25s ease;
+    }
+
+    .proc-card:hover .proc-heading {
+      color: #03f0fc;
+    }
+
+    .proc-icon {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+      line-height: 0;
+    }
+
+    .proc-icon :is(svg) {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    /* ── Corpo do card ── */
+    .proc-body {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      min-width: 0;
+    }
+
+    .proc-desc {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    /* ── Card 04 — Glow destacado ── */
+    .proc-card--final {
+      border-color: rgba(3,240,252,0.34);
+      box-shadow:
+        0 0 0 1px rgba(3,240,252,0.14),
+        0 0 28px rgba(3,240,252,0.16),
+        0 0 64px rgba(3,240,252,0.2),
+        0 0 100px rgba(3,240,252,0.1),
+        0 8px 44px rgba(0,0,0,0.38);
+    }
+
+    .proc-card--final::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        ellipse 95% 75% at 50% 0%,
+        rgba(3,240,252,0.14) 0%,
+        rgba(3,240,252,0.04) 42%,
+        transparent 70%
+      );
+      pointer-events: none;
+    }
+
+    .proc-card--final .proc-watermark {
+      z-index: 1;
+      color: rgba(3, 240, 252, 0.1);
+    }
+
+    .proc-card--final .proc-body {
+      position: relative;
+      z-index: 1;
+    }
+
+    .proc-card--final:hover {
+      border-color: rgba(3, 240, 252, 0.35);
+    }
+
+    .proc-cards-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      width: 100%;
+    }
+
+    /* ═══ Seção trabalhos — mesmo padrão da home (#portfolio): PB + texto no hover ═══ */
+    .portfolio-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+    .portfolio-card:hover {
+      cursor: pointer;
+    }
+    .portfolio-thumb {
+      position: relative;
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+    }
+    .portfolio-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+    }
+    .portfolio-card:hover .portfolio-thumb img {
+      filter: grayscale(0%);
+    }
+    .portfolio-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 24px 28px;
+      z-index: 1;
+    }
+    .portfolio-card:hover .portfolio-card-overlay {
+      opacity: 1;
+    }
+    .portfolio-card-arrow {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.05s;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .portfolio-card:hover .portfolio-card-arrow {
+      opacity: 1;
+    }
+    .portfolio-card-info {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+    }
+    .portfolio-card:hover .portfolio-card-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .portfolio-card-type {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(3, 240, 252, 0.75);
+      display: block;
+    }
+    .portfolio-card-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
+      margin: 0;
+      margin-top: 6px;
+    }
+    .portfolio-card-type--zero {
+      color: rgba(47, 103, 252, 0.9);
+    }
+    .portfolio-card-segment {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 4px 0 0;
+    }
+
+    /* ═══ Performance: GPU layers para animações contínuas ═══ */
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } }
+    [style*="auroraFloat"] { will-change: transform; }
+    [style*="beamFall"]    { will-change: transform, opacity; }
+    .grain-overlay         { will-change: unset; transform: translateZ(0); }
+  </style>
+  <link rel="stylesheet" href="assets/mobile-layout.css" />
+</head>
+<body class="page-criacao-de-sites bg-bg text-[#F0F4FF] font-body antialiased overflow-x-hidden">
+
+  <div class="grain-overlay"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- WhatsApp floating -->
+  <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Tenho%20interesse%20em%20criar%20um%20site%20com%20a%20MXC%20Digital.%20Podem%20me%20contar%20como%20funciona%3F" target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-[500] flex items-center gap-3 group" aria-label="Falar no WhatsApp">
+    <span class="absolute inset-0 w-14 h-14 rounded-full bg-[#25D366]/30 animate-ping"></span>
+    <div class="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-transform duration-300 group-hover:scale-110">
+      <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Pill navigation -->
+  <div class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="pointer-events-auto bg-surface/90 backdrop-blur-md border border-white/10 rounded-full py-2.5 px-5 flex items-center gap-6 shadow-xl shadow-black/50 [animation:fadeSlideIn_0.8s_cubic-bezier(0.2,0.8,0.2,1)_0.1s_both]">
+      <a href="index.html" class="flex items-center mr-2">
+        <img src="assets/logo.png" alt="MXC Digital" class="h-8 object-contain">
+      </a>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="index.html#servicos"  class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Serviços</a>
+        <a href="index.html#portfolio" class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Portfolio</a>
+        <a href="index.html#sobre"     class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#planos"    class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Planos</a>
+      </div>
+      <a href="contato.html"
+         class="btn-shimmer relative overflow-hidden text-[10px] font-display font-bold uppercase tracking-widest text-white rounded-full px-4 py-2 ml-2 transition-all duration-300"
+         style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 8px 20px -4px rgba(47,103,252,0.4); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+        <span class="relative z-10">Iniciar Projeto</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Aurora background -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none" style="transform:translateZ(0);">
+    <div class="absolute inset-0 dot-grid"></div>
+    <div class="absolute w-[700px] h-[700px] rounded-full bg-brand/20 blur-[70px] -top-48 -left-48" style="animation: auroraFloat1 22s ease-in-out infinite;"></div>
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-cyan/[0.12] blur-[70px] -bottom-32 -right-32" style="animation: auroraFloat2 28s ease-in-out infinite;"></div>
+    <div class="absolute w-[500px] h-[500px] rounded-full bg-brand/[0.08] blur-[55px] top-[40%] left-[50%]" style="animation: auroraFloat3 18s ease-in-out infinite;"></div>
+    <div id="mouse-glow" class="absolute inset-0" style="background: radial-gradient(700px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(47,103,252,0.06), transparent 40%);"></div>
+    <div class="absolute top-0 left-[10%] w-px h-48 bg-gradient-to-b from-transparent via-cyan/50 to-transparent" style="animation: beamFall 7s linear infinite; animation-delay: 0s;"></div>
+    <div class="absolute top-0 left-[42%] w-px h-56 bg-gradient-to-b from-transparent via-cyan/60 to-transparent" style="animation: beamFall 8s linear infinite; animation-delay: 4.5s;"></div>
+    <div class="absolute top-0 left-[73%] w-px h-60 bg-gradient-to-b from-transparent via-cyan/55 to-transparent" style="animation: beamFall 9s linear infinite; animation-delay: 6s;"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden z-10">
+    <div class="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/80 to-transparent" style="top: 50%; animation: horizonSweep 1.2s cubic-bezier(0.4,0,0.2,1) 0.3s both;"></div>
+
+    <div id="hero-moon" class="hero-moon"></div>
+    <div class="hero-moon-ring"></div>
+    <div class="hero-moon-apex"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+
+      <h1 class="font-display font-extrabold tracking-[-0.04em] text-white mb-8" style="font-size: clamp(48px, 7.5vw, 104px);">
+        <div class="overflow-hidden mb-2">
+          <span class="word-inner block" style="animation-delay: 1.0s;">Seu site novo,</span>
+        </div>
+        <div class="overflow-hidden mb-2">
+          <span class="word-inner block" style="animation-delay: 1.15s;">pronto em</span>
+        </div>
+        <div class="overflow-hidden">
+          <span class="word-inner block bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent" style="animation-delay: 1.3s;">14 dias.</span>
+        </div>
+      </h1>
+
+      <div class="max-w-xl mx-auto mb-12 [animation:fadeSlideIn_1s_ease_1.6s_both] text-lg md:text-xl leading-relaxed">
+        <p class="text-white/50 font-body mb-0">
+          Identidade exclusiva, copy estratégico e SEO desde o primeiro elemento. Sem template, sem terceirização.
+        </p>
+        <p class="font-display font-semibold text-white/75 mt-3 mb-0">
+          Você fala diretamente com quem constrói, do alinhamento ao lançamento.
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 [animation:fadeSlideIn_1s_ease_1.8s_both]">
+        <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Tenho%20interesse%20em%20criar%20um%20site%20com%20a%20MXC%20Digital.%20Podem%20me%20contar%20como%20funciona%3F" target="_blank" rel="noopener noreferrer"
+           class="btn-shimmer relative overflow-hidden font-display font-bold text-xs uppercase tracking-widest text-white rounded-full px-8 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-[1.03]"
+           style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 16px 40px -8px rgba(47,103,252,0.55), inset 0 1px 0 rgba(255,255,255,0.15); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+          <span class="relative z-10 flex items-center gap-2">Começar meu projeto <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+        </a>
+        <a href="#incluso"
+           class="btn-shimmer relative overflow-hidden font-display font-bold text-xs uppercase tracking-widest text-white/70 rounded-full px-6 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white"
+           style="background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.08) 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); --border-gradient: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(47,103,252,0.12), rgba(255,255,255,0.08)); --border-radius-before: 9999px;">
+          <span class="relative z-10 flex items-center gap-2">O que está incluso <i data-lucide="arrow-down" class="w-4 h-4"></i></span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       O QUE ESTÁ INCLUSO
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="incluso" class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-cyan"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/70">O que está incluso</span>
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <h2 class="font-display font-extrabold leading-[0.9] tracking-tight text-white" style="font-size: clamp(40px, 5vw, 72px);">
+          Tudo incluído no<br/>
+          <span class="bg-gradient-to-r from-white to-white/50 bg-clip-text text-transparent">mesmo valor. Sem surpresas no final.</span>
+        </h2>
+        <p class="text-white/45 font-body max-w-sm text-sm leading-relaxed">
+          Não vendemos "pacotes básicos". Todo site criado pela MXC já sai com o essencial para performar desde o primeiro dia.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div data-tilt class="card-incluso animate-on-scroll relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.05s_both]">
+          <div class="w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-6">
+            <i data-lucide="palette" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg mb-3">Design exclusivo</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">Cada projeto parte do zero. Nada de template: a identidade visual é criada especificamente para a sua marca, seu público e o que você quer comunicar. Nenhum site nosso parece com outro.</p>
+        </div>
+
+        <div data-tilt class="card-incluso animate-on-scroll relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.15s_both]">
+          <div class="w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-6">
+            <i data-lucide="pen-tool" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg mb-3">Copy estratégico</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">Textos que guiam o visitante do primeiro clique até o contato, sem forçar nem enrolar. Escrevemos cada seção com um objetivo claro: remover objeções e tornar a próxima ação óbvia.</p>
+        </div>
+
+        <div data-tilt class="card-incluso animate-on-scroll relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.25s_both]">
+          <div class="w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-6">
+            <i data-lucide="search" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg mb-3">SEO no site</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">Estrutura semântica, metadados, dados estruturados, performance técnica otimizada e mapa do site para o Google. Seu site nasce pronto para o Google, sem precisar esperar meses para começar a aparecer.</p>
+        </div>
+
+        <div data-tilt class="card-incluso animate-on-scroll relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.35s_both]">
+          <div class="w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-6">
+            <i data-lucide="smartphone" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg mb-3">Feito para celular</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">Se o seu site quebra no celular, você já perdeu 7 em cada 10 visitantes antes de ler a primeira linha. Todo site é desenhado primeiro no mobile, e só depois expandido para telas maiores.</p>
+        </div>
+
+        <div data-tilt class="card-incluso animate-on-scroll relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.45s_both]">
+          <div class="w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-6">
+            <i data-lucide="life-buoy" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg mb-3">Suporte pós-lançamento</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">30 dias de ajustes ilimitados após o lançamento. Mudou de ideia sobre alguma seção? Quer adicionar algo? A gente ajusta sem cobrar por isso. Depois, planos de manutenção opcionais, sem fidelidade obrigatória.</p>
+        </div>
+
+        <div data-tilt class="card-incluso animate-on-scroll relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.55s_both]">
+          <div class="w-11 h-11 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-6">
+            <i data-lucide="zap" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg mb-3">Velocidade otimizada</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">Imagens comprimidas, código limpo, armazenamento em cache configurado. A meta é carregar em menos de 2 segundos mesmo com internet fraca.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PARA QUEM É
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="para-quem" class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-cyan"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/70">Para quem</span>
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <h2 class="font-display font-extrabold leading-[0.9] tracking-tight text-white" style="font-size: clamp(40px, 5vw, 72px);">
+          Este serviço foi feito<br/>para você se…
+        </h2>
+      </div>
+
+      <div class="pq-cards-grid">
+        <div class="pq-card animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.1s_both]" data-pq>
+          <div class="pq-icon" aria-hidden="true">
+            <i data-lucide="sparkles" class="w-8 h-8 text-cyan"></i>
+          </div>
+          <h3 class="pq-title">Você está abrindo um negócio</h3>
+          <p class="pq-sub">e precisa aparecer antes dos concorrentes</p>
+          <div class="pq-tags">
+            <span class="pq-tag pq-problem" style="--delay:0s;--drift:6px">Sem presença online</span>
+            <span class="pq-tag pq-problem" style="--delay:0.4s;--drift:9px">Zero credibilidade</span>
+            <span class="pq-tag pq-problem" style="--delay:0.8s;--drift:5px">Invisível no Google</span>
+            <span class="pq-tag pq-solution">Online em 14 dias</span>
+            <span class="pq-tag pq-solution">1ª impressão profissional</span>
+            <span class="pq-tag pq-solution">SEO desde o dia 1</span>
+          </div>
+        </div>
+
+        <div class="pq-card animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.2s_both]" data-pq>
+          <div class="pq-icon" aria-hidden="true">
+            <i data-lucide="external-link" class="w-8 h-8 text-cyan"></i>
+          </div>
+          <h3 class="pq-title">Você vive só pelo Instagram</h3>
+          <p class="pq-sub">e sabe que depender de algoritmo é arriscado</p>
+          <div class="pq-tags">
+            <span class="pq-tag pq-problem" style="--delay:0.2s;--drift:7px">Refém do algoritmo</span>
+            <span class="pq-tag pq-problem" style="--delay:0.6s;--drift:10px">Sem endereço fixo na web</span>
+            <span class="pq-tag pq-problem" style="--delay:1s;--drift:6px">Perde venda offline</span>
+            <span class="pq-tag pq-solution">Site próprio 24/7</span>
+            <span class="pq-tag pq-solution">Independente de plataforma</span>
+            <span class="pq-tag pq-solution">Capta leads dormindo</span>
+          </div>
+        </div>
+
+        <div class="pq-card animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.3s_both]" data-pq>
+          <div class="pq-icon" aria-hidden="true">
+            <i data-lucide="globe" class="w-8 h-8 text-cyan"></i>
+          </div>
+          <h3 class="pq-title">Seu negócio é bom, mas parece pequeno online</h3>
+          <p class="pq-sub">porque sem site, você parece menor do que realmente é</p>
+          <div class="pq-tags">
+            <span class="pq-tag pq-problem" style="--delay:0.1s;--drift:8px">Sem credibilidade online</span>
+            <span class="pq-tag pq-problem" style="--delay:0.5s;--drift:6px">Concorrente parece maior</span>
+            <span class="pq-tag pq-problem" style="--delay:0.9s;--drift:10px">Cliente não te encontra</span>
+            <span class="pq-tag pq-solution">Presença que impressiona</span>
+            <span class="pq-tag pq-solution">Visto antes dos concorrentes</span>
+            <span class="pq-tag pq-solution">Credibilidade imediata</span>
+          </div>
+        </div>
+
+        <div class="pq-card animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.4s_both]" data-pq>
+          <div class="pq-icon" aria-hidden="true">
+            <i data-lucide="eye" class="w-8 h-8 text-cyan"></i>
+          </div>
+          <h3 class="pq-title">Você depende só de indicação para crescer</h3>
+          <p class="pq-sub">e sabe que isso tem limite, e que poderia estar captando clientes dormindo</p>
+          <div class="pq-tags">
+            <span class="pq-tag pq-problem" style="--delay:0.3s;--drift:7px">Crescimento travado</span>
+            <span class="pq-tag pq-problem" style="--delay:0.7s;--drift:9px">Invisível no Google</span>
+            <span class="pq-tag pq-problem" style="--delay:1.1s;--drift:5px">Zero captação passiva</span>
+            <span class="pq-tag pq-solution">Capta clientes 24/7</span>
+            <span class="pq-tag pq-solution">Aparece no Google</span>
+            <span class="pq-tag pq-solution">Não depende de indicação</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PROCESSO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">Processo</span>
+      </div>
+      <h2 class="font-display font-extrabold tracking-tight text-white mb-14" style="font-size: clamp(40px, 5vw, 72px);">
+        <span class="block leading-[0.9]">Do alinhamento ao lançamento.</span>
+        <span class="block leading-[0.9] mt-3 md:mt-4">
+          <span class="text-white">Em </span><span class="bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent">14 dias.</span>
+        </span>
+      </h2>
+
+      <div class="proc-cards-col relative">
+        <!-- Card 01 — Alinhamento -->
+        <div class="proc-card animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.1s_both]" data-proc="01">
+          <span class="proc-watermark">01</span>
+          <div class="proc-body">
+            <h3 class="proc-heading">Alinhamento</h3>
+            <div class="proc-icon" aria-hidden="true">
+              <i data-lucide="mail" class="w-8 h-8 text-cyan"></i>
+            </div>
+            <p class="proc-desc">
+              Começamos com as perguntas certas. Uma reunião focada para entender seu negócio, seu cliente e o que o site precisa fazer, antes de tocar em qualquer código.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 02 — Design -->
+        <div class="proc-card animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.2s_both]" data-proc="02">
+          <span class="proc-watermark">02</span>
+          <div class="proc-body">
+            <h3 class="proc-heading">Design</h3>
+            <div class="proc-icon" aria-hidden="true">
+              <i data-lucide="layers" class="w-8 h-8 text-cyan"></i>
+            </div>
+            <p class="proc-desc">
+              Identidade visual criada do zero. Cores, tipografia e layout construídos especificamente para o seu público. Nenhum template, nenhum atalho.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 03 — Desenvolvimento -->
+        <div class="proc-card animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.3s_both]" data-proc="03">
+          <span class="proc-watermark">03</span>
+          <div class="proc-body">
+            <h3 class="proc-heading">Dev</h3>
+            <div class="proc-icon" aria-hidden="true">
+              <i data-lucide="code-2" class="w-8 h-8 text-cyan"></i>
+            </div>
+            <p class="proc-desc">
+              Código limpo, semântico e otimizado para velocidade. Cada seção desenvolvida à mão, sem construtores visuais que incham o carregamento.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 04 — Entrega — card destacado -->
+        <div class="proc-card proc-card--final animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.4s_both]" data-proc="04">
+          <span class="proc-watermark">04</span>
+          <div class="proc-body">
+            <h3 class="proc-heading">Lançamento</h3>
+            <div class="proc-icon" aria-hidden="true">
+              <i data-lucide="zap" class="w-8 h-8 text-cyan"></i>
+            </div>
+            <p class="proc-desc">
+              Seu site no ar em até 14 dias. Domínio configurado, certificado de segurança ativo, hospedagem pronta. Você recebe o projeto com 30 dias de suporte sem custo extra.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PORTFOLIO SUBSET
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">Trabalhos</span>
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <h2 class="font-display font-extrabold leading-[0.9] tracking-tight text-white" style="font-size: clamp(40px, 5vw, 72px);">
+          Sites que criamos<br/>do zero
+        </h2>
+        <a href="index.html#portfolio" class="text-sm font-display text-white/40 hover:text-white transition-colors flex items-center gap-2">
+          Ver portfolio completo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <a href="portfolio/cruzeiro.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/cruzeiro-card-criacao-de-sites.png" alt="Cruzeiro Agropecuária"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type portfolio-card-type--zero">CRIADO DO ZERO</span>
+                <h3 class="portfolio-card-name">Cruzeiro Agropecuária</h3>
+                <p class="portfolio-card-segment">Agronegócio · Pernambuco</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="portfolio/wallach.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/wallach-card-home.png" alt="Wallach Assessoria Jurídica"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type portfolio-card-type--zero">CRIADO DO ZERO</span>
+                <h3 class="portfolio-card-name">Wallach Assessoria Jurídica</h3>
+                <p class="portfolio-card-segment">Direito · Recife, PE</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA FINAL
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-32">
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand/10 blur-[55px] rounded-full pointer-events-none"></div>
+      <div class="relative z-10">
+        <span class="text-[10px] font-display uppercase tracking-[0.2em] text-brand/70 block mb-6">Começar agora</span>
+        <h2 class="animate-on-scroll font-display font-extrabold text-white leading-[0.9] tracking-tight mb-6 [animation:fadeSlideIn_0.8s_ease_0s_both]"
+            style="font-size: clamp(40px, 6vw, 84px);">
+          Pronto para ter<br/>
+          <span class="bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent">um site que fecha clientes<br/>antes da reunião?</span>
+        </h2>
+        <p class="text-white/45 font-body text-lg max-w-lg mx-auto leading-relaxed mb-12">
+          Envie uma mensagem. Em até 2h você recebe uma proposta personalizada e um diagnóstico do que o seu site precisa para converter, sem compromisso.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Quero%20criar%20um%20site%20com%20a%20MXC%20Digital.%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white rounded-full px-10 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-[1.03]"
+             style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 20px 50px -8px rgba(47,103,252,0.6); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+            <span class="relative z-10 flex items-center gap-2">Falar no WhatsApp</span>
+          </a>
+          <a href="contato.html"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white/60 rounded-full px-8 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white"
+             style="background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.07) 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); --border-gradient: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(47,103,252,0.1), rgba(255,255,255,0.07)); --border-radius-before: 9999px;">
+            <span class="relative z-10">Enviar mensagem</span>
+          </a>
+        </div>
+        <p class="text-white/35 font-body text-sm max-w-lg mx-auto mt-8 leading-relaxed">
+          Abrimos poucas vagas por mês. Se este mês ainda tem espaço, você descobre em 2 minutos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 px-6 md:px-10 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="assets/logo.png" alt="MXC Digital" class="h-12 object-contain">
+          </div>
+          <p class="text-white/35 font-body text-sm leading-relaxed max-w-xs">
+            Sites que vendem, impressionam e representam. Entrega em 14 dias. Sem template, sem terceirização.
+          </p>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Navegação</p>
+          <div class="space-y-3">
+            <a href="criacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Criação de Sites</a>
+            <a href="reformulacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Reformulação</a>
+            <a href="portfolio.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Portfólio</a>
+            <a href="index.html#planos" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Planos de Manutenção</a>
+            <a href="contato.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Contato</a>
+            <a href="/politica-de-privacidade.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Política de Privacidade</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Contato</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="mailto:contato@mxcdigital.com.br" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i> contato@mxcdigital.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/20 font-body text-xs">© 2026 MXC Digital. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          <span class="text-white/20 font-body text-xs">Disponível para novos projetos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+    // ═══ Custom cursor — apenas anel, instantâneo, sem lerp ═══
+    (function() {
+      const ring = document.getElementById('cursor-ring');
+      if (!ring) return;
+
+      var _cx=0,_cy=0;
+      function _rp(){var h=ring.classList.contains('hovering')?28:16;ring.style.transform='translate('+(_cx-h)+'px,'+(_cy-h)+'px)';}
+      document.addEventListener('mousemove', e => { _cx=e.clientX;_cy=e.clientY;_rp(); });
+
+      document.addEventListener('mouseleave', () => { ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { ring.style.opacity = '1'; });
+
+      const hoverTargets = 'a, button, [data-cursor-hover], input, textarea, select, label';
+      document.querySelectorAll(hoverTargets).forEach(el => {
+        el.addEventListener('mouseenter', () => { ring.classList.add('hovering'); _rp(); });
+        el.addEventListener('mouseleave', () => { ring.classList.remove('hovering'); _rp(); });
+      });
+    })();
+
+    // ═══ Tilt 3D + glow — [data-tilt] na seção O que está incluso ═══
+    document.querySelectorAll('#incluso [data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r  = card.getBoundingClientRect();
+        const cx = r.left + r.width  / 2;
+        const cy = r.top  + r.height / 2;
+        const dx = (e.clientX - cx) / (r.width  / 2);
+        const dy = (e.clientY - cy) / (r.height / 2);
+        const rotY =  dx * 12;
+        const rotX = -dy * 8;
+        const glowX = ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%';
+        const glowY = ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%';
+        card.style.transform  = `perspective(700px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.025)`;
+        card.style.setProperty('--glow-x', glowX);
+        card.style.setProperty('--glow-y', glowY);
+        card.style.transition = 'transform 0.08s ease, box-shadow 0.4s ease, border-color 0.4s ease';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform  = '';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease, border-color 0.4s ease';
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = pct + '%';
+    });
+
+    // Mouse glow com rAF throttle — evita repaint a cada pixel (Safari fix)
+    (function(){
+      var ticking=false;
+      document.addEventListener('mousemove',function(e){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            document.documentElement.style.setProperty('--mouse-x',(e.clientX/window.innerWidth*100).toFixed(1)+'%');
+            document.documentElement.style.setProperty('--mouse-y',(e.clientY/window.innerHeight*100).toFixed(1)+'%');
+            ticking=false;
+          });
+          ticking=true;
+        }
+      });
+    })();
+
+    (function(){
+      var _ao=document.querySelectorAll('.animate-on-scroll');
+      function _ck(){_ao.forEach(function(el){if(el.classList.contains('animate'))return;var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.95&&r.bottom>0)el.classList.add('animate');});}
+      window.addEventListener('scroll',_ck,{passive:true});
+      window.addEventListener('resize',_ck,{passive:true});
+      if(document.readyState==='complete'){setTimeout(_ck,80);}else{window.addEventListener('load',function(){setTimeout(_ck,80);});}
+    })();
+
+    function scramble(el) {
+      const final = el.dataset.scramble || el.textContent;
+      if (!el.dataset.scramble) el.dataset.scramble = final;
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      let i = 0;
+      const iv = setInterval(() => {
+        el.textContent = final.split('').map((c, j) => j < i ? final[j] : chars[Math.floor(Math.random() * chars.length)]).join('');
+        if (i >= final.length) { el.textContent = final; clearInterval(iv); }
+        i += 0.4;
+      }, 25);
+    }
+    document.querySelectorAll('[data-scramble]').forEach(el => {
+      el.dataset.scramble = el.textContent;
+      el.addEventListener('mouseenter', () => scramble(el));
+    });
+
+    setTimeout(() => {
+      document.querySelectorAll('#hero .word-inner').forEach(el => el.classList.add('is-visible'));
+    }, 100);
+
+    // Pausa animações quando aba está em background (economia de CPU/GPU)
+    document.addEventListener('visibilitychange',function(){
+      var s=document.hidden?'paused':'running';
+      document.querySelectorAll('[style*="auroraFloat"],[style*="beamFall"],[style*="moonPulse"],[style*="moonRingPulse"]').forEach(function(el){
+        el.style.animationPlayState=s;
+      });
+    });
+  </script>
+</body>
+</html>

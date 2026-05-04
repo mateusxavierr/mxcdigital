@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/icone.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icone.png" />
+  <title>Política de Privacidade — MXC Digital</title>
+  <meta name="description" content="Política de privacidade e tratamento de dados pessoais da MXC Digital, em conformidade com a LGPD." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#2f67fc', cyan: '#03f0fc', surface: '#0d1520', bg: '#111827' },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Epilogue', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'brand-glow': '0 0 30px rgba(47,103,252,0.35)',
+            'cyan-glow': '0 0 30px rgba(3,240,252,0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(28px); filter: blur(8px); }
+      100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+    }
+    @keyframes beamFall {
+      0% { transform: translateY(-100%); opacity: 0; }
+      5% { opacity: 0.7; }
+      50% { opacity: 1; }
+      95% { opacity: 0.7; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+    @keyframes shimmerSweep { 0% { transform: translateX(-150%) skewX(-15deg); } 100% { transform: translateX(350%) skewX(-15deg); } }
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(80px,-60px) scale(1.1); } 66% { transform: translate(-40px,40px) scale(0.95); } }
+    @keyframes auroraFloat2 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(-100px,50px) scale(1.05); } 66% { transform: translate(60px,-80px) scale(1.1); } }
+    @keyframes auroraFloat3 { 0%, 100% { transform: translate(0,0) scale(1); opacity: 0.2; } 50% { transform: translate(50px,30px) scale(1.15); opacity: 0.4; } }
+
+    [style*="--border-gradient"]::before {
+      content: ""; position: absolute; inset: 0; padding: 1px;
+      border-radius: var(--border-radius-before, inherit);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      background: var(--border-gradient); pointer-events: none;
+    }
+
+    .btn-shimmer::after {
+      content: ""; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-150%) skewX(-15deg); pointer-events: none; z-index: 5; border-radius: 9999px;
+    }
+    .btn-shimmer:hover::after { animation: shimmerSweep 0.75s ease forwards; }
+
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 200; pointer-events: none; opacity: 0.032;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");
+      background-size: 200px 200px;
+    }
+
+    .cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(3, 240, 252, 0.55);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  height 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  border-color 0.2s ease,
+                  background 0.2s ease,
+                  opacity 0.3s ease;
+      will-change: left, top;
+    }
+    .cursor-ring.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(3, 240, 252, 0.85);
+      background: rgba(3, 240, 252, 0.04);
+    }
+    @media (pointer: fine) {
+      *, *::before, *::after,
+      a, button, input, select, textarea,
+      [role="button"], [data-cursor-hover],
+      label, summary {
+        cursor: none !important;
+      }
+    }
+    @media (pointer: coarse) { .cursor-ring { display: none; } }
+
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: linear-gradient(90deg, #2f67fc, #03f0fc); z-index: 300; transition: width 0.08s linear; }
+
+    ::selection { background: rgba(47,103,252,0.35); color: #fff; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: rgba(47,103,252,0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(47,103,252,0.6); }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px; }
+
+    /* ══════════════════════════════════════════════════════
+       Política de Privacidade
+    ═══════════════════════════════════════ */
+
+    .privacy-main {
+      padding: 80px 24px 120px;
+      min-height: 100vh;
+    }
+
+    .privacy-container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .privacy-header {
+      margin-bottom: 56px;
+      text-align: center;
+    }
+
+    .privacy-badge {
+      display: inline-block;
+      background: rgba(3,240,252,0.08);
+      border: 1px solid rgba(3,240,252,0.25);
+      color: rgba(3,240,252,0.8);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 999px;
+      letter-spacing: 0.12em;
+      margin-bottom: 16px;
+    }
+
+    .privacy-title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      color: #fff;
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .privacy-meta {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .privacy-body {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .privacy-section {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding-bottom: 40px;
+    }
+
+    .privacy-section:last-child {
+      border-bottom: none;
+    }
+
+    .privacy-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: rgba(3,240,252,0.85);
+      margin: 0 0 16px;
+      letter-spacing: 0.01em;
+    }
+
+    .privacy-section p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.8;
+      margin: 0 0 12px;
+    }
+
+    .privacy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .privacy-section ul {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 0 0 12px;
+    }
+
+    .privacy-section li {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    .privacy-section a {
+      color: rgba(3,240,252,0.8);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .privacy-section strong {
+      color: rgba(255,255,255,0.85);
+      font-weight: 600;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/mobile-layout.css" />
+</head>
+<body class="bg-bg text-[#F0F4FF] font-body antialiased overflow-x-hidden">
+
+  <div class="grain-overlay"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-[500] flex items-center gap-3 group" aria-label="Falar no WhatsApp">
+    <span class="absolute inset-0 w-14 h-14 rounded-full bg-[#25D366]/30 animate-ping"></span>
+    <div class="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-transform duration-300 group-hover:scale-110">
+      <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <div class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="pointer-events-auto bg-surface/90 backdrop-blur-md border border-white/10 rounded-full py-2.5 px-5 flex items-center gap-6 shadow-xl shadow-black/50 [animation:fadeSlideIn_0.8s_cubic-bezier(0.2,0.8,0.2,1)_0.1s_both]">
+      <a href="index.html" class="flex items-center mr-2">
+        <img src="assets/logo.png" alt="MXC Digital" class="h-8 object-contain">
+      </a>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="index.html#servicos"  class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Serviços</a>
+        <a href="index.html#portfolio" class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Portfolio</a>
+        <a href="index.html#sobre"     class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#planos"    class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Planos</a>
+      </div>
+      <a href="contato.html#form"
+         class="btn-shimmer relative overflow-hidden text-[10px] font-display font-bold uppercase tracking-widest text-white rounded-full px-4 py-2 ml-2 transition-all duration-300"
+         style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 8px 20px -4px rgba(47,103,252,0.4); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+        <span class="relative z-10">Enviar mensagem</span>
+      </a>
+    </nav>
+  </div>
+
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <div class="absolute inset-0 dot-grid"></div>
+    <div class="absolute w-[700px] h-[700px] rounded-full bg-brand/20 blur-[130px] -top-48 -left-48" style="animation: auroraFloat1 22s ease-in-out infinite;"></div>
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-cyan/[0.12] blur-[130px] -bottom-32 -right-32" style="animation: auroraFloat2 28s ease-in-out infinite;"></div>
+    <div class="absolute w-[500px] h-[500px] rounded-full bg-brand/[0.08] blur-[100px] top-[40%] left-[50%]" style="animation: auroraFloat3 18s ease-in-out infinite;"></div>
+    <div id="mouse-glow" class="absolute inset-0" style="background: radial-gradient(700px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(47,103,252,0.06), transparent 40%);"></div>
+    <div class="absolute top-0 left-[10%] w-px h-48 bg-gradient-to-b from-transparent via-cyan/50 to-transparent" style="animation: beamFall 7s linear infinite;"></div>
+    <div class="absolute top-0 left-[58%] w-px h-44 bg-gradient-to-b from-transparent via-cyan/35 to-transparent" style="animation: beamFall 11s linear infinite; animation-delay: 1s;"></div>
+    <div class="absolute top-0 left-[88%] w-px h-52 bg-gradient-to-b from-transparent via-cyan/45 to-transparent" style="animation: beamFall 7.5s linear infinite; animation-delay: 3s;"></div>
+  </div>
+
+  <main class="privacy-main relative z-10">
+
+    <div class="privacy-container">
+
+      <div class="privacy-header">
+        <span class="privacy-badge">LEGAL</span>
+        <h1 class="privacy-title font-display">Política de Privacidade</h1>
+        <p class="privacy-meta">Última atualização: abril de 2026 · MXC Digital</p>
+      </div>
+
+      <div class="privacy-body">
+
+        <section class="privacy-section">
+          <h2>1. Quem somos</h2>
+          <p>A <strong>MXC Digital</strong> é uma agência especializada em criação e reformulação de sites, com sede no Brasil. Para fins desta política, atuamos como <strong>Controladora</strong> dos dados pessoais coletados por meio deste site, nos termos da Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).</p>
+          <p>Contato para assuntos de privacidade: <a href="mailto:contato@mxcdigital.com.br">contato@mxcdigital.com.br</a></p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>2. Quais dados coletamos</h2>
+          <p>Ao preencher o formulário de contato em nosso site, coletamos os seguintes dados pessoais:</p>
+          <ul>
+            <li><strong>Nome completo</strong></li>
+            <li><strong>Endereço de e-mail</strong></li>
+            <li><strong>Número de WhatsApp</strong></li>
+            <li><strong>Tipo de serviço de interesse</strong></li>
+            <li><strong>Mensagem livre</strong> com informações sobre o projeto</li>
+          </ul>
+          <p>Não coletamos dados sensíveis (conforme art. 5º, II da LGPD), documentos de identificação, dados financeiros, nem realizamos coleta automática de dados além dos cookies descritos na seção 7.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>3. Para que usamos seus dados</h2>
+          <p>Os dados coletados são utilizados exclusivamente para:</p>
+          <ul>
+            <li>Responder à sua solicitação de contato e enviar uma proposta personalizada</li>
+            <li>Entrar em contato por e-mail ou WhatsApp para discutir seu projeto</li>
+            <li>Registrar o histórico de atendimentos para referência interna</li>
+          </ul>
+          <p>Seus dados <strong>não são utilizados</strong> para envio de publicidade não solicitada, criação de perfis comportamentais ou qualquer finalidade diferente das listadas acima.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>4. Base legal para o tratamento</h2>
+          <p>O tratamento dos seus dados pessoais é realizado com base nas seguintes hipóteses legais previstas na LGPD:</p>
+          <ul>
+            <li><strong>Consentimento (art. 7º, I)</strong>: ao marcar a caixa de aceite no formulário, você consente expressamente com o tratamento dos seus dados para as finalidades descritas nesta política.</li>
+            <li><strong>Legítimo interesse (art. 7º, IX)</strong>: para o registro e gestão dos atendimentos realizados pela MXC Digital.</li>
+          </ul>
+        </section>
+
+        <section class="privacy-section">
+          <h2>5. Como armazenamos e protegemos seus dados</h2>
+          <p>Os dados enviados pelo formulário são transmitidos via <strong>EmailJS</strong> (plataforma de envio de e-mail client-side) para o e-mail corporativo da MXC Digital (<strong>contato@mxcdigital.com.br</strong>), hospedado na Hostinger. A transmissão é realizada via protocolo seguro (HTTPS/SSL).</p>
+          <p>Não mantemos banco de dados próprio com seus dados pessoais. Os dados ficam armazenados na caixa de entrada do e-mail corporativo, protegida por senha e acesso restrito aos membros da equipe MXC Digital.</p>
+          <p>O EmailJS atua como <strong>Operadora</strong> dos dados, processando-os em nosso nome. Para mais informações sobre as práticas de privacidade do EmailJS, acesse: <a href="https://www.emailjs.com/legal/privacy-policy/" target="_blank" rel="noopener">emailjs.com/legal/privacy-policy</a>.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>6. Por quanto tempo guardamos seus dados</h2>
+          <p>Seus dados são mantidos pelo período necessário para a prestação do serviço solicitado ou pelo prazo de <strong>2 (dois) anos</strong> a contar do último contato, o que ocorrer primeiro. Após esse prazo, os dados são excluídos de forma segura, salvo obrigação legal de retenção.</p>
+          <p>Você pode solicitar a exclusão antecipada dos seus dados a qualquer momento, conforme descrito na seção 8.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>7. Cookies e tecnologias de rastreamento</h2>
+          <p>Nosso site pode utilizar cookies para as seguintes finalidades:</p>
+          <ul>
+            <li><strong>Cookies funcionais</strong>: necessários para o funcionamento básico do site (ex: preferências de sessão)</li>
+            <li><strong>Cookies analíticos</strong>: utilizamos o Google Analytics para compreender como os visitantes interagem com o site. Os dados são anonimizados e não permitem identificação pessoal</li>
+          </ul>
+          <p>Você pode desativar os cookies nas configurações do seu navegador. A desativação de cookies analíticos não afeta o funcionamento do site.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>8. Seus direitos como titular</h2>
+          <p>Nos termos da LGPD (art. 18), você tem os seguintes direitos em relação aos seus dados pessoais:</p>
+          <ul>
+            <li><strong>Confirmação e acesso</strong>: saber se tratamos seus dados e obter uma cópia</li>
+            <li><strong>Correção</strong>: solicitar a atualização de dados incompletos, inexatos ou desatualizados</li>
+            <li><strong>Anonimização, bloqueio ou eliminação</strong>: de dados desnecessários ou tratados em desconformidade com a LGPD</li>
+            <li><strong>Portabilidade</strong>: receber seus dados em formato estruturado</li>
+            <li><strong>Eliminação</strong>: solicitar a exclusão dos dados tratados com base em consentimento</li>
+            <li><strong>Revogação do consentimento</strong>: retirar seu consentimento a qualquer momento, sem prejuízo do tratamento realizado anteriormente</li>
+            <li><strong>Oposição</strong>: opor-se ao tratamento realizado com base em legítimo interesse</li>
+          </ul>
+          <p>Para exercer qualquer um desses direitos, entre em contato pelo e-mail <a href="mailto:contato@mxcdigital.com.br">contato@mxcdigital.com.br</a>. Responderemos em até <strong>15 dias úteis</strong>.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>9. Compartilhamento com terceiros</h2>
+          <p>Seus dados <strong>não são vendidos, alugados ou compartilhados</strong> com terceiros para fins comerciais. O único terceiro que processa seus dados é o EmailJS, na qualidade de Operadora, conforme descrito na seção 5.</p>
+          <p>Podemos compartilhar seus dados com autoridades competentes quando exigido por lei ou ordem judicial.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>10. Alterações nesta política</h2>
+          <p>Esta política pode ser atualizada periodicamente para refletir mudanças em nossas práticas ou na legislação aplicável. A data da última atualização está indicada no início deste documento. Recomendamos que você consulte esta página periodicamente.</p>
+        </section>
+
+        <section class="privacy-section">
+          <h2>11. Contato e Encarregado de Dados (DPO)</h2>
+          <p>Para qualquer dúvida, solicitação ou reclamação relacionada ao tratamento dos seus dados pessoais, entre em contato:</p>
+          <ul>
+            <li><strong>E-mail:</strong> <a href="mailto:contato@mxcdigital.com.br">contato@mxcdigital.com.br</a></li>
+            <li><strong>WhatsApp:</strong> (81) 99116-7922</li>
+          </ul>
+          <p>Você também pode apresentar reclamação à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong> pelo site <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>.</p>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="relative z-10 px-6 md:px-10 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="assets/logo.png" alt="MXC Digital" class="h-12 object-contain">
+          </div>
+          <p class="text-white/35 font-body text-sm leading-relaxed max-w-xs">
+            Sites que vendem, impressionam e representam. Entrega em 14 dias. Sem template, sem terceirização.
+          </p>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Navegação</p>
+          <div class="space-y-3">
+            <a href="criacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Criação de Sites</a>
+            <a href="reformulacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Reformulação</a>
+            <a href="portfolio.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Portfólio</a>
+            <a href="index.html#planos" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Planos de Manutenção</a>
+            <a href="contato.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Contato</a>
+            <a href="/politica-de-privacidade.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Política de Privacidade</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Contato</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="mailto:contato@mxcdigital.com.br" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i> contato@mxcdigital.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/20 font-body text-xs">© 2026 MXC Digital. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          <span class="text-white/20 font-body text-xs">Disponível para novos projetos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+    (function() {
+      const ring = document.getElementById('cursor-ring');
+      if (!ring) return;
+      document.addEventListener('mousemove', e => {
+        ring.style.left = e.clientX + 'px';
+        ring.style.top  = e.clientY + 'px';
+      });
+      document.addEventListener('mouseleave', () => { ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { ring.style.opacity = '1'; });
+      const hoverTargets = 'a, button, [data-cursor-hover], input, textarea, select, label';
+      document.querySelectorAll(hoverTargets).forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+      });
+    })();
+
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight || 1) * 100;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = pct + '%';
+    });
+
+    document.addEventListener('mousemove', e => {
+      document.documentElement.style.setProperty('--mouse-x', (e.clientX / window.innerWidth * 100).toFixed(1) + '%');
+      document.documentElement.style.setProperty('--mouse-y', (e.clientY / window.innerHeight * 100).toFixed(1) + '%');
+    });
+  </script>
+</body>
+</html>

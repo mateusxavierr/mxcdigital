@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- SEO -->
+  <title>Página não encontrada | MXC Digital</title>
+  <meta name="description" content="Essa página não existe, mas o restante do site da MXC Digital tem tudo que você precisa sobre criação e remodelagem de sites profissionais." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://mxcdigital.com.br/404.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MXC Digital" />
+  <meta property="og:url" content="https://mxcdigital.com.br/404.html" />
+  <meta property="og:title" content="Página não encontrada | MXC Digital" />
+  <meta property="og:description" content="Essa página não existe, mas temos muito mais para mostrar. Conheça os projetos e serviços da MXC Digital." />
+  <meta property="og:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Página não encontrada | MXC Digital" />
+  <meta name="twitter:description" content="Essa página não existe, mas temos muito mais para mostrar." />
+  <meta name="twitter:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Mesmas fontes do resto do site -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ══ Reset e base ════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cyan: #03f0fc;
+      --cyan-dim: rgba(3,240,252,0.55);
+      --bg: #06080f;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      color: #fff;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow: hidden;
+    }
+
+    /* ══ Canvas de estrelas ══════════════════════════════ */
+    #stars-canvas {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ══ Navbar mínima ════════════════════════════════════ */
+    .nav-404 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    .nav-404-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-404-logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+
+    .nav-404-logo span {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-404-logo span em {
+      color: var(--cyan);
+      font-style: normal;
+    }
+
+    .nav-404-back {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 6px 16px;
+      border-radius: 999px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .nav-404-back:hover {
+      color: var(--cyan);
+      border-color: rgba(3,240,252,0.35);
+    }
+
+    /* ══ Layout principal ════════════════════════════════ */
+    .page-404 {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 24px;
+      gap: 0;
+    }
+
+    /* ══ Composição 4[Netuno]4 ════════════════════════════ */
+    .num-404 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    /* Dígito "4" — outline estilizado */
+    .digit-4 {
+      font-size: clamp(120px, 18vw, 200px);
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: -0.06em;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(3,240,252,0.3);
+      user-select: none;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Container do Netuno — substitui o "0" */
+    .neptune-404-wrapper {
+      position: relative;
+      z-index: 3;
+      flex-shrink: 0;
+    }
+
+    /* A aura ao redor do Netuno */
+    .neptune-404-aura {
+      position: absolute;
+      inset: -12%;
+      border-radius: 50%;
+      border: 1px solid rgba(3,240,252,0.2);
+      box-shadow:
+        0 0 0 1px rgba(3,240,252,0.06),
+        0 0 40px rgba(3,240,252,0.1),
+        inset 0 0 30px rgba(3,240,252,0.04);
+      pointer-events: none;
+      animation: aura404Pulse 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes aura404Pulse {
+      from { box-shadow: 0 0 0 1px rgba(3,240,252,0.06), 0 0 30px rgba(3,240,252,0.08), inset 0 0 20px rgba(3,240,252,0.03); }
+      to   { box-shadow: 0 0 0 1px rgba(3,240,252,0.12), 0 0 60px rgba(3,240,252,0.18), inset 0 0 40px rgba(3,240,252,0.06); }
+    }
+
+    /* Apex da aura */
+    .neptune-404-apex {
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, transparent, rgba(3,240,252,0.8), transparent);
+      box-shadow: 0 0 10px rgba(3,240,252,0.6);
+      pointer-events: none;
+      animation: apex404Pulse 2.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes apex404Pulse {
+      from { opacity: 0.6; }
+      to   { opacity: 1; }
+    }
+
+    /* Canvas do Three.js */
+    #neptune-canvas-404 {
+      display: block;
+      border-radius: 50%;
+    }
+
+    /* ══ Textos ═══════════════════════════════════════════ */
+    .headline-404 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .headline-404 span {
+      background: linear-gradient(90deg, var(--cyan), #818cf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sub-404 {
+      font-size: clamp(0.85rem, 1.5vw, 1rem);
+      color: rgba(255,255,255,0.38);
+      max-width: 420px;
+      line-height: 1.7;
+      margin-bottom: 36px;
+    }
+
+    /* ══ CTAs ═════════════════════════════════════════════ */
+    .ctas-404 {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .cta-404-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(90deg, var(--cyan), #0891b2);
+      color: #000;
+      font-weight: 800;
+      font-size: 0.875rem;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: inherit;
+      box-shadow: 0 0 24px rgba(3,240,252,0.3);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .cta-404-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .cta-404-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 12px 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-family: inherit;
+      border: 1px solid rgba(255,255,255,0.12);
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .cta-404-secondary:hover {
+      color: var(--cyan);
+      border-color: rgba(3,240,252,0.35);
+    }
+
+    /* ══ Cursor ═══════════════════════════════════════════ */
+    .cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(3,240,252,0.55);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s cubic-bezier(0.34,1.56,0.64,1),
+                  height 0.2s cubic-bezier(0.34,1.56,0.64,1),
+                  border-color 0.2s ease,
+                  background 0.2s ease,
+                  opacity 0.3s ease;
+      will-change: left, top;
+    }
+    .cursor-ring.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(3,240,252,0.85);
+      background: rgba(3,240,252,0.04);
+    }
+    @media (pointer: fine) {
+      *, *::before, *::after, a, button { cursor: none !important; }
+    }
+    @media (pointer: coarse) { .cursor-ring { display: none; } }
+
+    /* ══ Responsivo ═══════════════════════════════════════ */
+    @media (max-width: 600px) {
+      .nav-404 { padding: 16px 20px; }
+      .digit-4 { -webkit-text-stroke-width: 1.5px; }
+    }
+  </style>
+  <link rel="stylesheet" href="assets/mobile-layout.css" />
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Canvas de estrelas -->
+  <canvas id="stars-canvas"></canvas>
+
+  <!-- Navbar -->
+  <nav class="nav-404">
+    <a href="index.html" class="nav-404-logo">
+      <img src="assets/logo.png" alt="MXC Digital — início" width="32" height="32" />
+    </a>
+    <a href="index.html" class="nav-404-back">← Voltar ao início</a>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="page-404">
+
+    <!-- 4 [Netuno] 4 -->
+    <div class="num-404">
+      <span class="digit-4">4</span>
+
+      <div class="neptune-404-wrapper" id="neptune-wrapper-404">
+        <div class="neptune-404-aura"></div>
+        <div class="neptune-404-apex"></div>
+        <canvas id="neptune-canvas-404"></canvas>
+      </div>
+
+      <span class="digit-4">4</span>
+    </div>
+
+    <!-- Textos -->
+    <h1 class="headline-404">
+      Você foi parar em <span>Netuno.</span>
+    </h1>
+
+    <p class="sub-404">
+      Essa página não existe. Só gás, gelo e ventos de 2.100 km/h por aqui.<br />
+      O que você procura está de volta à Terra.
+    </p>
+
+    <!-- CTAs -->
+    <div class="ctas-404">
+      <a href="index.html" class="cta-404-primary">← Voltar para o início</a>
+      <a href="criacao-de-sites.html" class="cta-404-secondary">Ver nossos serviços</a>
+    </div>
+
+  </main>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js"
+      }
+    }
+  </script>
+
+  <script type="module">
+    import * as THREE from 'three';
+    import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/loaders/GLTFLoader.js';
+
+    const wrapper = document.getElementById('neptune-wrapper-404');
+    const canvas  = document.getElementById('neptune-canvas-404');
+
+    if (!wrapper || !canvas) {
+      throw new Error('[404 Neptune] elementos ausentes.');
+    }
+
+    function getSize() {
+      const digit = document.querySelector('.digit-4');
+      const h = digit ? digit.offsetHeight : 160;
+      return Math.max(h, 120);
+    }
+
+    let size = getSize();
+    canvas.width  = size;
+    canvas.height = size;
+    canvas.style.width  = size + 'px';
+    canvas.style.height = size + 'px';
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(size, size);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.1;
+
+    const scene  = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    camera.position.set(0, 0, 3.2);
+
+    scene.add(new THREE.AmbientLight(0x5566aa, 1.2));
+    const sun = new THREE.DirectionalLight(0xfff3e0, 2.2);
+    sun.position.set(5, 3, 5);
+    scene.add(sun);
+    const cyan = new THREE.PointLight(0x03f0fc, 1.8, 12);
+    cyan.position.set(-3, 2, 2);
+    scene.add(cyan);
+    const rim = new THREE.DirectionalLight(0x1a3a8a, 0.8);
+    rim.position.set(-4, -2, -3);
+    scene.add(rim);
+
+    let neptuneMesh = null;
+    let baseScale   = 1;
+
+    function resizeCanvas() {
+      const s = getSize();
+      if (s !== size) {
+        size = s;
+        canvas.width  = size;
+        canvas.height = size;
+        canvas.style.width  = size + 'px';
+        canvas.style.height = size + 'px';
+        renderer.setSize(size, size);
+      }
+    }
+
+    window.addEventListener('resize', resizeCanvas, { passive: true });
+
+    if (location.protocol === 'file:') {
+      console.warn(
+        '[404 Neptune] Use um servidor local (npm run dev) para carregar o GLB; file:// bloqueia o asset.'
+      );
+    } else {
+      const loader = new GLTFLoader();
+      loader.load(
+        'assets/neptune.glb',
+        (gltf) => {
+          const group = gltf.scene;
+          const box    = new THREE.Box3().setFromObject(group);
+          const center = box.getCenter(new THREE.Vector3());
+          const bbox   = box.getSize(new THREE.Vector3());
+          const maxDim = Math.max(bbox.x, bbox.y, bbox.z, 0.0001);
+
+          group.position.sub(center);
+
+          baseScale = 2.2 / maxDim;
+          group.scale.setScalar(baseScale);
+
+          neptuneMesh = group;
+          scene.add(group);
+        },
+        undefined,
+        (err) => console.error('[404 Neptune] Erro ao carregar GLB:', err)
+      );
+    }
+
+    function animate() {
+      requestAnimationFrame(animate);
+      resizeCanvas();
+
+      if (neptuneMesh) {
+        neptuneMesh.rotation.y += 0.004;
+        neptuneMesh.rotation.x  = 0.08;
+        neptuneMesh.scale.setScalar(baseScale);
+      }
+      renderer.render(scene, camera);
+    }
+    animate();
+  </script>
+
+  <script>
+    (function () {
+      const canvas = document.getElementById('stars-canvas');
+      const ctx    = canvas.getContext('2d');
+      let stars    = [];
+
+      function resize() {
+        canvas.width  = window.innerWidth;
+        canvas.height = window.innerHeight;
+      }
+
+      function createStars(count) {
+        stars = [];
+        for (let i = 0; i < count; i++) {
+          stars.push({
+            x:       Math.random() * canvas.width,
+            y:       Math.random() * canvas.height,
+            r:       Math.random() * 1.2 + 0.2,
+            alpha:   Math.random() * 0.6 + 0.2,
+            speed:   Math.random() * 0.003 + 0.001,
+            phase:   Math.random() * Math.PI * 2,
+          });
+        }
+      }
+
+      function drawStars(t) {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        for (const s of stars) {
+          const a = s.alpha * (0.6 + 0.4 * Math.sin(t * s.speed + s.phase));
+          ctx.beginPath();
+          ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(255,255,255,' + a.toFixed(3) + ')';
+          ctx.fill();
+        }
+      }
+
+      let raf;
+      function loop(t) {
+        drawStars(t);
+        raf = requestAnimationFrame(loop);
+      }
+
+      resize();
+      createStars(280);
+      requestAnimationFrame(loop);
+
+      window.addEventListener('resize', function () {
+        resize();
+        createStars(280);
+      }, { passive: true });
+    })();
+
+    (function () {
+      const ring = document.getElementById('cursor-ring');
+      if (!ring) return;
+      document.addEventListener('mousemove', function (e) {
+        ring.style.left = e.clientX + 'px';
+        ring.style.top  = e.clientY + 'px';
+      });
+      document.addEventListener('mouseleave', function () { ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', function () { ring.style.opacity = '1'; });
+      document.querySelectorAll('a, button, [data-cursor-hover]').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { ring.classList.add('hovering'); });
+        el.addEventListener('mouseleave', function () { ring.classList.remove('hovering'); });
+      });
+    })();
+  </script>
+
+</body>
+</html>

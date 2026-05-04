@@ -1,0 +1,886 @@
+/**
+ * MXC Digital — layout mobile apenas (max-width: 767.98px).
+ * Desktop (≥768px) não é alterado.
+ */
+
+@media (max-width: 767.98px) {
+  html {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  body {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  body > section.relative.z-10 {
+    padding-left: max(1.125rem, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box;
+    overflow-x: clip;
+  }
+
+  /* ═══════════════════════════════════════════════════════════════════
+     REDUÇÃO GLOBAL DE ESPAÇAMENTOS — MOBILE ONLY
+     py-24 (96px) → 2.75rem (44px) | py-32 (128px) → 3rem (48px)
+     py-10 (40px) → 1.75rem (28px) | py-16 (64px) → 2rem (32px)
+     Margem entre elementos: mb-16/mb-12 também reduzidas.
+     Desktop (≥768px) inalterado — regras dentro deste media query.
+     ═══════════════════════════════════════════════════════════════════ */
+
+  /* Padding vertical das sections principais */
+  section.py-24,
+  section[class*="py-24"] {
+    padding-top: 2.75rem !important;
+    padding-bottom: 2.75rem !important;
+  }
+
+  section.py-32,
+  section[class*="py-32"] {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+
+  section.py-16,
+  section[class*="py-16"] {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  section.py-10,
+  section[class*="py-10"] {
+    padding-top: 1.75rem !important;
+    padding-bottom: 1.75rem !important;
+  }
+
+  /* Footer */
+  footer.py-16 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* Margens inferiores grandes em headings e blocos de intro */
+  .mb-16 { margin-bottom: 1.75rem !important; }
+  .mb-12 { margin-bottom: 1.25rem !important; }
+  .mb-10 { margin-bottom: 1rem !important; }
+
+  /* Gap em grids de cards — reduz espaço entre cards */
+  .gap-6  { gap: 0.875rem !important; }
+  .gap-8  { gap: 1rem !important; }
+  .gap-12 { gap: 1.25rem !important; }
+
+  /* Padding interno de cards grandes */
+  .p-8  { padding: 1.25rem !important; }
+  .p-10 { padding: 1.5rem !important; }
+  .px-8 { padding-left: 1.25rem !important; padding-right: 1.25rem !important; }
+  .py-8 { padding-top: 1.25rem !important;  padding-bottom: 1.25rem !important; }
+
+  /* Espaçamento antes/depois de subtítulos de seção */
+  .mb-6 { margin-bottom: 0.875rem !important; }
+  .mt-6 { margin-top: 0.875rem !important; }
+  .mb-8 { margin-bottom: 1rem !important; }
+  .mt-8 { margin-top: 1rem !important; }
+
+  /* Home / portfolio com animação Netuno: gutter fica no #hero-sticky */
+  section#hero.relative.z-10:has(#hero-sticky) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    overflow-x: clip;
+  }
+
+  /*
+   * Netuno: uma viewport só — sem o “corredor” de 200vh entre o hero e “Explore o site”.
+   * Desktop mantém height:200vh do HTML (fora deste media query).
+   */
+  section#hero.relative.z-10:has(#neptune-canvas-wrapper) {
+    height: auto !important;
+    min-height: 100vh !important;
+  }
+
+  @supports (height: 100svh) {
+    section#hero.relative.z-10:has(#neptune-canvas-wrapper) {
+      min-height: 100svh !important;
+    }
+  }
+
+  #hero-sticky {
+    padding-left: max(1.125rem, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  #hero-sticky:has(#neptune-canvas-wrapper) {
+    min-height: 100vh !important;
+    height: 100vh !important;
+  }
+
+  @supports (height: 100svh) {
+    #hero-sticky:has(#neptune-canvas-wrapper) {
+      min-height: 100svh !important;
+      height: 100svh !important;
+    }
+  }
+
+  /*
+   * Netuno + arco ciano + glow: um único grupo (geometria fixa no mobile após o 1.º layout).
+   */
+  #hero-sticky:has(#neptune-canvas-wrapper) .neptune-hero-cluster {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transform-origin: 50% 50%;
+  }
+
+  /* Canvas: isolamento de pintura; transform de escala fica no cluster */
+  #neptune-canvas-wrapper {
+    contain: strict;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+
+  #hero-content {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #hero h1 {
+    font-size: clamp(3.25rem, 14vw, 4.5rem) !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  #hero h1 .word-inner {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  #hero h1 > .overflow-hidden {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #hero .inline-flex.items-center.gap-2 {
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #hero p.max-w-xl {
+    max-width: 100% !important;
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+    box-sizing: border-box;
+    font-size: 0.8rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Criação de Sites hero subtitle: text-lg is on the div wrapper, not the p */
+  #hero div.text-lg p,
+  #hero div.text-xl p {
+    font-size: 0.8rem !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Reformulação: evita corte de sílaba em "destrava" — reduz fonte e desativa hifenização */
+  body.page-reformulacao-de-sites #hero h1 {
+    font-size: clamp(2.75rem, 11.5vw, 4.5rem) !important;
+    hyphens: none !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* ── Homepage: iguala font-size ao das outras páginas (reformulação).
+   * nowrap removido — "que impressionam." pode quebrar linha em telas pequenas.
+   */
+  body.page-index #hero h1 {
+    font-size: clamp(2.75rem, 11.5vw, 4.5rem) !important;
+  }
+
+  #hero-content .flex.items-center.justify-center.gap-4 {
+    width: 100%;
+    max-width: 100%;
+    align-items: center !important;
+    justify-content: center;
+  }
+
+  #hero-content .flex.items-center.justify-center.gap-4 > a {
+    max-width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  /* Heróis sem Netuno; com Netuno a lua/anel vêm do neptune-scroll.js no mobile */
+  #hero-sticky:not(:has(#neptune-canvas-wrapper)) .hero-moon,
+  #hero-sticky:not(:has(#neptune-canvas-wrapper)) .hero-moon-ring {
+    width: min(1000px, 100vw) !important;
+    height: min(1000px, 100vw) !important;
+  }
+
+  /*
+   * Netuno: tamanho/posição da lua e do anel = canvas (neptune-scroll.js, mobile).
+   * Anel acima do WebGL para contorno e glow na borda do disco.
+   */
+  #hero-sticky:has(#neptune-canvas-wrapper) .hero-moon-ring {
+    z-index: 45 !important;
+  }
+
+  /*
+   * Criação / reformulação / portfolio — hero com meia-lua (sem Netuno): no desktop usa 130vw;
+   * no mobile aproximamos a proporção. O #hero já tem overflow-hidden.
+   */
+  body.page-criacao-de-sites .hero-moon,
+  body.page-criacao-de-sites .hero-moon-ring,
+  body.page-reformulacao-de-sites .hero-moon,
+  body.page-reformulacao-de-sites .hero-moon-ring,
+  body.page-portfolio .hero-moon,
+  body.page-portfolio .hero-moon-ring {
+    width: min(1200px, 152vw) !important;
+    height: min(1200px, 152vw) !important;
+    bottom: -36% !important;
+  }
+
+  body.page-criacao-de-sites .hero-moon-ring,
+  body.page-reformulacao-de-sites .hero-moon-ring {
+    box-shadow:
+      0 -3px 42px rgba(3, 240, 252, 0.72),
+      0 -1px 100px rgba(47, 103, 252, 0.42),
+      0 -1px 200px rgba(47, 103, 252, 0.24) !important;
+    outline-color: rgba(3, 240, 252, 0.38) !important;
+  }
+
+  #hero + section .max-w-5xl .grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.3rem !important;
+  }
+
+  .max-w-5xl.mx-auto,
+  .max-w-6xl.mx-auto,
+  .max-w-4xl.mx-auto,
+  .max-w-2xl.mx-auto {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .max-w-4xl.mx-auto.text-center.relative {
+    overflow-x: clip;
+  }
+
+  .nav-explore-card {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .plans-grid.max-w-4xl {
+    overflow-x: clip;
+  }
+
+  section.relative.z-10 h2.font-display {
+    font-size: clamp(2.375rem, 9.5vw, 3.25rem) !important;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    box-sizing: border-box;
+  }
+
+  body > footer.relative.z-10 {
+    padding-left: max(1.125rem, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box;
+    overflow-x: clip;
+  }
+
+  main.privacy-main.relative.z-10 {
+    padding-left: max(1.125rem, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box;
+    overflow-x: clip;
+  }
+
+  main.privacy-main .privacy-container {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Design system — wrapper principal (filho direto de body) */
+  body > div.max-w-\[1400px\].mx-auto.border-x.border-white\/5.relative.z-10 {
+    padding-left: max(1.125rem, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box;
+    max-width: 100% !important;
+    overflow-x: clip;
+  }
+
+  #hero h1.text-\[72px\] {
+    font-size: clamp(2.5rem, 11vw, 3.5rem) !important;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  /* Página 404 (layout próprio) */
+  .nav-404 {
+    padding-left: max(1.125rem, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box;
+  }
+
+  .page-404 {
+    padding-left: max(1.125rem, env(safe-area-inset-left, 0px)) !important;
+    padding-right: max(0.875rem, env(safe-area-inset-right, 0px)) !important;
+    box-sizing: border-box;
+    max-width: 100vw;
+    overflow-x: clip;
+  }
+
+  .digit-4 {
+    font-size: clamp(64px, 14vw, 160px) !important;
+  }
+
+  .headline-404 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+    padding-left: 0.125rem;
+    padding-right: 0.125rem;
+  }
+
+  .sub-404 {
+    max-width: 100% !important;
+  }
+
+  .ctas-404 {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     Páginas de projeto de portfólio (body.page-projeto)
+     Apenas mobile — desktop não é alterado.
+     ═══════════════════════════════════════════════════════════ */
+
+  /* Espaçamentos entre seções: py-28 (112px) e py-20 (80px) são grandes
+     demais no mobile. Reduzidos para valores naturais sem sumir o respiro. */
+  body.page-projeto section.py-28 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  body.page-projeto section.py-20 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* 1. Hero: alinha conteúdo ao topo, logo abaixo do pill nav */
+  body.page-projeto section#hero {
+    justify-content: flex-start !important;
+    padding-top: 90px !important;
+    padding-bottom: 2.5rem !important;
+    min-height: 100svh !important;
+  }
+
+  /* 1b. Breadcrumb: distância extra em relação ao header no mobile */
+  body.page-projeto section#hero .max-w-6xl > div:first-child {
+    margin-top: 18px !important;
+  }
+
+  /* 2. Título do projeto: tamanho mais legível no mobile */
+  body.page-projeto section#hero h1 {
+    font-size: clamp(2.4rem, 10vw, 3.25rem) !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* 3. Imagem hero (boi / personagem): centralizada, ampliada e com mais destaque */
+  body.page-projeto section#hero .pointer-events-none.absolute {
+    top: 308px !important;
+    bottom: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    width: 100% !important;
+    min-width: unset !important;
+    max-width: 100% !important;
+    height: 315px !important;
+    transform: translateX(-50%);
+    align-items: flex-end !important;
+    justify-content: center !important;
+  }
+
+  /* Ajuste fino por página: cada h1 tem altura diferente,
+     top = h1_bottom_with_margin + (363 - 315) / 2  */
+  body.page-cruzeiro section#hero .pointer-events-none.absolute { top: 308px !important; }
+  body.page-mrboxes  section#hero .pointer-events-none.absolute { top: 308px !important; }
+  body.page-wallach  section#hero .pointer-events-none.absolute { top: 292px !important; }
+
+  body.page-projeto section#hero .pointer-events-none.absolute img {
+    opacity: 0.9 !important;
+    height: 100% !important;
+    width: auto !important;
+    max-height: 100% !important;
+    max-width: 82% !important;
+    object-position: center bottom !important;
+  }
+
+  /* 4. Texto de resumo: empurrado abaixo da imagem */
+  body.page-projeto section#hero .max-w-6xl > p {
+    margin-top: 363px !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Seção 03 O Resultado — mobile: imagem estática em destaque ─── */
+
+  body.page-projeto .resultado-wrapper {
+    height: auto !important;
+  }
+  body.page-projeto .resultado-sticky {
+    position: static !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  body.page-projeto .resultado-header {
+    padding: 24px 20px 10px !important;
+  }
+  /* Padding lateral e topo: dá respiro entre o título e a imagem,
+     e afasta a imagem das bordas do celular.
+     !important sobrepõe o inline style do JS. */
+  body.page-projeto .resultado-frame-area {
+    padding: 14px 12px 16px !important;
+    flex: none !important;
+  }
+  body.page-projeto .resultado-browser {
+    height: auto !important;
+    border-radius: 10px !important;
+  }
+
+  /* Espaço antes da seção 4 (Decisões de Design) */
+  body.page-projeto .resultado-wrapper + section {
+    padding-top: 2rem !important;
+  }
+
+  /* ── Próximo Projeto — imagem de fundo no mobile ────────────── */
+
+  /* Aspect ratio mais alto para dar destaque real à imagem */
+  body.page-projeto .next-proj-inner {
+    aspect-ratio: 4 / 3 !important;
+  }
+  /* Imagem de preview: visível com boa opacidade */
+  body.page-projeto .next-proj-photo {
+    opacity: 0.72;
+  }
+  /* Overlay gradiente: mais escuro à esquerda (legibilidade do texto)
+     e mais transparente à direita (deixa a foto respirar) */
+  body.page-projeto .next-proj-overlay {
+    background: linear-gradient(
+      115deg,
+      rgba(13, 21, 32, 0.88) 0%,
+      rgba(13, 21, 32, 0.60) 50%,
+      rgba(13, 21, 32, 0.20) 100%
+    ) !important;
+    transition: none !important;
+  }
+  /* Esconde as formas abstratas decorativas (ficam estranhas sobre foto) */
+  body.page-projeto .next-proj-inner > div[class*="top-1/2"] {
+    display: none !important;
+  }
+  /* Esconde a textura de pontos (dot-grid) sobre a foto */
+  body.page-projeto .next-proj-inner > .dot-grid {
+    display: none !important;
+  }
+
+  /* QDelícia card: mais nitidez + posição no topo para ver o hero */
+  body.page-projeto .next-proj-photo-qdelicia {
+    opacity: 0.92 !important;
+    object-position: left top !important;
+  }
+
+  body.page-projeto .next-proj-overlay-qdelicia {
+    background: linear-gradient(
+      115deg,
+      rgba(13, 21, 32, 0.72) 0%,
+      rgba(13, 21, 32, 0.42) 50%,
+      rgba(13, 21, 32, 0.10) 100%
+    ) !important;
+  }
+
+  /* ── Antes/Depois — imagem completa sem corte lateral ─────────── */
+  body.page-projeto .antes-depois-screen {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  body.page-projeto .antes-depois-screen img {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+  }
+
+  /* ── Seção 05 Galeria — visível no mobile com scroll horizontal ── */
+  body.page-projeto section:has(.gallery-outer) {
+    display: block !important;
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
+  body.page-projeto .gallery-outer {
+    padding-left: 1.25rem;
+  }
+  body.page-projeto .gallery-scroll {
+    gap: 0.75rem !important;
+  }
+  body.page-projeto .gallery-item {
+    width: min(280px, 78vw) !important;
+  }
+  body.page-projeto .gallery-item .browser-screen {
+    height: 170px !important;
+  }
+  body.page-projeto .gallery-item .browser-screen img {
+    height: 170px !important;
+  }
+
+  /* ── Galeria: sombra do browser-frame suavizada no mobile.
+   * O overflow-x:clip do body corta sombras laterais grandes (32px blur),
+   * criando um corte brusco visível. Reduzido para um drop suave e contido.
+   */
+  body.page-projeto .gallery-item .browser-frame {
+    box-shadow:
+      0 4px 14px rgba(0, 0, 0, 0.38),
+      0 0 0 1px rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* ── QDelícia: h1 tem 1 linha (~34px) vs 2 linhas dos demais (~84px).
+   * top recalculado: h1_bottom_margin + (363 - 315) / 2 = ~258px.
+   */
+  body.page-qdelicia section#hero .pointer-events-none.absolute {
+    top: 258px !important;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     Homepage — "Explore o site": 4 cartões em linha única
+     O grid é controlado pela regra #hero + section .max-w-5xl .grid
+     (acima). Aqui só ajustamos tamanho e tipografia dos cartões.
+     ═══════════════════════════════════════════════════════════ */
+
+  .nav-explore-card {
+    height: 100px !important;
+    padding: 0.45rem 0.2rem !important;
+    border-radius: 0.75rem !important;
+  }
+
+  .nav-explore-inner {
+    gap: 0.2rem !important;
+  }
+
+  .nav-explore-icon svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+
+  .nav-explore-name {
+    font-size: 0.58rem !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Hover-reveal: inútil em touch — oculta para não consumir espaço */
+  .nav-explore-reveal {
+    display: none !important;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     HOVER → CONGELADO NO MOBILE (sem mouse, animações sem sentido)
+     Cada bloco corresponde a um componente de card do site.
+     ═══════════════════════════════════════════════════════════ */
+
+  /* ── Nav Explore: congela inner no estado inicial ─────────── */
+  .nav-explore-card:hover .nav-explore-inner,
+  .nav-explore-card:focus .nav-explore-inner,
+  .nav-explore-card:active .nav-explore-inner {
+    transform: translateY(0.2rem) !important;
+    transition: none !important;
+  }
+
+  /* ── Portfolio cards (homepage + portfolio.html + reformulacao.html) ──
+   * Sempre coloridos, overlay e título sempre visíveis.
+   */
+  .portfolio-thumb img,
+  #cruzeiro-thumb::before,
+  #qdelicia-thumb::before {
+    filter: grayscale(0%) !important;
+    transition: none !important;
+  }
+  .portfolio-card-overlay {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+  .portfolio-card-arrow {
+    opacity: 1 !important;
+    transition: none !important;
+  }
+  .portfolio-card-info {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: none !important;
+  }
+
+  /* ── Cards de serviço principal (homepage) — congela expansão ── */
+  .card-servico-principal:hover {
+    max-height: 360px !important;
+  }
+  .card-servico-principal:hover .card-servico-extra {
+    opacity: 0 !important;
+    transform: translateY(12px) !important;
+  }
+
+  /* ── "O que muda" + tilt glow (reformulacao-de-sites) ────────── */
+  #o-que-muda .card-que-muda:hover {
+    border-color: rgba(255, 255, 255, 0.09) !important;
+    box-shadow: none !important;
+  }
+  #o-que-muda [data-tilt]:hover::after {
+    opacity: 0 !important;
+  }
+
+  /* ── "O que está incluso" (criacao-de-sites) — congela borda/glow ── */
+  #incluso .card-incluso:hover {
+    border-color: rgba(255, 255, 255, 0.09) !important;
+    box-shadow: none !important;
+  }
+  #incluso [data-tilt]:hover::after {
+    opacity: 0 !important;
+  }
+
+  /* ── Stats cards (homepage) — esconde overlay de info ao tocar ── */
+  .stat-overlay {
+    display: none !important;
+  }
+
+  /* ── Card "30 dias": separa número do sufixo para manter 1 linha ── */
+  .stat-dias {
+    font-size: 0.65rem !important;
+    line-height: 1.3 !important;
+    display: block !important;
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.35) !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+    margin-top: 0.25rem;
+  }
+
+  /* ── Plano Profissional — glow contido no mobile (overflow-x:hidden corta spreads largos) ── */
+  .plan-card--final-glow {
+    box-shadow:
+      0 0 0 1px rgba(3, 240, 252, 0.28),
+      0 0 12px rgba(3, 240, 252, 0.18),
+      0 6px 24px rgba(3, 240, 252, 0.08),
+      0 10px 36px rgba(0, 0, 0, 0.32) !important;
+  }
+
+  /* ── "O problema" cards (homepage) — congela borda/glow/tilt ─── */
+  .card-problema:hover {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    box-shadow: none !important;
+  }
+  .card-problema[data-tilt]:hover::after {
+    opacity: 0 !important;
+  }
+
+  /* ── "Serviços" cards (homepage) — congela borda/overlay/seta/tilt/ping ── */
+  /* Cards principais: Criação do Zero + Reformulação */
+  .card-servico-principal:hover {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+  }
+  .card-servico-principal.group:hover .group-hover\:opacity-100 {
+    opacity: 0 !important;
+  }
+  .card-servico-principal.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0) !important;
+  }
+  /* Cards secundários (data-tilt): SEO+Copy e Manutenção 24h */
+  #servicos [data-tilt]:hover {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    box-shadow: none !important;
+  }
+  #servicos [data-tilt]:hover::after {
+    opacity: 0 !important;
+  }
+  /* Remove o ping pulsante no ícone de escudo */
+  #servicos .animate-ping {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+
+  /* ── "Diagnóstico" (#sinais-reforma) — congela borda do item ─── */
+  #sinais-reforma .sinal-diag-item:hover {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+  }
+
+  /* ── "Sinais de reforma" — congela número hover ────────────── */
+  #sinais-reforma .sinal-diag-item:hover .sinal-diag-num {
+    color: rgba(255, 255, 255, 0.3) !important;
+    text-shadow: none !important;
+  }
+
+  /* ── Processo cards (criacao-de-sites) — congela borda/cor ──── */
+  .proc-card:hover {
+    border-color: rgba(255, 255, 255, 0.09) !important;
+  }
+  .proc-card:hover .proc-heading {
+    color: rgba(255, 255, 255, 0.55) !important;
+  }
+
+  /* ── "Decisões de design" / card-case (páginas de portfolio) — congela borda/glow ── */
+  .card-case:hover {
+    border-color: rgba(255, 255, 255, 0.07) !important;
+    box-shadow: none !important;
+  }
+  .card-case:hover::after {
+    opacity: 0 !important;
+  }
+
+  /* ── Galeria de screenshots (portfolio) — congela sombra ao hover ── */
+  .gallery-item.gallery-item-zoomable:hover .browser-frame {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06) !important;
+  }
+
+  /* ── "Para quem" (criacao-de-sites): MANTÉM animação de tags ───
+   * A transição vermelho→azul ao toque é preservada (funciona em touch
+   * via :hover por tap). Apenas adiciona indicador visual de que o card
+   * é interativo antes do primeiro toque.
+   */
+  .pq-card {
+    border: 1px solid rgba(3, 240, 252, 0.22) !important;
+    cursor: pointer !important;
+  }
+  .pq-card::after {
+    content: "↻ toque para ver a solução";
+    display: block;
+    margin-top: 0.75rem;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgba(3, 240, 252, 0.45);
+    pointer-events: none;
+  }
+  .pq-card:hover::after {
+    display: none;
+  }
+
+  /* ═══════════════════════════════════════════════════════════
+     Subtítulos de seção — padronizados no tamanho do hero
+     (0.9rem ≈ 14.4px, mesmo do p.max-w-xl do hero da homepage).
+     Títulos ficam proporcionalmente maiores e o olho sabe para
+     onde olhar primeiro.
+     ═══════════════════════════════════════════════════════════ */
+
+  section p.text-lg,
+  section p.text-xl {
+    font-size: 0.9rem !important;
+    line-height: 1.65 !important;
+  }
+
+  /* ── Mr. Boxes comparador: sem margens brancas vertical ────────────
+   * O container tinha height:360px (inline), img height:auto → sobrava
+   * espaço vazio. Forçar height:auto no container resolve.
+   */
+  body.page-mrboxes .comparador-screen {
+    height: auto !important;
+    display: block !important;
+    overflow: visible !important;
+  }
+
+  body.page-mrboxes .comparador-screen img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: fill !important;
+  }
+
+  /* ── CTA final ("Próximo Passo" / "Começar agora") — glow sem corte lateral ──
+   *
+   * PROBLEMA RAIZ: filter:blur(55px) extravasa o elemento por ~165px de cada
+   * lado. Qualquer ancestor com overflow:clip (html, body, section) corta esse
+   * extravasamento criando uma "parede" vertical visível — impossível de evitar
+   * mantendo blur.
+   *
+   * SOLUÇÃO DEFINITIVA: substituir o blur por radial-gradient auto-contido.
+   * O gradiente desvanece para transparent dentro do próprio elemento → zero
+   * overflow → zero corte. Sem dependência de overflow:visible em nenhum ancestor.
+   *
+   * Largura: 100vw (ocupa todo o ecrã de borda a borda).
+   * Posicionamento: left:50% + translateX(-50%) centra no viewport.
+   * Cor: brand (#2f67fc) ou cyan (#03f0fc) conforme a página, via body class.
+   * Alvo: .h-[300px] + .rounded-full distingue do aurora-bg (h-[600px]).
+   * ─────────────────────────────────────────────────────────────────────── */
+
+  /* ── CTA final: remove glow orb totalmente no mobile ──────────────────
+   * O orbe (w-[600px] h-[300px] blur-[55px]) causava cortes nas bordas
+   * laterais devido ao overflow:clip dos ancestors. Solução definitiva:
+   * ocultar o elemento — sem glow, sem render, sem artefactos.
+   * Aplica-se a index, criacao-de-sites e reformulacao-de-sites.
+   * ─────────────────────────────────────────────────────────────────── */
+  body.page-index .w-\[600px\].h-\[300px\].rounded-full.pointer-events-none,
+  body.page-criacao-de-sites .w-\[600px\].h-\[300px\].rounded-full.pointer-events-none,
+  body.page-reformulacao-de-sites .w-\[600px\].h-\[300px\].rounded-full.pointer-events-none,
+  body.page-portfolio .w-\[600px\].h-\[300px\].rounded-full.pointer-events-none {
+    display: none !important;
+  }
+
+  /* ── Portfolio: reduz espaço hero → primeira secção (pt-40 = 160px → 2.5rem) ── */
+  body.page-portfolio #trabalhos-portfolio {
+    padding-top: 2.5rem !important;
+  }
+
+  /* ── Criação de Sites: proc-card--final (Lançamento) — suaviza glow no mobile ──
+   * O box-shadow original tem spreads de 64px e 100px que criam uma "borda"
+   * luminosa visível contra a secção seguinte. Reduz spreads para 8/16px máx.
+   * O ::before radial-gradient também é esmaecido. Linha divisória desaparece.
+   * ─────────────────────────────────────────────────────────────────────────── */
+  body.page-criacao-de-sites .proc-card--final {
+    box-shadow:
+      0 0 0 1px rgba(3, 240, 252, 0.28),
+      0 0 14px rgba(3, 240, 252, 0.18),
+      0 0 28px rgba(3, 240, 252, 0.10),
+      0 6px 24px rgba(0, 0, 0, 0.32) !important;
+  }
+
+  body.page-criacao-de-sites .proc-card--final::before {
+    opacity: 0.5 !important;
+  }
+
+  /* ── Portfolio: reduz gaps entre header e grid de cards ─────────────
+   * #trabalhos-portfolio tem pb-16 (64px) + secção grid tem py-12 (48px)
+   * = 112px de vazio entre o título e os filtros/cards. Compacta no mobile.
+   * ─────────────────────────────────────────────────────────────────── */
+  body.page-portfolio #trabalhos-portfolio {
+    padding-bottom: 0.75rem !important;
+  }
+
+  body.page-portfolio section.py-12 {
+    padding-top: 1.25rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+
+}

@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- SEO -->
+  <title>Reformule Seu Site e Converta Mais | MXC Digital</title>
+  <meta name="description" content="Seu site parece genérico ou não gera resultados? Remodelamos com estratégia, design e foco em conversão para atrair mais clientes e posicionar sua marca." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mxcdigital.com.br/reformulacao-de-sites.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="MXC Digital" />
+  <meta property="og:url" content="https://mxcdigital.com.br/reformulacao-de-sites.html" />
+  <meta property="og:title" content="Seu site pode mais. A MXC prova isso no design" />
+  <meta property="og:description" content="Transformamos sites comuns em ativos digitais. Antes e depois que mostra resultado, sem reformas superficiais, sem templates." />
+  <meta property="og:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Seu site pode mais. A MXC prova isso no design" />
+  <meta name="twitter:description" content="Transformamos sites comuns em ativos digitais. Antes e depois que mostra resultado." />
+  <meta name="twitter:image" content="https://mxcdigital.com.br/assets/og/og-default.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/icone.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icone.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#2f67fc', cyan: '#03f0fc', surface: '#0d1520', bg: '#111827' },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Epilogue', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'brand-glow': '0 0 30px rgba(47,103,252,0.35)',
+            'cyan-glow': '0 0 30px rgba(3,240,252,0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeSlideIn { 0% { opacity: 0; transform: translateY(28px); filter: blur(8px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); } }
+    @keyframes beamFall { 0% { transform: translateY(-100%); opacity: 0; } 5% { opacity: 0.7; } 50% { opacity: 1; } 95% { opacity: 0.7; } 100% { transform: translateY(110vh); opacity: 0; } }
+    @keyframes shimmerSweep { 0% { transform: translateX(-150%) skewX(-15deg); } 100% { transform: translateX(350%) skewX(-15deg); } }
+    @keyframes wordUp { 0% { transform: translateY(110%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(80px,-60px) scale(1.1); } 66% { transform: translate(-40px,40px) scale(0.95); } }
+    @keyframes auroraFloat2 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(-100px,50px) scale(1.05); } 66% { transform: translate(60px,-80px) scale(1.1); } }
+    @keyframes auroraFloat3 { 0%, 100% { transform: translate(0,0) scale(1); opacity: 0.2; } 50% { transform: translate(50px,30px) scale(1.15); opacity: 0.4; } }
+    @keyframes horizonSweep { 0% { transform: scaleX(0); transform-origin: left; opacity: 0; } 30% { transform: scaleX(1); transform-origin: left; opacity: 1; } 70% { transform: scaleX(1); transform-origin: right; opacity: 1; } 100% { transform: scaleX(0); transform-origin: right; opacity: 0; } }
+    @keyframes arrowFlow { 0% { transform: translateX(-8px); opacity: 0; } 30%, 70% { opacity: 1; } 100% { transform: translateX(8px); opacity: 0; } }
+
+    /* ── Keyframes de entrada — scroll reveal ───────────── */
+    @keyframes splitFromLeft {
+      from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-18px); }
+      to   { opacity: 1; clip-path: inset(0 0% 0 0);   transform: translateX(0); }
+    }
+    @keyframes splitFromRight {
+      from { opacity: 0; clip-path: inset(0 0 0 100%);  transform: translateX(18px); }
+      to   { opacity: 1; clip-path: inset(0 0 0 0%);    transform: translateX(0); }
+    }
+    @keyframes scaleSnap {
+      from { opacity: 0; transform: scale(0.88); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes elegantRise {
+      from { opacity: 0; transform: translateY(22px); filter: blur(6px); }
+      to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+    }
+    @keyframes diagWipe {
+      from { opacity: 0; clip-path: inset(0 100% 100% 0); }
+      to   { opacity: 1; clip-path: inset(0 0% 0% 0); }
+    }
+    @keyframes blurSnap {
+      from { opacity: 0; filter: blur(12px); transform: scale(1.04); }
+      to   { opacity: 1; filter: blur(0);    transform: scale(1); }
+    }
+    @keyframes spinReveal3D {
+      from { opacity: 0; transform: perspective(600px) rotateY(-55deg) translateX(-30px); }
+      to   { opacity: 1; transform: perspective(600px) rotateY(0deg)   translateX(0); }
+    }
+    @keyframes caretBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ═══ MEIA LUA — Hero (igual index; sem Netuno) ═══ */
+    @keyframes moonPulse {
+      0%, 100% { box-shadow:
+        0 0 80px  rgba(47, 103, 252, 0.20),
+        0 0 160px rgba(47, 103, 252, 0.10),
+        0 0 40px  rgba(3,  240, 252, 0.08),
+        inset 0 0 120px rgba(47, 103, 252, 0.06); }
+      50% { box-shadow:
+        0 0 120px rgba(47, 103, 252, 0.30),
+        0 0 240px rgba(47, 103, 252, 0.15),
+        0 0 80px  rgba(3,  240, 252, 0.15),
+        inset 0 0 160px rgba(47, 103, 252, 0.10); }
+    }
+    .hero-moon {
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1000px, 130vw);
+      height: min(1000px, 130vw);
+      border-radius: 50%;
+      border: 1px solid rgba(47, 103, 252, 0.18);
+      box-shadow:
+        0 0 80px  rgba(47, 103, 252, 0.20),
+        0 0 160px rgba(47, 103, 252, 0.10),
+        0 0 40px  rgba(3,  240, 252, 0.08),
+        inset 0 0 120px rgba(47, 103, 252, 0.06);
+      background: radial-gradient(
+        ellipse at 50% 0%,
+        rgba(47, 103, 252, 0.12) 0%,
+        rgba(3,  240, 252, 0.06) 30%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+      animation: moonPulse 8s ease-in-out infinite;
+    }
+    .hero-moon-ring {
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1000px, 130vw);
+      height: min(1000px, 130vw);
+      border-radius: 50%;
+      border: 1.5px solid transparent;
+      background: transparent;
+      box-shadow:
+        0 -2px 30px  rgba(3, 240, 252, 0.55),
+        0 -1px 80px  rgba(47, 103, 252, 0.35),
+        0 -1px 160px rgba(47, 103, 252, 0.20);
+      outline: 1px solid rgba(3, 240, 252, 0.25);
+      outline-offset: 0px;
+      pointer-events: none;
+      z-index: 2;
+      animation: moonRingPulse 6s ease-in-out infinite;
+    }
+    .hero-moon-apex {
+      display: none;
+      position: absolute;
+      bottom: calc(min(500px, 65vw) - 45% - 4px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 12px;
+      background: radial-gradient(ellipse at center,
+        rgba(3, 240, 252, 0.9) 0%,
+        rgba(47, 103, 252, 0.5) 40%,
+        transparent 100%
+      );
+      filter: blur(4px);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 3;
+      animation: moonApexPulse 6s ease-in-out infinite;
+    }
+    @keyframes moonRingPulse {
+      0%, 100% {
+        box-shadow:
+          0 -2px 30px  rgba(3, 240, 252, 0.55),
+          0 -1px 80px  rgba(47, 103, 252, 0.35),
+          0 -1px 160px rgba(47, 103, 252, 0.20);
+      }
+      50% {
+        box-shadow:
+          0 -2px 50px  rgba(3, 240, 252, 0.80),
+          0 -1px 120px rgba(47, 103, 252, 0.50),
+          0 -1px 220px rgba(47, 103, 252, 0.30);
+      }
+    }
+    @keyframes moonApexPulse {
+      0%, 100% { opacity: 0.7; transform: translateX(-50%) scaleX(1); }
+      50%       { opacity: 1.0; transform: translateX(-50%) scaleX(1.3); }
+    }
+
+    .animate-on-scroll { animation-play-state: paused !important; }
+    .animate-on-scroll.animate { animation-play-state: running !important; }
+
+    .word-inner { display: inline-block; will-change: transform; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+    .word-inner.is-visible { animation: wordUp 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+    #hero .word-inner { transform: translateY(110%); opacity: 0; }
+    /* Evita corte de descendentes (g, p, y…) nos masks do h1, sem alterar o espaçamento visual entre linhas (mb-2 = 0,5rem) */
+    #hero h1 > .overflow-hidden {
+      padding-bottom: 0.14em;
+    }
+    #hero h1 > .overflow-hidden:not(:last-child) {
+      margin-bottom: calc(0.5rem - 0.14em);
+    }
+    #hero h1 > .overflow-hidden:nth-child(2) {
+      margin-bottom: calc(0.3rem - 0.14em);
+    }
+    #hero h1 > .overflow-hidden:last-child {
+      padding-bottom: 0.3em;
+      margin-bottom: calc(2rem - 0.32em);
+    }
+    /* leading-0.88 do h1 aperta a caixa de linha; bg-clip-text piora; descendentes (g) precisam de line-height maior só nesta linha */
+    #hero h1 > .overflow-hidden:last-child .word-inner {
+      line-height: 1.26;
+    }
+
+    /* O que muda — cards: mesmo fundo, borda e hover que "O que está incluso" (criacao-de-sites) */
+    #o-que-muda .card-que-muda {
+      background: rgba(13, 21, 32, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      position: relative;
+      transform-style: preserve-3d;
+      overflow: hidden;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.08s ease;
+    }
+    #o-que-muda .card-que-muda:hover {
+      border-color: rgba(3, 240, 252, 0.35);
+      box-shadow: 0 0 40px rgba(3, 240, 252, 0.12), 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+    #o-que-muda [data-tilt] { will-change: transform; }
+    #o-que-muda [data-tilt]::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        200px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+        rgba(3, 240, 252, 0.1),
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    #o-que-muda [data-tilt]:hover::after { opacity: 1; }
+    #o-que-muda [data-tilt] > * { position: relative; z-index: 2; }
+    #o-que-muda .o-que-muda-grid { align-items: stretch; }
+    #o-que-muda .o-que-muda-grid .card-que-muda { display: flex; flex-direction: column; min-height: 0; }
+    #o-que-muda .o-que-muda-grid .card-que-muda > .card-que-muda-inner { flex: 1; min-width: 0; width: 100%; }
+
+    /* Sinais — números brancos; acende no hover (mesma lógica, só em branco) */
+    #sinais-reforma .sinal-diag-num {
+      font-size: 1.875rem;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.3);
+      transition: color 0.35s ease, text-shadow 0.35s ease;
+    }
+    #sinais-reforma .sinal-diag-item:hover .sinal-diag-num {
+      color: #fff;
+      text-shadow: 0 0 22px rgba(255, 255, 255, 0.5);
+    }
+
+    [style*="--border-gradient"]::before {
+      content: ""; position: absolute; inset: 0; padding: 1px;
+      border-radius: var(--border-radius-before, inherit);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      background: var(--border-gradient); pointer-events: none;
+    }
+
+    .btn-shimmer::after, .btn-shimmer-cyan::after {
+      content: ""; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-150%) skewX(-15deg); pointer-events: none; z-index: 5; border-radius: 9999px;
+    }
+    .btn-shimmer-cyan::after { background: linear-gradient(90deg, transparent, rgba(3,240,252,0.25), transparent); }
+    .btn-shimmer:hover::after, .btn-shimmer-cyan:hover::after { animation: shimmerSweep 0.75s ease forwards; }
+
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 200; pointer-events: none; opacity: 0.032;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");
+      background-size: 200px 200px;
+    }
+
+    /* ── Custom cursor — anel único ──────────────────────── */
+    .cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(3, 240, 252, 0.55);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      will-change: transform;
+      transform: translate(-100px, -100px);
+      transition: width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  height 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  border-color 0.2s ease,
+                  background 0.2s ease,
+                  opacity 0.3s ease;
+    }
+    .cursor-ring.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(3, 240, 252, 0.85);
+      background: rgba(3, 240, 252, 0.04);
+    }
+    @media (pointer: fine) {
+      *, *::before, *::after,
+      a, button, input, select, textarea,
+      [role="button"], [data-cursor-hover],
+      label, summary {
+        cursor: none !important;
+      }
+    }
+    @media (pointer: coarse) { .cursor-ring { display: none; } }
+
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: linear-gradient(90deg, #2f67fc, #03f0fc); z-index: 300; transition: width 0.08s linear; }
+
+    ::selection { background: rgba(47,103,252,0.35); color: #fff; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: rgba(47,103,252,0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(47,103,252,0.6); }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px; }
+
+    /* Before/After — frame do mock "antes" */
+    .site-mock-before {
+      background: #1a1d24;
+    }
+
+    /* ══════════════════════════════════════════════════════
+       Browser "antes" — caricatura extrema de site ruim
+    ══════════════════════════════════════════════════════ */
+
+    .antes-site {
+      background: #d4d0c8;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Comic Sans MS', 'Chalkboard SE', cursive;
+      font-size: 10px;
+      overflow: hidden;
+      color: #000;
+      background-image: repeating-linear-gradient(
+        0deg, rgba(0,0,0,0.03) 0px, rgba(0,0,0,0.03) 1px, transparent 1px, transparent 20px
+      );
+    }
+
+    .antes-urlbar {
+      background: #c0c0c0;
+      padding: 3px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #888;
+      flex-shrink: 0;
+    }
+    .antes-url { font-size: 7px; color: #444; font-family: monospace; }
+    .antes-notSecure { font-size: 7.5px; color: #c0392b; font-weight: 900; }
+
+    .antes-construction {
+      background: repeating-linear-gradient(
+        45deg, #ffcc00, #ffcc00 8px, #000 8px, #000 16px
+      );
+      color: #fff;
+      font-size: 7px;
+      font-weight: 900;
+      text-align: center;
+      padding: 3px 4px;
+      text-shadow: 1px 1px 0 #000;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .antes-nav {
+      background: linear-gradient(180deg, #000080 0%, #0000cd 100%);
+      padding: 4px 6px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .antes-logo-text {
+      font-size: 8px;
+      font-weight: 900;
+      color: #ffd700;
+      white-space: nowrap;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .antes-menu { display: flex; gap: 4px; flex-wrap: wrap; }
+    .antes-menu span {
+      font-size: 6.5px;
+      color: #fff;
+      font-weight: 900;
+      white-space: nowrap;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .antes-banner {
+      background: linear-gradient(135deg, #800000 0%, #cc0000 40%, #ff6600 70%, #ffcc00 100%);
+      padding: 10px 8px;
+      flex-shrink: 0;
+      text-align: center;
+      border-top: 3px solid #ffd700;
+      border-bottom: 3px solid #ffd700;
+    }
+    .antes-banner-title {
+      font-size: 11px;
+      font-weight: 900;
+      color: #ffff00;
+      text-shadow: 2px 2px 0 #000, -1px -1px 0 #000;
+      margin: 0 0 2px;
+      letter-spacing: 0.04em;
+    }
+    .antes-banner-sub {
+      font-size: 7.5px;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000;
+      margin: 0 0 5px;
+      font-style: italic;
+    }
+    .antes-ctas { display: flex; gap: 3px; justify-content: center; flex-wrap: wrap; }
+    .antes-cta {
+      padding: 2px 7px;
+      font-size: 7.5px;
+      font-weight: 900;
+      cursor: pointer;
+      font-family: 'Comic Sans MS', cursive;
+      border: 2px outset #fff;
+      text-shadow: 1px 1px 0 #000;
+    }
+    .antes-cta.green { background: #00aa00; color: #ffff00; }
+    .antes-cta.red   { background: #dd0000; color: #fff; }
+    .antes-cta.yellow{ background: #ffcc00; color: #000; }
+
+    .antes-body {
+      display: flex;
+      gap: 4px;
+      padding: 6px;
+      flex: 1;
+      min-height: 0;
+      background: #f0ede8;
+      overflow: hidden;
+    }
+    .antes-main { flex: 2; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+    .antes-section-title {
+      font-size: 9px;
+      font-weight: 900;
+      color: #800000;
+      border-bottom: 2px solid #0000ff;
+      padding-bottom: 2px;
+      margin: 0 0 3px;
+      text-align: center;
+    }
+    .antes-body-text {
+      font-size: 7.5px;
+      color: #000;
+      line-height: 1.4;
+      margin: 0 0 3px;
+    }
+
+    .antes-sidebar { flex: 1; display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+    .antes-widget {
+      background: #ddd;
+      border: 1px solid #888;
+      border-top: 3px solid #000080;
+      padding: 4px 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .red-widget { border-top-color: #cc0000; background: #ffe8e8; }
+    .antes-widget-title {
+      font-size: 7px;
+      font-weight: 900;
+      color: #000080;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .antes-counter {
+      font-size: 10px;
+      font-weight: 900;
+      color: #00aa00;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      margin: 0;
+      letter-spacing: 0.1em;
+    }
+
+    .antes-footer {
+      background: #000;
+      padding: 3px 6px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+    .antes-footer span { font-size: 6px; color: #777; }
+    .antes-dev { color: #ff6600 !important; font-style: italic; }
+
+    /* ══════════════════════════════════════════════════════
+       Browser "depois" — hero minimalista
+    ══════════════════════════════════════════════════════ */
+
+    .depois-site {
+      background: #07091a;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      overflow: hidden;
+      color: #fff;
+      position: relative;
+      min-height: 0;
+    }
+
+    /* Gradiente sutil no fundo — mesma linguagem do hero MXC */
+    .depois-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%,   rgba(3,240,252,0.07) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%,  rgba(99,102,241,0.06) 0%, transparent 50%),
+        radial-gradient(ellipse at 20% 100%, rgba(3,240,252,0.04) 0%, transparent 45%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glow arc na base — referência ao arco da aura MXC (mais visível) */
+    .depois-arc-glow {
+      position: absolute;
+      bottom: -38%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 72%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at 50% 36%,
+        rgba(3,240,252,0.32) 0%,
+        rgba(3,240,252,0.16) 22%,
+        rgba(6,150,220,0.1) 45%,
+        rgba(3,240,252,0.04) 62%,
+        transparent 78%
+      );
+      box-shadow:
+        0 0 50px 28px rgba(3,240,252,0.12),
+        0 18px 60px -8px rgba(3,240,252,0.2);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Nav */
+    .depois-nav {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 12px;
+      flex-shrink: 0;
+    }
+    .depois-logo {
+      font-size: 8.5px;
+      font-weight: 800;
+      color: #03f0fc;
+      letter-spacing: 0.05em;
+    }
+    .depois-nav-cta {
+      background: transparent;
+      color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 6.5px;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    /* Hero — alinhado ao topo, conteúdo maior (não no centro vertical) */
+    .depois-hero {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+      padding: 0 12px 20px;
+      padding-top: 5%;
+      gap: 10px;
+    }
+
+    /* Badge */
+    .depois-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(3,240,252,0.07);
+      border: 1px solid rgba(3,240,252,0.2);
+      color: rgba(3,240,252,0.8);
+      font-size: 7px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .depois-badge-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #03f0fc;
+      box-shadow: 0 0 5px rgba(3,240,252,0.9);
+      animation: depoisDotPulse 1.6s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+    @keyframes depoisDotPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.4; transform: scale(0.7); }
+    }
+
+    /* Headline */
+    .depois-headline {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.12;
+      margin: 0;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
+    .depois-gradient {
+      background: linear-gradient(90deg, #03f0fc 0%, #818cf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Subtítulo */
+    .depois-sub {
+      font-size: 7.8px;
+      color: rgba(255,255,255,0.38);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* CTA */
+    .depois-cta {
+      display: inline-flex;
+      align-items: center;
+      background: linear-gradient(90deg, #03f0fc, #0e7490);
+      color: #000;
+      border: none;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 8.5px;
+      font-weight: 800;
+      cursor: pointer;
+      font-family: inherit;
+      box-shadow: 0 0 22px rgba(3,240,252,0.4), 0 3px 12px rgba(0,0,0,0.45);
+      margin-top: 2px;
+    }
+
+    /* ═══ Seção trabalhos — mesmo padrão da home (#portfolio): PB + texto no hover ═══ */
+    .portfolio-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+    }
+    .portfolio-card:hover {
+      cursor: pointer;
+    }
+    .portfolio-thumb {
+      position: relative;
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+    }
+    .portfolio-thumb img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(100%);
+      transition: filter 0.4s ease;
+    }
+    .portfolio-card:hover .portfolio-thumb img {
+      filter: grayscale(0%);
+    }
+    .portfolio-card-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 0 24px 28px;
+      z-index: 1;
+    }
+    .portfolio-card:hover .portfolio-card-overlay {
+      opacity: 1;
+    }
+    .portfolio-card-arrow {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      opacity: 0;
+      transition: opacity 0.35s ease 0.05s;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .portfolio-card:hover .portfolio-card-arrow {
+      opacity: 1;
+    }
+    .portfolio-card-info {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+    }
+    .portfolio-card:hover .portfolio-card-info {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .portfolio-card-type {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(3, 240, 252, 0.75);
+      display: block;
+    }
+    .portfolio-card-name {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: #ffffff;
+      -webkit-text-fill-color: #ffffff;
+      margin: 0;
+      margin-top: 6px;
+    }
+    .portfolio-card-segment {
+      font-family: 'Epilogue', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 4px 0 0;
+    }
+
+    /* ═══ Performance: GPU layers para animações contínuas ═══ */
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } }
+    [style*="auroraFloat"] { will-change: transform; }
+    [style*="beamFall"]    { will-change: transform, opacity; }
+    .grain-overlay         { will-change: unset; transform: translateZ(0); }
+  </style>
+  <link rel="stylesheet" href="assets/mobile-layout.css" />
+</head>
+<body class="page-reformulacao-de-sites bg-bg text-[#F0F4FF] font-body antialiased overflow-x-hidden">
+
+  <div class="grain-overlay"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- WhatsApp floating -->
+  <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Tenho%20um%20site%20que%20precisa%20ser%20reformulado.%20Quero%20saber%20como%20a%20MXC%20Digital%20pode%20ajudar." target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-[500] flex items-center gap-3 group" aria-label="Falar no WhatsApp">
+    <span class="absolute inset-0 w-14 h-14 rounded-full bg-[#25D366]/30 animate-ping"></span>
+    <div class="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-transform duration-300 group-hover:scale-110">
+      <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Pill nav -->
+  <div class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="pointer-events-auto bg-surface/90 backdrop-blur-md border border-white/10 rounded-full py-2.5 px-5 flex items-center gap-6 shadow-xl shadow-black/50 [animation:fadeSlideIn_0.8s_cubic-bezier(0.2,0.8,0.2,1)_0.1s_both]">
+      <a href="index.html" class="flex items-center mr-2">
+        <img src="assets/logo.png" alt="MXC Digital" class="h-8 object-contain">
+      </a>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="index.html#servicos"  class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Serviços</a>
+        <a href="index.html#portfolio" class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Portfolio</a>
+        <a href="index.html#sobre"     class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#planos"    class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Planos</a>
+      </div>
+      <a href="contato.html"
+         class="btn-shimmer relative overflow-hidden text-[10px] font-display font-bold uppercase tracking-widest text-white rounded-full px-4 py-2 ml-2 transition-all duration-300"
+         style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 8px 20px -4px rgba(47,103,252,0.4); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+        <span class="relative z-10">Iniciar Projeto</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Aurora background -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none" style="transform:translateZ(0);">
+    <div class="absolute inset-0 dot-grid"></div>
+    <div class="absolute w-[700px] h-[700px] rounded-full bg-brand/20 blur-[70px] -top-48 -left-48" style="animation: auroraFloat1 22s ease-in-out infinite;"></div>
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-cyan/[0.12] blur-[70px] -bottom-32 -right-32" style="animation: auroraFloat2 28s ease-in-out infinite;"></div>
+    <div class="absolute w-[500px] h-[500px] rounded-full bg-brand/[0.08] blur-[55px] top-[40%] left-[50%]" style="animation: auroraFloat3 18s ease-in-out infinite;"></div>
+    <div id="mouse-glow" class="absolute inset-0" style="background: radial-gradient(700px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(47,103,252,0.06), transparent 40%);"></div>
+    <div class="absolute top-0 left-[10%] w-px h-48 bg-gradient-to-b from-transparent via-cyan/50 to-transparent" style="animation: beamFall 7s linear infinite; animation-delay: 0s;"></div>
+    <div class="absolute top-0 left-[42%] w-px h-56 bg-gradient-to-b from-transparent via-cyan/60 to-transparent" style="animation: beamFall 8s linear infinite; animation-delay: 4.5s;"></div>
+    <div class="absolute top-0 left-[73%] w-px h-60 bg-gradient-to-b from-transparent via-cyan/55 to-transparent" style="animation: beamFall 9s linear infinite; animation-delay: 6s;"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden z-10">
+    <div class="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/80 to-transparent" style="top: 50%; animation: horizonSweep 1.2s cubic-bezier(0.4,0,0.2,1) 0.3s both;"></div>
+
+    <div id="hero-moon" class="hero-moon"></div>
+    <div class="hero-moon-ring"></div>
+    <div class="hero-moon-apex"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto">
+
+      <h1 class="font-display font-extrabold leading-[0.88] tracking-[-0.04em] text-white mb-0" style="font-size: clamp(48px, 7.5vw, 104px);">
+        <div class="overflow-hidden">
+          <span class="word-inner block" style="animation-delay: 1.0s;">Seu site tem</span>
+        </div>
+        <div class="overflow-hidden">
+          <span class="word-inner block" style="animation-delay: 1.15s;">potencial,</span>
+        </div>
+        <div class="overflow-hidden">
+          <span class="word-inner block bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent" style="animation-delay: 1.3s;">a gente destrava.</span>
+        </div>
+      </h1>
+
+      <p class="text-lg md:text-xl text-white/50 font-body max-w-xl mx-auto leading-relaxed mb-12 [animation:fadeSlideIn_1s_ease_1.6s_both]">
+        Se o seu site já existe mas não converte, está lento ou simplesmente não representa mais o que você construiu: reformulamos toda a experiência sem perder o histórico de SEO que levou tempo para conquistar.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 [animation:fadeSlideIn_1s_ease_1.8s_both]">
+        <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Tenho%20um%20site%20que%20precisa%20ser%20reformulado.%20Quero%20saber%20como%20a%20MXC%20Digital%20pode%20ajudar." target="_blank" rel="noopener noreferrer"
+           class="btn-shimmer relative overflow-hidden font-display font-bold text-xs uppercase tracking-widest text-white rounded-full px-8 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-[1.03]"
+           style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 16px 40px -8px rgba(47,103,252,0.55), inset 0 1px 0 rgba(255,255,255,0.15); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+          <span class="relative z-10 flex items-center gap-2">Quero meu diagnóstico gratuito <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+        </a>
+        <a href="#transformacao"
+           class="btn-shimmer relative overflow-hidden font-display font-bold text-xs uppercase tracking-widest text-white/70 rounded-full px-6 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white"
+           style="background: linear-gradient(180deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.08) 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); --border-gradient: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(47,103,252,0.12), rgba(255,255,255,0.08)); --border-radius-before: 9999px;">
+          <span class="relative z-10 flex items-center gap-2">Ver transformação <i data-lucide="arrow-down" class="w-4 h-4"></i></span>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       BEFORE / AFTER
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="transformacao" class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-[10px] font-display uppercase tracking-[0.2em] text-cyan/70 block mb-4">Transformação</span>
+        <h2 class="font-display font-extrabold text-white tracking-tight leading-[0.92]" style="font-size: clamp(36px, 5vw, 64px);">
+          Do que não vende<br/>
+          <span class="bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent">ao que converte.</span>
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-6 items-center">
+
+        <!-- BEFORE -->
+        <div class="animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.1s_both]">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-6 h-6 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center">
+              <i data-lucide="x" class="w-3.5 h-3.5 text-white/40"></i>
+            </span>
+            <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-white/35">Antes</span>
+          </div>
+          <div class="relative rounded-2xl border border-white/[0.06] overflow-hidden aspect-[4/3] site-mock-before">
+            <div class="absolute top-0 left-0 right-0 h-8 bg-white/[0.04] border-b border-white/5 flex items-center px-3 gap-1.5 z-20">
+              <span class="w-1.5 h-1.5 rounded-full bg-white/15"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white/15"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white/15"></span>
+            </div>
+            <div class="absolute top-8 left-0 right-0 bottom-0 z-10 overflow-hidden">
+              <div class="antes-site">
+
+                <!-- URL bar -->
+                <div class="antes-urlbar">
+                  <span class="antes-url">http://www.meusite.com.br/index2.htm</span>
+                  <span class="antes-notSecure">⚠ Não seguro</span>
+                </div>
+
+                <!-- Faixa Em Construção -->
+                <div class="antes-construction">
+                  🚧 SITE EM CONSTRUÇÃO, VOLTE EM BREVE 🚧
+                </div>
+
+                <!-- Nav caótica -->
+                <nav class="antes-nav" aria-label="Navegação (caricato)">
+                  <span class="antes-logo-text">⭐ EMPRESA LTDA ⭐</span>
+                  <div class="antes-menu">
+                    <span>HOME</span><span>SOBRE</span><span>PRODUTOS</span>
+                    <span>SERVIÇOS</span><span>GALERIA</span><span>CONTATO</span>
+                    <span>FAQ</span><span>BLOG</span><span>MAPA DO SITE</span>
+                  </div>
+                </nav>
+
+                <!-- Banner caótico -->
+                <div class="antes-banner">
+                  <div class="antes-banner-text">
+                    <p class="antes-banner-title">BEM VINDO AO NOSSO SITE!!!</p>
+                    <p class="antes-banner-sub">A MELHOR EMPRESA DA REGIÃO DESDE 1998!!</p>
+                    <div class="antes-ctas">
+                      <button type="button" class="antes-cta green">✅ COMPRE JÁ</button>
+                      <button type="button" class="antes-cta red">🔥 OFERTA!</button>
+                      <button type="button" class="antes-cta yellow">📞 LIGUE</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Corpo -->
+                <div class="antes-body">
+                  <div class="antes-main">
+                    <p class="antes-section-title">★ QUEM SOMOS ★</p>
+                    <p class="antes-body-text">
+                      Somos uma empresa <span style="color:#ff0000;font-weight:900">LÍDER DE MERCADO</span>
+                      com <span style="color:#0000ff">MAIS DE 20 ANOS</span> de experiência!!
+                      Nossos clientes são <u>muito satisfeitos</u> com nossos serviços!!!
+                    </p>
+                    <p class="antes-body-text" style="font-size:6px;color:#999">
+                      Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation
+                    </p>
+                  </div>
+                  <div class="antes-sidebar">
+                    <div class="antes-widget red-widget">
+                      <p class="antes-widget-title">🔥 PROMOÇÃO!</p>
+                      <p style="font-size:7px;color:#ff0000;font-weight:900">ATÉ 50% OFF!!!</p>
+                      <button type="button" class="antes-cta green" style="font-size:6px;padding:2px 4px">CLIQUE AQUI</button>
+                    </div>
+                    <div class="antes-widget">
+                      <p class="antes-widget-title">👁 VISITAS</p>
+                      <p class="antes-counter">003.847</p>
+                    </div>
+                    <div class="antes-widget">
+                      <p class="antes-widget-title">📢 AVISOS</p>
+                      <p style="font-size:6.5px;color:#333">⚠ Site melhor visualizado no Internet Explorer 6.0</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Rodapé -->
+                <div class="antes-footer">
+                  <span>© 2014 Empresa Ltda. Todos os direitos reservados. Proibida reprodução.</span>
+                  <span class="antes-dev">Hospedagem e criação: WebFácil Soluções Web</span>
+                </div>
+
+              </div>
+            </div>
+            <!-- Sad corner tag -->
+            <div class="absolute bottom-3 right-3 z-30 flex items-center gap-1.5 bg-bg/80 border border-white/10 text-white/40 text-[9px] font-display uppercase tracking-widest rounded-full px-2.5 py-1">
+              <i data-lucide="frown" class="w-3 h-3"></i> 2014
+            </div>
+          </div>
+          <div class="mt-5 space-y-2 text-sm text-white/40 font-body">
+            <div class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-white/30"></i> Lento e travado</div>
+            <div class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-white/30"></i> Sem estrutura de conversão</div>
+            <div class="flex items-center gap-2"><i data-lucide="x" class="w-3.5 h-3.5 text-white/30"></i> Visual datado</div>
+          </div>
+        </div>
+
+        <!-- ARROW divider -->
+        <div class="flex md:flex-col items-center justify-center gap-3 relative">
+          <div class="h-px md:h-24 md:w-px w-24 bg-gradient-to-r md:bg-gradient-to-b from-white/10 via-cyan/50 to-white/10"></div>
+          <div class="w-11 h-11 rounded-full bg-gradient-to-br from-brand to-cyan flex items-center justify-center shadow-[0_0_35px_rgba(3,240,252,0.35)]">
+            <i data-lucide="arrow-down" class="w-5 h-5 text-bg md:hidden"></i>
+            <i data-lucide="arrow-right" class="w-5 h-5 text-bg hidden md:block"></i>
+          </div>
+          <div class="h-px md:h-24 md:w-px w-24 bg-gradient-to-r md:bg-gradient-to-b from-white/10 via-cyan/50 to-white/10"></div>
+        </div>
+
+        <!-- AFTER -->
+        <div class="animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.3s_both]">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="w-6 h-6 rounded-full bg-cyan/15 border border-cyan/30 flex items-center justify-center">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-cyan"></i>
+            </span>
+            <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/80">Depois</span>
+          </div>
+          <div class="relative rounded-2xl border border-cyan/25 bg-surface overflow-hidden aspect-[4/3] shadow-[0_0_60px_rgba(3,240,252,0.1)]">
+            <div class="absolute top-0 left-0 right-0 h-8 bg-bg/80 border-b border-white/5 flex items-center px-3 gap-1.5 z-20">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-cyan"></span>
+              <span class="w-1.5 h-1.5 rounded-full bg-white/30"></span>
+            </div>
+            <div class="absolute top-8 left-0 right-0 bottom-0 z-10 overflow-hidden">
+              <div class="depois-site">
+
+                <!-- Gradiente de fundo -->
+                <div class="depois-bg" aria-hidden="true"></div>
+
+                <!-- Nav mínima -->
+                <nav class="depois-nav">
+                  <span class="depois-logo">◈ Studio</span>
+                  <button type="button" class="depois-nav-cta">Começar →</button>
+                </nav>
+
+                <!-- Hero centralizado -->
+                <div class="depois-hero">
+                  <span class="depois-badge">
+                    <span class="depois-badge-dot"></span>
+                    Novo site · 14 dias
+                  </span>
+
+                  <h2 class="depois-headline">
+                    Seu negócio,<br>
+                    <span class="depois-gradient">apresentado bem.</span>
+                  </h2>
+
+                  <p class="depois-sub">
+                    Design exclusivo e textos estratégicos,<br>sem template, sem terceirização.
+                  </p>
+
+                  <button type="button" class="depois-cta">Iniciar projeto →</button>
+                </div>
+
+                <!-- Glow de fundo na base (referência ao arco do hero MXC) -->
+                <div class="depois-arc-glow" aria-hidden="true"></div>
+
+              </div>
+            </div>
+            <div class="absolute bottom-3 right-3 z-30 flex items-center gap-1.5 bg-cyan/15 border border-cyan/30 text-cyan text-[9px] font-display uppercase tracking-widest rounded-full px-2.5 py-1">
+              <i data-lucide="sparkles" class="w-3 h-3"></i> 2026
+            </div>
+          </div>
+          <div class="mt-5 space-y-2 text-sm text-white/55 font-body">
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan"></i> Velocidade otimizada</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan"></i> Cada seção pensada para converter</div>
+            <div class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan"></i> Design que representa a marca</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       O QUE MUDA
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="o-que-muda" class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">O que muda</span>
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <h2 class="font-display font-extrabold leading-[0.9] tracking-tight text-white" style="font-size: clamp(40px, 5vw, 72px);">
+          Reformular não é<br/>"trocar a capa".
+        </h2>
+        <p class="text-white/45 font-body max-w-sm text-sm leading-relaxed">
+          Não é só trocar a capa. Abrimos o carro. Revisamos cada pilar, do que o visitante sente ao que o Google lê.
+        </p>
+      </div>
+
+      <div class="o-que-muda-grid grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div data-tilt class="card-que-muda card-que-muda-eq h-full animate-on-scroll group relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.1s_both]">
+          <div class="card-que-muda-inner flex items-start gap-5">
+            <div class="w-12 h-12 rounded-2xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="layout-dashboard" class="w-5 h-5 text-cyan"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <h3 class="font-display font-bold text-white text-xl mb-3 leading-tight">Design e identidade visual</h3>
+              <p class="text-white/45 font-body text-sm leading-relaxed">Paleta, tipografia e hierarquia alinhadas à sua marca, sem cara de template genérico.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-tilt class="card-que-muda card-que-muda-eq h-full animate-on-scroll group relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.2s_both]">
+          <div class="card-que-muda-inner flex items-start gap-5">
+            <div class="w-12 h-12 rounded-2xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="mouse-pointer-click" class="w-5 h-5 text-cyan"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <h3 class="font-display font-bold text-white text-xl mb-3 leading-tight">Experiência do usuário</h3>
+              <p class="text-white/45 font-body text-sm leading-relaxed">Fluxos e CTAs que levam ao contato com o mínimo de cliques e de dúvida.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-tilt class="card-que-muda card-que-muda-eq h-full animate-on-scroll group relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.3s_both]">
+          <div class="card-que-muda-inner flex items-start gap-5">
+            <div class="w-12 h-12 rounded-2xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="type" class="w-5 h-5 text-cyan"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <h3 class="font-display font-bold text-white text-xl mb-3 leading-tight">Copy e mensagem</h3>
+              <p class="text-white/45 font-body text-sm leading-relaxed">Copy objetiva em cada seção, sem jargão nem fórmula de “soluções inovadoras”.</p>
+            </div>
+          </div>
+        </div>
+
+        <div data-tilt class="card-que-muda card-que-muda-eq h-full animate-on-scroll group relative rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.4s_both]">
+          <div class="card-que-muda-inner flex items-start gap-5">
+            <div class="w-12 h-12 rounded-2xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+              <i data-lucide="gauge" class="w-5 h-5 text-cyan"></i>
+            </div>
+            <div class="min-w-0 flex-1">
+              <h3 class="font-display font-bold text-white text-xl mb-3 leading-tight">Performance e SEO</h3>
+              <p class="text-white/45 font-body text-sm leading-relaxed">Stack e metas otimizados: rápido para quem acessa e claro para o Google.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SINAIS DE QUE PRECISA DE REFORMULAÇÃO
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="sinais-reforma" class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <span class="text-[10px] font-display uppercase tracking-[0.2em] text-brand/70 block mb-4">Diagnóstico</span>
+        <h2 class="font-display font-extrabold text-white tracking-tight leading-[0.92]" style="font-size: clamp(36px, 5vw, 60px);">
+          Sinais de que seu site está<br/>
+          <span class="bg-gradient-to-r from-white to-white/50 bg-clip-text text-transparent">custando dinheiro agora</span>
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        <div class="animate-on-scroll sinal-diag-item group flex items-center gap-5 bg-surface/60 border border-white/[0.07] rounded-2xl p-6 hover:border-cyan/30 transition-all duration-300 [animation:fadeSlideIn_0.7s_ease_0.05s_both]">
+          <span class="sinal-diag-num font-display font-extrabold w-12 flex-shrink-0 tabular-nums">01</span>
+          <div class="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="log-out" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-white text-base mb-1">Taxa de rejeição acima de 70%: a maioria sai em segundos</h3>
+            <p class="text-white/40 font-body text-sm leading-snug line-clamp-1">Entram e saem em segundos: o site não está comunicando o valor.</p>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll sinal-diag-item group flex items-center gap-5 bg-surface/60 border border-white/[0.07] rounded-2xl p-6 hover:border-cyan/30 transition-all duration-300 [animation:fadeSlideIn_0.7s_ease_0.1s_both]">
+          <span class="sinal-diag-num font-display font-extrabold w-12 flex-shrink-0 tabular-nums">02</span>
+          <div class="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="calendar-x" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-white text-base mb-1">Visual que denuncia a idade</h3>
+            <p class="text-white/40 font-body text-sm leading-snug line-clamp-1">Visual datado: passa a ideia de que a empresa parou no tempo.</p>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll sinal-diag-item group flex items-center gap-5 bg-surface/60 border border-white/[0.07] rounded-2xl p-6 hover:border-cyan/30 transition-all duration-300 [animation:fadeSlideIn_0.7s_ease_0.15s_both]">
+          <span class="sinal-diag-num font-display font-extrabold w-12 flex-shrink-0 tabular-nums">03</span>
+          <div class="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="smartphone-nfc" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-white text-base mb-1">Quebrado no celular, onde 7 de cada 10 visitantes estão</h3>
+            <p class="text-white/40 font-body text-sm leading-snug line-clamp-1">Layout e tipografia ruins no mobile: a maior parte do tráfego se perde.</p>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll sinal-diag-item group flex items-center gap-5 bg-surface/60 border border-white/[0.07] rounded-2xl p-6 hover:border-cyan/30 transition-all duration-300 [animation:fadeSlideIn_0.7s_ease_0.2s_both]">
+          <span class="sinal-diag-num font-display font-extrabold w-12 flex-shrink-0 tabular-nums">04</span>
+          <div class="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="line-chart" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-white text-base mb-1">Tráfego sem conversão: você paga pelo marketing e o site desperdiça</h3>
+            <p class="text-white/40 font-body text-sm leading-snug line-clamp-1">Visitas entram, mas a página não conduz ninguém até o contato.</p>
+          </div>
+        </div>
+
+        <div class="animate-on-scroll sinal-diag-item group flex items-center gap-5 bg-surface/60 border border-white/[0.07] rounded-2xl p-6 hover:border-cyan/30 transition-all duration-300 [animation:fadeSlideIn_0.7s_ease_0.25s_both]">
+          <span class="sinal-diag-num font-display font-extrabold w-12 flex-shrink-0 tabular-nums">05</span>
+          <div class="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="hourglass" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <div>
+            <h3 class="font-display font-bold text-white text-base mb-1">Carregamento acima de 4 segundos</h3>
+            <p class="text-white/40 font-body text-sm leading-snug line-clamp-1">Cada segundo a mais: desistência e pior posição no Google.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PORTFOLIO SUBSET (Reformulação)
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-cyan"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/70">Trabalhos</span>
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <h2 class="font-display font-extrabold leading-[0.9] tracking-tight text-white" style="font-size: clamp(40px, 5vw, 72px);">
+          Sites que<br/>reformulamos
+        </h2>
+        <a href="index.html#portfolio" class="text-sm font-display text-white/40 hover:text-white transition-colors flex items-center gap-2">
+          Ver portfolio completo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <a href="portfolio/mrboxes.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/mrboxes-card-home.png" alt="Mr. Boxes"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type">REFORMULAÇÃO</span>
+                <h3 class="portfolio-card-name">Mr. Boxes</h3>
+                <p class="portfolio-card-segment">Self Storage · Recife, PE</p>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <a href="portfolio/qdelicia.html"
+           class="portfolio-card group animate-on-scroll relative overflow-hidden rounded-2xl border border-white/[0.07] hover:border-white/15 block [animation:blurSnap_0.9s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]"
+           data-cursor-hover>
+          <div class="portfolio-thumb aspect-video relative overflow-hidden">
+            <img loading="lazy" decoding="async" src="assets/portfolio/qdelicia-card-reformulacao-de-sites.png" alt="QDelícia Frutas Frutas"
+                 class="absolute inset-0 w-full h-full object-cover"
+                 style="opacity:0;transition:opacity 0.3s;"
+                 onload="this.style.opacity='1'"
+                 onerror="this.style.display='none'" />
+            <div class="portfolio-card-overlay">
+              <i data-lucide="arrow-up-right" class="portfolio-card-arrow w-5 h-5 text-white" aria-hidden="true"></i>
+              <div class="portfolio-card-info">
+                <span class="portfolio-card-type">REFORMULAÇÃO</span>
+                <h3 class="portfolio-card-name">QDelícia Frutas</h3>
+                <p class="portfolio-card-segment">Distribuição de Alimentos · PE</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA FINAL
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-32">
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-cyan/10 blur-[55px] rounded-full pointer-events-none"></div>
+      <div class="relative z-10">
+        <span class="text-[10px] font-display uppercase tracking-[0.2em] text-cyan/70 block mb-6">Próximo passo</span>
+        <h2 class="animate-on-scroll font-display font-extrabold text-white leading-[0.9] tracking-tight mb-6 [animation:fadeSlideIn_0.8s_ease_0s_both]"
+            style="font-size: clamp(40px, 6vw, 84px);">
+          Envie o link do seu site.<br/>
+          <span class="bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent">O diagnóstico é gratuito.</span>
+        </h2>
+        <p class="text-white/45 font-body text-lg max-w-lg mx-auto leading-relaxed mb-12">
+          Envie o link e conte o que mais te incomoda no site atual. Em até 2h você recebe um diagnóstico real do que está custando conversão, sem compromisso e sem pressão de venda.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Quero%20reformular%20meu%20site%20com%20a%20MXC%20Digital.%20Podem%20fazer%20um%20or%C3%A7amento%3F" target="_blank" rel="noopener noreferrer"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white rounded-full px-10 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-[1.03]"
+             style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 20px 50px -8px rgba(47,103,252,0.6); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+            <span class="relative z-10 flex items-center gap-2">Enviar meu site</span>
+          </a>
+          <a href="contato.html"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white/60 rounded-full px-8 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white"
+             style="background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.07) 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); --border-gradient: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(47,103,252,0.1), rgba(255,255,255,0.07)); --border-radius-before: 9999px;">
+            <span class="relative z-10">Preencher formulário</span>
+          </a>
+        </div>
+        <p class="text-white/35 font-body text-sm max-w-lg mx-auto mt-8 leading-relaxed">
+          Atendemos poucos projetos por vez para garantir atenção total em cada reformulação.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 px-6 md:px-10 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="assets/logo.png" alt="MXC Digital" class="h-12 object-contain">
+          </div>
+          <p class="text-white/35 font-body text-sm leading-relaxed max-w-xs">
+            Sites que vendem, impressionam e representam. Entrega em 14 dias. Sem template, sem terceirização.
+          </p>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Navegação</p>
+          <div class="space-y-3">
+            <a href="criacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Criação de Sites</a>
+            <a href="reformulacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Reformulação</a>
+            <a href="portfolio.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Portfólio</a>
+            <a href="index.html#planos" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Planos de Manutenção</a>
+            <a href="contato.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Contato</a>
+            <a href="/politica-de-privacidade.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Política de Privacidade</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Contato</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="mailto:contato@mxcdigital.com.br" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i> contato@mxcdigital.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/20 font-body text-xs">© 2026 MXC Digital. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          <span class="text-white/20 font-body text-xs">Disponível para novos projetos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+    // ═══ Custom cursor — apenas anel, instantâneo, sem lerp ═══
+    (function() {
+      const ring = document.getElementById('cursor-ring');
+      if (!ring) return;
+
+      var _cx=0,_cy=0;
+      function _rp(){var h=ring.classList.contains('hovering')?28:16;ring.style.transform='translate('+(_cx-h)+'px,'+(_cy-h)+'px)';}
+      document.addEventListener('mousemove', e => { _cx=e.clientX;_cy=e.clientY;_rp(); });
+
+      document.addEventListener('mouseleave', () => { ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { ring.style.opacity = '1'; });
+
+      const hoverTargets = 'a, button, [data-cursor-hover], input, textarea, select, label';
+      document.querySelectorAll(hoverTargets).forEach(el => {
+        el.addEventListener('mouseenter', () => { ring.classList.add('hovering'); _rp(); });
+        el.addEventListener('mouseleave', () => { ring.classList.remove('hovering'); _rp(); });
+      });
+    })();
+
+    // Altura uniforme — grid 2×2: todos os cards com a altura do mais alto (texto completo visível)
+    (function () {
+      const mq = window.matchMedia('(min-width: 768px)');
+      function equalizeOQueMuda() {
+        const list = document.querySelectorAll('.o-que-muda-grid .card-que-muda-eq');
+        if (!list.length) return;
+        if (!mq.matches) {
+          list.forEach(el => { el.style.minHeight = ''; });
+          return;
+        }
+        list.forEach(el => { el.style.minHeight = 'auto'; });
+        let max = 0;
+        list.forEach(el => { max = Math.max(max, el.offsetHeight); });
+        list.forEach(el => { el.style.minHeight = max + 'px'; });
+      }
+      var equalizeT;
+      function debounced() {
+        clearTimeout(equalizeT);
+        equalizeT = setTimeout(equalizeOQueMuda, 50);
+      }
+      window.addEventListener('resize', debounced);
+      window.addEventListener('load', equalizeOQueMuda);
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(equalizeOQueMuda); }
+      equalizeOQueMuda();
+    })();
+
+    // ═══ Tilt 3D + glow — "O que muda" (mesmo comportamento do #incluso em criação de sites) ═══
+    document.querySelectorAll('#o-que-muda [data-tilt]').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r  = card.getBoundingClientRect();
+        const cx = r.left + r.width  / 2;
+        const cy = r.top  + r.height / 2;
+        const dx = (e.clientX - cx) / (r.width  / 2);
+        const dy = (e.clientY - cy) / (r.height / 2);
+        const rotY =  dx * 12;
+        const rotX = -dy * 8;
+        const glowX = ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%';
+        const glowY = ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%';
+        card.style.transform  = `perspective(700px) rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.025)`;
+        card.style.setProperty('--glow-x', glowX);
+        card.style.setProperty('--glow-y', glowY);
+        card.style.transition = 'transform 0.08s ease, box-shadow 0.4s ease, border-color 0.4s ease';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform  = '';
+        card.style.transition = 'transform 0.5s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease, border-color 0.4s ease';
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = pct + '%';
+    });
+
+    // Mouse glow com rAF throttle — evita repaint a cada pixel (Safari fix)
+    (function(){
+      var ticking=false;
+      document.addEventListener('mousemove',function(e){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            document.documentElement.style.setProperty('--mouse-x',(e.clientX/window.innerWidth*100).toFixed(1)+'%');
+            document.documentElement.style.setProperty('--mouse-y',(e.clientY/window.innerHeight*100).toFixed(1)+'%');
+            ticking=false;
+          });
+          ticking=true;
+        }
+      });
+    })();
+
+    (function(){
+      var _ao=document.querySelectorAll('.animate-on-scroll');
+      function _ck(){_ao.forEach(function(el){if(el.classList.contains('animate'))return;var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.95&&r.bottom>0)el.classList.add('animate');});}
+      window.addEventListener('scroll',_ck,{passive:true});
+      window.addEventListener('resize',_ck,{passive:true});
+      if(document.readyState==='complete'){setTimeout(_ck,80);}else{window.addEventListener('load',function(){setTimeout(_ck,80);});}
+    })();
+
+    function scramble(el) {
+      const final = el.dataset.scramble || el.textContent;
+      if (!el.dataset.scramble) el.dataset.scramble = final;
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      let i = 0;
+      const iv = setInterval(() => {
+        el.textContent = final.split('').map((c, j) => j < i ? final[j] : chars[Math.floor(Math.random() * chars.length)]).join('');
+        if (i >= final.length) { el.textContent = final; clearInterval(iv); }
+        i += 0.4;
+      }, 25);
+    }
+    document.querySelectorAll('[data-scramble]').forEach(el => {
+      el.dataset.scramble = el.textContent;
+      el.addEventListener('mouseenter', () => scramble(el));
+    });
+
+    setTimeout(() => {
+      document.querySelectorAll('#hero .word-inner').forEach(el => el.classList.add('is-visible'));
+    }, 100);
+
+    // Pausa animações quando aba está em background (economia de CPU/GPU)
+    document.addEventListener('visibilitychange',function(){
+      var s=document.hidden?'paused':'running';
+      document.querySelectorAll('[style*="auroraFloat"],[style*="beamFall"],[style*="moonPulse"],[style*="moonRingPulse"]').forEach(function(el){
+        el.style.animationPlayState=s;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "site-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes serve -l 5173 site",
+    "start": "npx --yes serve -l 5173 site"
+  }
+}

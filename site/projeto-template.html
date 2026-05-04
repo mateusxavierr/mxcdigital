@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="assets/icone.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icone.png" />
+  <title>Atelier Nova — Case Study · MXC Digital</title>
+  <meta name="description" content="Como construímos a presença digital do Atelier Nova com identidade única e uma estrutura pensada para atrair clientes qualificados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#2f67fc', cyan: '#03f0fc', surface: '#0d1520', bg: '#111827' },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Epilogue', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'brand-glow': '0 0 30px rgba(47,103,252,0.35)',
+            'cyan-glow': '0 0 30px rgba(3,240,252,0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeSlideIn { 0% { opacity: 0; transform: translateY(28px); filter: blur(8px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); } }
+    @keyframes beamFall { 0% { transform: translateY(-100%); opacity: 0; } 5% { opacity: 0.7; } 50% { opacity: 1; } 95% { opacity: 0.7; } 100% { transform: translateY(110vh); opacity: 0; } }
+    @keyframes shimmerSweep { 0% { transform: translateX(-150%) skewX(-15deg); } 100% { transform: translateX(350%) skewX(-15deg); } }
+    @keyframes wordUp { 0% { transform: translateY(110%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(80px,-60px) scale(1.1); } 66% { transform: translate(-40px,40px) scale(0.95); } }
+    @keyframes auroraFloat2 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(-100px,50px) scale(1.05); } 66% { transform: translate(60px,-80px) scale(1.1); } }
+    @keyframes auroraFloat3 { 0%, 100% { transform: translate(0,0) scale(1); opacity: 0.2; } 50% { transform: translate(50px,30px) scale(1.15); opacity: 0.4; } }
+    @keyframes horizonSweep { 0% { transform: scaleX(0); transform-origin: left; opacity: 0; } 30% { transform: scaleX(1); transform-origin: left; opacity: 1; } 70% { transform: scaleX(1); transform-origin: right; opacity: 1; } 100% { transform: scaleX(0); transform-origin: right; opacity: 0; } }
+
+    /* ── Keyframes de entrada — scroll reveal ───────────── */
+    @keyframes splitFromLeft {
+      from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-18px); }
+      to   { opacity: 1; clip-path: inset(0 0% 0 0);   transform: translateX(0); }
+    }
+    @keyframes splitFromRight {
+      from { opacity: 0; clip-path: inset(0 0 0 100%);  transform: translateX(18px); }
+      to   { opacity: 1; clip-path: inset(0 0 0 0%);    transform: translateX(0); }
+    }
+    @keyframes scaleSnap {
+      from { opacity: 0; transform: scale(0.88); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes elegantRise {
+      from { opacity: 0; transform: translateY(22px); filter: blur(6px); }
+      to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+    }
+    @keyframes diagWipe {
+      from { opacity: 0; clip-path: inset(0 100% 100% 0); }
+      to   { opacity: 1; clip-path: inset(0 0% 0% 0); }
+    }
+    @keyframes blurSnap {
+      from { opacity: 0; filter: blur(12px); transform: scale(1.04); }
+      to   { opacity: 1; filter: blur(0);    transform: scale(1); }
+    }
+    @keyframes spinReveal3D {
+      from { opacity: 0; transform: perspective(600px) rotateY(-55deg) translateX(-30px); }
+      to   { opacity: 1; transform: perspective(600px) rotateY(0deg)   translateX(0); }
+    }
+    @keyframes caretBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .animate-on-scroll { animation-play-state: paused !important; }
+    .animate-on-scroll.animate { animation-play-state: running !important; }
+
+    .word-inner { display: inline-block; }
+    .word-inner.is-visible { animation: wordUp 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+    #hero .word-inner { transform: translateY(110%); opacity: 0; }
+
+    [style*="--border-gradient"]::before {
+      content: ""; position: absolute; inset: 0; padding: 1px;
+      border-radius: var(--border-radius-before, inherit);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      background: var(--border-gradient); pointer-events: none;
+    }
+
+    .btn-shimmer::after, .btn-shimmer-cyan::after {
+      content: ""; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-150%) skewX(-15deg); pointer-events: none; z-index: 5; border-radius: 9999px;
+    }
+    .btn-shimmer-cyan::after { background: linear-gradient(90deg, transparent, rgba(3,240,252,0.25), transparent); }
+    .btn-shimmer:hover::after, .btn-shimmer-cyan:hover::after { animation: shimmerSweep 0.75s ease forwards; }
+
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 200; pointer-events: none; opacity: 0.032;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");
+      background-size: 200px 200px;
+    }
+
+    /* ── Custom cursor — anel único ──────────────────────── */
+    .cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(3, 240, 252, 0.55);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      transform: translate(-50%, -50%);
+      transition: width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  height 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  border-color 0.2s ease,
+                  background 0.2s ease,
+                  opacity 0.3s ease;
+      will-change: left, top;
+    }
+    .cursor-ring.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(3, 240, 252, 0.85);
+      background: rgba(3, 240, 252, 0.04);
+    }
+    @media (pointer: fine) {
+      *, *::before, *::after,
+      a, button, input, select, textarea,
+      [role="button"], [data-cursor-hover],
+      label, summary {
+        cursor: none !important;
+      }
+    }
+    @media (pointer: coarse) { .cursor-ring { display: none; } }
+
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: linear-gradient(90deg, #2f67fc, #03f0fc); z-index: 300; transition: width 0.08s linear; }
+
+    ::selection { background: rgba(47,103,252,0.35); color: #fff; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: rgba(47,103,252,0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(47,103,252,0.6); }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px; }
+
+    /* Sticky sections (efeito Humaan) */
+    .sticky-wrapper { position: relative; height: 200vh; }
+    .sticky-inner {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+  </style>
+  <link rel="stylesheet" href="assets/mobile-layout.css" />
+</head>
+<body class="bg-bg text-[#F0F4FF] font-body antialiased overflow-x-hidden">
+
+  <div class="grain-overlay"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- WhatsApp floating -->
+  <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20entender%20melhor%20como%20voc%C3%AAs%20trabalham." target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-[500] flex items-center gap-3 group" aria-label="Falar no WhatsApp">
+    <span class="absolute inset-0 w-14 h-14 rounded-full bg-[#25D366]/30 animate-ping"></span>
+    <div class="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-transform duration-300 group-hover:scale-110">
+      <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Pill nav -->
+  <div class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="pointer-events-auto bg-surface/90 backdrop-blur-md border border-white/10 rounded-full py-2.5 px-5 flex items-center gap-6 shadow-xl shadow-black/50 [animation:fadeSlideIn_0.8s_cubic-bezier(0.2,0.8,0.2,1)_0.1s_both]">
+      <a href="index.html" class="flex items-center mr-2">
+        <img src="assets/logo.png" alt="MXC Digital" class="h-8 object-contain">
+      </a>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="index.html#servicos"  class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Serviços</a>
+        <a href="index.html#portfolio" class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Portfolio</a>
+        <a href="index.html#sobre"     class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Sobre</a>
+        <a href="index.html#planos"    class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Planos</a>
+      </div>
+      <a href="contato.html"
+         class="btn-shimmer relative overflow-hidden text-[10px] font-display font-bold uppercase tracking-widest text-white rounded-full px-4 py-2 ml-2 transition-all duration-300"
+         style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 8px 20px -4px rgba(47,103,252,0.4); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+        <span class="relative z-10">Iniciar Projeto</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Aurora background (mais sutil para case study) -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none">
+    <div class="absolute inset-0 dot-grid opacity-60"></div>
+    <div class="absolute w-[700px] h-[700px] rounded-full bg-brand/15 blur-[140px] -top-48 -left-48" style="animation: auroraFloat1 22s ease-in-out infinite;"></div>
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-cyan/[0.10] blur-[140px] -bottom-32 -right-32" style="animation: auroraFloat2 28s ease-in-out infinite;"></div>
+    <div id="mouse-glow" class="absolute inset-0" style="background: radial-gradient(700px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(47,103,252,0.05), transparent 40%);"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO FULLSCREEN
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-end px-6 md:px-10 pb-20 pt-32 overflow-hidden z-10">
+    <!-- Huge visual background inside the hero -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-brand/30 via-surface to-cyan/20"></div>
+      <div class="absolute inset-0 dot-grid opacity-30"></div>
+      <!-- Mock shapes that suggest a site preview -->
+      <div class="absolute top-32 right-[10%] w-48 h-48 rounded-3xl bg-brand/15 border border-brand/25 backdrop-blur-sm"></div>
+      <div class="absolute bottom-32 right-[28%] w-36 h-52 rounded-3xl bg-cyan/15 border border-cyan/25 backdrop-blur-sm"></div>
+      <div class="absolute top-48 right-[35%] w-24 h-24 rounded-full bg-white/5 border border-white/10"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/60 to-transparent"></div>
+      <!-- Horizon sweep -->
+      <div class="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/80 to-transparent" style="top: 50%; animation: horizonSweep 1.2s cubic-bezier(0.4,0,0.2,1) 0.4s both;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl w-full mx-auto">
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 mb-8 text-[10px] font-display uppercase tracking-[0.2em] text-white/40 [animation:fadeSlideIn_0.8s_ease_0.3s_both]">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <span class="text-white/20">/</span>
+        <a href="index.html#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+        <span class="text-white/20">/</span>
+        <span class="text-white">Atelier Nova</span>
+      </div>
+
+      <!-- Type badge -->
+      <div class="inline-flex items-center gap-2 bg-brand/15 border border-brand/30 text-brand/90 font-display font-semibold text-[10px] uppercase tracking-[0.2em] rounded-full px-4 py-1.5 mb-8 [animation:fadeSlideIn_0.8s_ease_0.5s_both]">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+        Criação do Zero · 2026
+      </div>
+
+      <!-- Título -->
+      <h1 class="font-display font-extrabold leading-[0.86] tracking-[-0.04em] text-white mb-8 max-w-4xl" style="font-size: clamp(64px, 10vw, 160px);">
+        <div class="overflow-hidden">
+          <span class="word-inner block" style="animation-delay: 0.7s;">Atelier</span>
+        </div>
+        <div class="overflow-hidden">
+          <span class="word-inner block bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent" style="animation-delay: 0.85s;">Nova</span>
+        </div>
+      </h1>
+
+      <p class="text-lg md:text-xl text-white/55 font-body max-w-xl leading-relaxed [animation:fadeSlideIn_0.9s_ease_1.3s_both]">
+        Como construímos a presença digital de um estúdio de arquitetura de interiores — transformando trabalho de portfólio em uma máquina de atração de clientes qualificados.
+      </p>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 [animation:fadeSlideIn_1s_ease_1.8s_both]">
+      <span class="text-[9px] font-display uppercase tracking-[0.25em] text-white/30">Scroll</span>
+      <div class="w-px h-10 bg-gradient-to-b from-white/25 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       OVERVIEW
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-[auto_1fr] gap-12 lg:gap-24">
+        <!-- Metadata -->
+        <div class="space-y-8 lg:w-72">
+          <div class="animate-on-scroll [animation:fadeSlideIn_0.7s_ease_0.1s_both]">
+            <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/35 mb-2">Cliente</p>
+            <p class="font-display font-semibold text-white text-base">Atelier Nova</p>
+          </div>
+          <div class="animate-on-scroll [animation:fadeSlideIn_0.7s_ease_0.2s_both]">
+            <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/35 mb-2">Serviço</p>
+            <p class="font-display font-semibold text-white text-base">Criação do Zero</p>
+            <p class="text-white/40 font-body text-xs mt-1">Branding · Copy · SEO · Dev</p>
+          </div>
+          <div class="animate-on-scroll [animation:fadeSlideIn_0.7s_ease_0.3s_both]">
+            <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/35 mb-2">Ano</p>
+            <p class="font-display font-semibold text-white text-base">2026</p>
+          </div>
+          <div class="animate-on-scroll [animation:fadeSlideIn_0.7s_ease_0.4s_both]">
+            <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/35 mb-2">Setor</p>
+            <p class="font-display font-semibold text-white text-base">Arquitetura · Design</p>
+          </div>
+        </div>
+
+        <!-- Context -->
+        <div class="animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.2s_both]">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-px bg-brand"></span>
+            <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">Overview</span>
+          </div>
+          <p class="font-display font-semibold text-white leading-tight mb-6" style="font-size: clamp(24px, 2.6vw, 36px); letter-spacing: -0.02em;">
+            Um estúdio com 8 anos de experiência e portfólio invejável — mas uma presença digital que não refletia nada disso.
+          </p>
+          <p class="text-white/50 font-body text-base leading-relaxed mb-4">
+            O Atelier Nova chegou até nós depois de passar três anos inteiros apenas no Instagram. A maioria dos clientes vinha por indicação, mas havia um teto claro: sem site, o estúdio dependia do contato direto para passar credibilidade.
+          </p>
+          <p class="text-white/45 font-body text-base leading-relaxed">
+            Nosso papel foi transformar um portfólio visual denso em uma experiência digital que comunicasse o mesmo cuidado dos projetos físicos — e filtrasse, já no primeiro contato, o tipo de cliente que eles queriam atender.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       O DESAFIO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
+        <div class="animate-on-scroll [animation:fadeSlideIn_0.7s_ease_0.1s_both]">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-px bg-brand"></span>
+            <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">01 · Desafio</span>
+          </div>
+          <h2 class="font-display font-extrabold text-white tracking-tight leading-[0.92]" style="font-size: clamp(36px, 4vw, 56px);">
+            O desafio
+          </h2>
+        </div>
+        <div class="animate-on-scroll space-y-5 [animation:fadeSlideIn_0.8s_ease_0.25s_both]">
+          <p class="text-white/70 font-body text-lg leading-relaxed">
+            Criar um site que fosse tão premium quanto o trabalho do estúdio — sem cair em dois extremos comuns em portfólios de arquitetura.
+          </p>
+          <div class="space-y-3 mt-6 pl-6 border-l border-brand/30">
+            <p class="text-white/50 font-body text-base leading-relaxed">
+              <span class="font-display font-semibold text-white">Evitar o "template fotográfico"</span> — aquele site que é só um carrossel de projetos sem contexto, que não vende nada.
+            </p>
+            <p class="text-white/50 font-body text-base leading-relaxed">
+              <span class="font-display font-semibold text-white">Evitar a poluição visual</span> — menus complexos, animações excessivas e copy genérico que distrai do trabalho em si.
+            </p>
+          </div>
+          <p class="text-white/45 font-body text-base leading-relaxed mt-6">
+            E, o mais importante: fazer com que um visitante com orçamento grande sentisse confiança em clicar em "Começar um projeto" antes mesmo de marcar uma reunião.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       STICKY FULLSCREEN VISUAL #1
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="sticky-wrapper relative z-10 my-12">
+    <div class="sticky-inner bg-gradient-to-br from-brand/35 via-surface to-cyan/25 relative">
+      <div class="absolute inset-0 dot-grid opacity-25"></div>
+      <!-- Decorative elements -->
+      <div class="absolute top-[15%] left-[10%] w-56 h-80 rounded-3xl bg-brand/12 border border-brand/25 backdrop-blur-sm"></div>
+      <div class="absolute top-[25%] right-[12%] w-72 h-48 rounded-3xl bg-cyan/12 border border-cyan/25 backdrop-blur-sm"></div>
+      <div class="absolute bottom-[18%] left-[28%] w-40 h-40 rounded-full bg-white/[0.05] border border-white/10 backdrop-blur-sm"></div>
+      <div class="absolute bottom-[25%] right-[28%] w-28 h-28 rounded-2xl bg-brand/20 border border-brand/30"></div>
+
+      <div class="absolute inset-0 flex items-center justify-center px-6">
+        <div class="text-center max-w-3xl">
+          <span class="inline-block text-[10px] font-display uppercase tracking-[0.25em] text-cyan/80 mb-6">Homepage</span>
+          <h2 class="font-display font-extrabold text-white leading-[0.9] tracking-tight" style="font-size: clamp(40px, 6vw, 84px);">
+            Minimalismo editorial, respiração entre elementos.
+          </h2>
+        </div>
+      </div>
+      <!-- Bottom gradient -->
+      <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-bg to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       A SOLUÇÃO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
+        <div class="animate-on-scroll [animation:fadeSlideIn_0.7s_ease_0.1s_both]">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-px bg-cyan"></span>
+            <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/80">02 · Solução</span>
+          </div>
+          <h2 class="font-display font-extrabold text-white tracking-tight leading-[0.92]" style="font-size: clamp(36px, 4vw, 56px);">
+            A solução
+          </h2>
+        </div>
+        <div class="animate-on-scroll space-y-5 [animation:fadeSlideIn_0.8s_ease_0.25s_both]">
+          <p class="text-white/70 font-body text-lg leading-relaxed">
+            Construímos um site editorial — quase como uma revista digital — onde cada projeto é uma página inteira em si, com contexto, fotos grandes e narrativa.
+          </p>
+          <p class="text-white/50 font-body text-base leading-relaxed">
+            A tipografia foi escolhida para criar peso em poucas palavras, permitindo que os projetos ocupassem o espaço principal sem concorrência visual. O menu foi reduzido para quatro itens, todos navegáveis com um clique.
+          </p>
+          <p class="text-white/50 font-body text-base leading-relaxed">
+            Copywriting: abandonamos "serviços" e "portfólio" como categorias. No lugar, usamos "projetos recentes" e "como trabalhamos" — termos que refletem como o próprio cliente pensa sobre o trabalho.
+          </p>
+          <div class="mt-8 grid grid-cols-2 gap-4">
+            <div class="bg-surface border border-white/[0.07] rounded-xl p-4">
+              <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-2">Stack</p>
+              <p class="text-white/70 font-body text-sm">HTML · Tailwind · JS</p>
+            </div>
+            <div class="bg-surface border border-white/[0.07] rounded-xl p-4">
+              <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-2">Prazo</p>
+              <p class="text-white/70 font-body text-sm">5 semanas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       STICKY FULLSCREEN VISUAL #2
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="sticky-wrapper relative z-10 my-12">
+    <div class="sticky-inner bg-gradient-to-br from-cyan/25 via-surface to-brand/15 relative">
+      <div class="absolute inset-0 dot-grid opacity-25"></div>
+      <!-- Mobile preview mockup -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex gap-5 items-center">
+        <div class="w-48 h-96 rounded-[32px] bg-bg border border-white/10 p-3 shadow-2xl shadow-black/40">
+          <div class="w-full h-full bg-gradient-to-br from-brand/30 to-cyan/20 rounded-[24px] relative overflow-hidden">
+            <div class="absolute top-4 left-4 right-4 h-3 bg-white/20 rounded-full"></div>
+            <div class="absolute top-14 left-4 right-4 h-16 bg-white/10 rounded-xl"></div>
+            <div class="absolute top-36 left-4 right-4 h-24 bg-white/5 rounded-xl"></div>
+            <div class="absolute bottom-4 left-4 right-4 h-10 bg-brand/40 rounded-full"></div>
+          </div>
+        </div>
+        <div class="hidden md:block w-56 h-[440px] rounded-[32px] bg-bg border border-cyan/30 p-3 shadow-[0_0_60px_rgba(3,240,252,0.2)]">
+          <div class="w-full h-full bg-gradient-to-br from-cyan/25 to-brand/15 rounded-[24px] relative overflow-hidden">
+            <div class="absolute top-4 left-4 right-4 h-3 bg-cyan/40 rounded-full"></div>
+            <div class="absolute top-14 left-4 right-4 h-20 bg-white/15 rounded-xl"></div>
+            <div class="absolute top-40 left-4 right-4 grid grid-cols-2 gap-2">
+              <div class="h-20 bg-white/8 rounded-lg"></div>
+              <div class="h-20 bg-white/8 rounded-lg"></div>
+              <div class="h-20 bg-white/8 rounded-lg"></div>
+              <div class="h-20 bg-white/8 rounded-lg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-16 left-1/2 -translate-x-1/2 text-center px-6">
+        <span class="inline-block text-[10px] font-display uppercase tracking-[0.25em] text-cyan/80 mb-3">Feito para celular</span>
+        <p class="font-display font-bold text-white tracking-tight" style="font-size: clamp(20px, 2.2vw, 28px);">
+          70% dos visitantes chegam pelo celular.
+        </p>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-bg to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       RESULTADOS
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-6">
+        <span class="w-8 h-px bg-cyan"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/80">03 · Resultados</span>
+      </div>
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+        <h2 class="font-display font-extrabold leading-[0.9] tracking-tight text-white" style="font-size: clamp(40px, 5vw, 72px);">
+          Os números<br/>depois do lançamento.
+        </h2>
+        <p class="text-white/45 font-body max-w-xs text-sm leading-relaxed">
+          Medidos nos primeiros 90 dias após o lançamento, comparado à performance do Instagram do mesmo período no ano anterior.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="animate-on-scroll relative bg-surface border border-white/[0.07] rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.1s_both]">
+          <div class="font-display font-extrabold text-white mb-3" style="font-size: 68px; line-height: 1;"
+               data-target="320" data-suffix="%">0%</div>
+          <p class="font-display font-semibold text-white text-base mb-2">Aumento em contatos qualificados</p>
+          <p class="text-white/40 font-body text-sm leading-relaxed">Formulários preenchidos com orçamento declarado acima de R$80k.</p>
+        </div>
+        <div class="animate-on-scroll relative bg-surface border border-cyan/25 rounded-2xl p-8 shadow-[0_0_40px_rgba(3,240,252,0.08)] [animation:fadeSlideIn_0.8s_ease_0.2s_both]">
+          <div class="font-display font-extrabold bg-gradient-to-r from-brand to-cyan bg-clip-text text-transparent mb-3" style="font-size: 68px; line-height: 1;"
+               data-target="4" data-suffix="s">0s</div>
+          <p class="font-display font-semibold text-white text-base mb-2">Tempo médio no site</p>
+          <p class="text-white/40 font-body text-sm leading-relaxed">Mais do que dobrou em relação ao benchmark do setor — e 3× maior que a versão anterior.</p>
+        </div>
+        <div class="animate-on-scroll relative bg-surface border border-white/[0.07] rounded-2xl p-8 [animation:fadeSlideIn_0.8s_ease_0.3s_both]">
+          <div class="font-display font-extrabold text-cyan mb-3" style="font-size: 68px; line-height: 1;"
+               data-target="1.9" data-suffix="s">0s</div>
+          <p class="font-display font-semibold text-white text-base mb-2">Largest Contentful Paint</p>
+          <p class="text-white/40 font-body text-sm leading-relaxed">Carregamento da primeira tela em 4G simulado. Google considera "bom" abaixo de 2.5s.</p>
+        </div>
+      </div>
+
+      <!-- Depoimento do cliente -->
+      <div class="animate-on-scroll mt-12 relative bg-gradient-to-br from-surface to-surface/60 border border-white/[0.07] rounded-3xl p-10 md:p-14 overflow-hidden [animation:fadeSlideIn_0.8s_ease_0.5s_both]">
+        <div class="absolute top-0 right-0 w-80 h-80 bg-brand/[0.08] blur-[100px] rounded-full pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl">
+          <i data-lucide="quote" class="w-10 h-10 text-brand/40 mb-6"></i>
+          <p class="font-display font-semibold text-white leading-relaxed mb-8" style="font-size: clamp(22px, 2.4vw, 32px); letter-spacing: -0.015em;">
+            "Em dois meses a gente fechou dois projetos grandes que vieram direto pelo formulário. O site virou a melhor comercial que a gente já teve."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-brand/40 to-cyan/20 flex-shrink-0 border border-white/10"></div>
+            <div>
+              <p class="font-display font-semibold text-white text-sm">Helena Torres</p>
+              <p class="text-white/40 font-body text-xs">Sócia-fundadora · Atelier Nova</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA FINAL
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-32">
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand/10 blur-[100px] rounded-full pointer-events-none"></div>
+      <div class="relative z-10">
+        <span class="text-[10px] font-display uppercase tracking-[0.2em] text-brand/70 block mb-6">O próximo pode ser o seu</span>
+        <h2 class="animate-on-scroll font-display font-extrabold text-white leading-[0.9] tracking-tight mb-6 [animation:fadeSlideIn_0.8s_ease_0s_both]"
+            style="font-size: clamp(40px, 6.5vw, 88px);">
+          Gostou do resultado?<br/>
+          <span class="bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent">Vamos construir o seu.</span>
+        </h2>
+        <p class="text-white/45 font-body text-lg max-w-lg mx-auto leading-relaxed mb-12">
+          Fale com a gente sobre o seu projeto. Primeira conversa sempre grátis, sem compromisso.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Quero%20criar%20um%20site%20com%20a%20MXC%20Digital.%20Gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener noreferrer"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white rounded-full px-10 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-[1.03]"
+             style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 20px 50px -8px rgba(47,103,252,0.6); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+            <span class="relative z-10 flex items-center gap-2">Falar no WhatsApp</span>
+          </a>
+          <a href="contato.html"
+             class="btn-shimmer relative overflow-hidden font-display font-bold text-sm uppercase tracking-widest text-white/60 rounded-full px-8 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white"
+             style="background: linear-gradient(180deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.02) 50%, rgba(255,255,255,0.07) 100%); box-shadow: 0 0 0 1px rgba(255,255,255,0.1); --border-gradient: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(47,103,252,0.1), rgba(255,255,255,0.07)); --border-radius-before: 9999px;">
+            <span class="relative z-10">Preencher alinhamento</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PRÓXIMO PROJETO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 pb-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">Próximo projeto</span>
+      </div>
+      <a href="projeto-template.html"
+         class="group block relative overflow-hidden rounded-3xl border border-white/[0.07] hover:border-white/20 transition-all duration-500"
+         data-cursor-hover>
+        <div class="aspect-[21/8] md:aspect-[21/6] bg-gradient-to-br from-cyan/20 via-surface to-brand/15 relative overflow-hidden">
+          <div class="absolute inset-0 dot-grid opacity-30"></div>
+          <div class="absolute top-1/2 left-[10%] -translate-y-1/2 w-28 h-40 rounded-2xl bg-cyan/15 border border-cyan/25 backdrop-blur-sm"></div>
+          <div class="absolute top-1/2 right-[15%] -translate-y-1/2 w-44 h-24 rounded-2xl bg-brand/20 border border-brand/30"></div>
+          <div class="absolute inset-0 bg-bg/40 group-hover:bg-transparent transition-all duration-700"></div>
+          <!-- Overlay content -->
+          <div class="absolute inset-0 flex items-center justify-between px-8 md:px-14">
+            <div>
+              <span class="text-[9px] font-display uppercase tracking-[0.2em] text-cyan/70 block mb-3">Próximo · Reformulação</span>
+              <h3 class="font-display font-extrabold text-white leading-[0.9] tracking-tight" style="font-size: clamp(32px, 5vw, 64px);" data-scramble>Mendonça Advogados</h3>
+              <p class="text-white/50 font-body text-sm mt-3 max-w-sm">Como transformamos um site ultrapassado em uma peça central da estratégia comercial de um escritório de advocacia.</p>
+            </div>
+            <div class="hidden md:flex w-16 h-16 rounded-full bg-surface/80 border border-white/15 items-center justify-center group-hover:bg-brand group-hover:border-brand group-hover:scale-110 transition-all duration-500 flex-shrink-0">
+              <i data-lucide="arrow-right" class="w-7 h-7 text-white"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 px-6 md:px-10 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="assets/logo.png" alt="MXC Digital" class="h-12 object-contain">
+          </div>
+          <p class="text-white/35 font-body text-sm leading-relaxed max-w-xs">
+            Criamos e reformulamos sites para empresas que querem crescer de verdade.
+          </p>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Navegação</p>
+          <div class="space-y-3">
+            <a href="criacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Criação de Sites</a>
+            <a href="reformulacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Reformulação</a>
+            <a href="portfolio.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Portfólio</a>
+            <a href="index.html#planos" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Planos de Manutenção</a>
+            <a href="contato.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Contato</a>
+            <a href="/politica-de-privacidade.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Política de Privacidade</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Contato</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="mailto:contato@mxcdigital.com.br" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i> contato@mxcdigital.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/20 font-body text-xs">© 2026 MXC Digital. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          <span class="text-white/20 font-body text-xs">Disponível para novos projetos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+    // ═══ Custom cursor — apenas anel, instantâneo, sem lerp ═══
+    (function() {
+      const ring = document.getElementById('cursor-ring');
+      if (!ring) return;
+
+      document.addEventListener('mousemove', e => {
+        ring.style.left = e.clientX + 'px';
+        ring.style.top  = e.clientY + 'px';
+      });
+
+      document.addEventListener('mouseleave', () => { ring.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { ring.style.opacity = '1'; });
+
+      const hoverTargets = 'a, button, [data-cursor-hover], input, textarea, select, label';
+      document.querySelectorAll(hoverTargets).forEach(el => {
+        el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+      });
+    })();
+
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = pct + '%';
+    });
+
+    document.addEventListener('mousemove', e => {
+      document.documentElement.style.setProperty('--mouse-x', (e.clientX / window.innerWidth * 100).toFixed(1) + '%');
+      document.documentElement.style.setProperty('--mouse-y', (e.clientY / window.innerHeight * 100).toFixed(1) + '%');
+    });
+
+    (function() {
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('animate'); io.unobserve(e.target); } });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('.animate-on-scroll').forEach(el => io.observe(el));
+    })();
+
+    function scramble(el) {
+      const final = el.dataset.scramble || el.textContent;
+      if (!el.dataset.scramble) el.dataset.scramble = final;
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      let i = 0;
+      const iv = setInterval(() => {
+        el.textContent = final.split('').map((c, j) => j < i ? final[j] : chars[Math.floor(Math.random() * chars.length)]).join('');
+        if (i >= final.length) { el.textContent = final; clearInterval(iv); }
+        i += 0.4;
+      }, 25);
+    }
+    document.querySelectorAll('[data-scramble]').forEach(el => {
+      el.dataset.scramble = el.textContent;
+      el.addEventListener('mouseenter', () => scramble(el));
+    });
+
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const dur = 1800;
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / dur, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          const v = ease * target;
+          const display = Number.isInteger(target) ? Math.floor(v) : v.toFixed(1);
+          el.textContent = display + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        counterObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+    setTimeout(() => {
+      document.querySelectorAll('#hero .word-inner').forEach(el => el.classList.add('is-visible'));
+    }, 100);
+  </script>
+</body>
+</html>

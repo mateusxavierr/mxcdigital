@@ -1,0 +1,1638 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- SEO -->
+  <title>Case Study — QDelícia Frutas | MXC Digital</title>
+  <meta name="description" content="Reformulação completa do site da QDelícia Frutas — 22 anos de tradição, nova identidade visual, posicionamento B2B e entrega em 14 dias." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://mxcdigital.com.br/portfolio/qdelicia.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="MXC Digital" />
+  <meta property="og:url" content="https://mxcdigital.com.br/portfolio/qdelicia.html" />
+  <meta property="og:title" content="QDelícia Frutas — Reformulação de Site | MXC Digital" />
+  <meta property="og:description" content="Reformulação completa do site da QDelícia Frutas — 22 anos de tradição, nova identidade visual, posicionamento B2B e entrega em 14 dias." />
+  <meta property="og:image" content="https://mxcdigital.com.br/assets/portfolio/qdelicia-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_BR" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="QDelícia Frutas — Reformulação de Site | MXC Digital" />
+  <meta name="twitter:description" content="Reformulação completa do site da QDelícia Frutas. Identidade nova, copy B2B e entrega em 14 dias." />
+  <meta name="twitter:image" content="https://mxcdigital.com.br/assets/portfolio/qdelicia-cover.jpg" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="../assets/icone.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/icone.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Epilogue:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { brand: '#2f67fc', cyan: '#03f0fc', surface: '#0d1520', bg: '#111827' },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+            body: ['Epilogue', 'sans-serif'],
+            mono: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          boxShadow: {
+            'brand-glow': '0 0 30px rgba(47,103,252,0.35)',
+            'cyan-glow': '0 0 30px rgba(3,240,252,0.35)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @keyframes fadeSlideIn { 0% { opacity: 0; transform: translateY(28px); filter: blur(8px); } 100% { opacity: 1; transform: translateY(0); filter: blur(0); } }
+    @keyframes beamFall { 0% { transform: translateY(-100%); opacity: 0; } 5% { opacity: 0.7; } 50% { opacity: 1; } 95% { opacity: 0.7; } 100% { transform: translateY(110vh); opacity: 0; } }
+    @keyframes shimmerSweep { 0% { transform: translateX(-150%) skewX(-15deg); } 100% { transform: translateX(350%) skewX(-15deg); } }
+    @keyframes wordUp { 0% { transform: translateY(110%); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(80px,-60px) scale(1.1); } 66% { transform: translate(-40px,40px) scale(0.95); } }
+    @keyframes auroraFloat2 { 0%, 100% { transform: translate(0,0) scale(1); } 33% { transform: translate(-100px,50px) scale(1.05); } 66% { transform: translate(60px,-80px) scale(1.1); } }
+    @keyframes auroraFloat3 { 0%, 100% { transform: translate(0,0) scale(1); opacity: 0.2; } 50% { transform: translate(50px,30px) scale(1.15); opacity: 0.4; } }
+    @keyframes horizonSweep { 0% { transform: scaleX(0); transform-origin: left; opacity: 0; } 30% { transform: scaleX(1); transform-origin: left; opacity: 1; } 70% { transform: scaleX(1); transform-origin: right; opacity: 1; } 100% { transform: scaleX(0); transform-origin: right; opacity: 0; } }
+
+    /* ── Keyframes de entrada — scroll reveal ───────────── */
+    @keyframes splitFromLeft {
+      from { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-18px); }
+      to   { opacity: 1; clip-path: inset(0 0% 0 0);   transform: translateX(0); }
+    }
+    @keyframes splitFromRight {
+      from { opacity: 0; clip-path: inset(0 0 0 100%);  transform: translateX(18px); }
+      to   { opacity: 1; clip-path: inset(0 0 0 0%);    transform: translateX(0); }
+    }
+    @keyframes scaleSnap {
+      from { opacity: 0; transform: scale(0.88); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes elegantRise {
+      from { opacity: 0; transform: translateY(22px); filter: blur(6px); }
+      to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+    }
+    @keyframes diagWipe {
+      from { opacity: 0; clip-path: inset(0 100% 100% 0); }
+      to   { opacity: 1; clip-path: inset(0 0% 0% 0); }
+    }
+    @keyframes blurSnap {
+      from { opacity: 0; filter: blur(12px); transform: scale(1.04); }
+      to   { opacity: 1; filter: blur(0);    transform: scale(1); }
+    }
+    @keyframes spinReveal3D {
+      from { opacity: 0; transform: perspective(600px) rotateY(-55deg) translateX(-30px); }
+      to   { opacity: 1; transform: perspective(600px) rotateY(0deg)   translateX(0); }
+    }
+    @keyframes caretBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+    @keyframes marqueeScroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .animate-on-scroll { animation-play-state: paused !important; }
+    .animate-on-scroll.animate { animation-play-state: running !important; }
+
+    .word-inner { display: inline-block; will-change: transform; -webkit-backface-visibility: hidden; backface-visibility: hidden; }
+    .word-inner.is-visible { animation: wordUp 0.85s cubic-bezier(0.16,1,0.3,1) forwards; }
+    #hero .word-inner { transform: translateY(110%); opacity: 0; }
+
+    [style*="--border-gradient"]::before {
+      content: ""; position: absolute; inset: 0; padding: 1px;
+      border-radius: var(--border-radius-before, inherit);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor; mask-composite: exclude;
+      background: var(--border-gradient); pointer-events: none;
+    }
+
+    .btn-shimmer::after, .btn-shimmer-cyan::after {
+      content: ""; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+      transform: translateX(-150%) skewX(-15deg); pointer-events: none; z-index: 5; border-radius: 9999px;
+    }
+    .btn-shimmer-cyan::after { background: linear-gradient(90deg, transparent, rgba(3,240,252,0.25), transparent); }
+    .btn-shimmer:hover::after, .btn-shimmer-cyan:hover::after { animation: shimmerSweep 0.75s ease forwards; }
+
+    .grain-overlay {
+      position: fixed; inset: 0; z-index: 200; pointer-events: none; opacity: 0.032;
+      background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='300' height='300' filter='url(%23g)'/></svg>");
+      background-size: 200px 200px;
+    }
+
+    /* ── Custom cursor — anel único ──────────────────────── */
+    .cursor-ring {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid rgba(3, 240, 252, 0.55);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      will-change: transform;
+      transform: translate(-100px, -100px);
+      transition: width 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  height 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  border-color 0.2s ease,
+                  background 0.2s ease,
+                  opacity 0.3s ease;
+    }
+    .cursor-ring.hovering {
+      width: 56px;
+      height: 56px;
+      border-color: rgba(3, 240, 252, 0.85);
+      background: rgba(3, 240, 252, 0.04);
+    }
+    @media (pointer: fine) {
+      *, *::before, *::after,
+      a, button, input, select, textarea,
+      [role="button"], [data-cursor-hover],
+      label, summary {
+        cursor: none !important;
+      }
+    }
+    @media (pointer: coarse) { .cursor-ring { display: none; } }
+
+    .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; width: 0%; background: linear-gradient(90deg, #2f67fc, #03f0fc); z-index: 300; transition: width 0.08s linear; }
+
+    ::selection { background: rgba(47,103,252,0.35); color: #fff; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #111827; }
+    ::-webkit-scrollbar-thumb { background: rgba(47,103,252,0.3); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(47,103,252,0.6); }
+    .dot-grid { background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px); background-size: 32px 32px; }
+
+    /* Sticky sections (efeito Humaan) */
+    .sticky-wrapper { position: relative; height: 200vh; }
+    .sticky-inner {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ── Browser Mockup CSS ───────────────────────────── */
+    .browser-frame {
+      background: #1C1C1E;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.07);
+      position: relative;
+    }
+    /* Glare sutil sobre a tela do browser */
+    .browser-frame::after {
+      content: "";
+      position: absolute;
+      top: 38px;
+      left: 0; right: 0;
+      height: 55%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.022) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .browser-bar {
+      height: 38px;
+      background: #2C2C2E;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 8px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 3;
+    }
+    .browser-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .browser-dot-r { background: #FF5F57; }
+    .browser-dot-y { background: #FEBC2E; }
+    .browser-dot-g { background: #28C840; }
+    .browser-screen { overflow: hidden; position: relative; }
+    .browser-screen img { width: 100%; display: block; }
+
+    /* Sombra mais leve para itens da galeria (frames pequenos) */
+    .gallery-item .browser-frame {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06);
+    }
+
+    /* ── iPhone Mockup CSS ────────────────────────────── */
+    .phone-frame {
+      background: #1C1C1E;
+      border-radius: 50px;
+      padding: 14px;
+      box-shadow:
+        0 60px 120px rgba(0,0,0,0.9),
+        0 20px 40px rgba(0,0,0,0.7),
+        0 0 0 1px rgba(255,255,255,0.08),
+        inset 0 0 0 2px #2C2C2E;
+      position: relative;
+      z-index: 1;
+      isolation: isolate;
+    }
+    .phone-screen-wrap {
+      border-radius: 38px;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+    }
+    .phone-screen-wrap img { width: 100%; display: block; }
+    .phone-island {
+      width: 90px;
+      height: 26px;
+      background: #000;
+      border-radius: 13px;
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+    }
+    .phone-home-bar {
+      width: 90px;
+      height: 4px;
+      background: rgba(255,255,255,0.22);
+      border-radius: 2px;
+      margin: 10px auto 6px;
+    }
+
+    /* Mobile First case — respiro extra embaixo: ghost rotacionado + sombra ficam fora do clip */
+    .phone-mockup-wallach {
+      position: relative;
+      display: inline-block;
+      overflow: visible;
+      padding: 16px 32px 88px 28px;
+    }
+    .phone-mockup-wallach .phone-screen-wrap {
+      background: #0D1829;
+    }
+    .phone-mockup-wallach .phone-screen-wrap > img {
+      padding-top: 0;
+      vertical-align: top;
+    }
+    .phone-mockup-wallach .phone-island {
+      top: 12px;
+      z-index: 20;
+      box-shadow: 0 0 0 1px rgba(0,0,0,0.35);
+    }
+    /* Home indicator dentro da tela (como iPhone real); borda cinza igual em todos os lados */
+    .phone-mockup-wallach .phone-home-bar {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      transform: translateX(-50%);
+      margin: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.32);
+    }
+    .phone-mockup-wallach .phone-frame {
+      padding: 14px;
+      box-shadow:
+        0 28px 56px rgba(0,0,0,0.52),
+        0 12px 28px rgba(0,0,0,0.38),
+        0 0 0 1px rgba(255,255,255,0.08),
+        inset 0 0 0 2px #2C2C2E;
+    }
+
+    /* ── Horizontal Gallery ───────────────────────────── */
+    .gallery-outer { position: relative; }
+    .gallery-outer::before,
+    .gallery-outer::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 12px;
+      width: 80px;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .gallery-outer::before {
+      left: 0;
+      background: linear-gradient(to right, #111827 10%, transparent);
+    }
+    .gallery-outer::after {
+      right: 0;
+      background: linear-gradient(to left, #111827 10%, transparent);
+    }
+    .gallery-scroll {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      overflow-y: visible;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding-bottom: 12px;
+      padding-top: 4px;
+      cursor: grab;
+      -webkit-overflow-scrolling: touch;
+    }
+    .gallery-scroll:active { cursor: grabbing; }
+    .gallery-scroll::-webkit-scrollbar { display: none; }
+    .gallery-item { flex-shrink: 0; }
+    .gallery-item.gallery-item-zoomable {
+      cursor: zoom-in;
+      border-radius: 0.375rem;
+      transition: transform 0.2s ease;
+    }
+    .gallery-item.gallery-item-zoomable:focus-visible {
+      outline: 2px solid rgba(47,103,252,0.65);
+      outline-offset: 4px;
+    }
+    .gallery-item.gallery-item-zoomable:active { transform: scale(0.99); }
+    .gallery-item.gallery-item-zoomable:hover .browser-frame {
+      box-shadow: 0 12px 42px rgba(0,0,0,0.62), 0 0 0 1px rgba(255,255,255,0.09);
+    }
+    /* Lightbox galeria */
+    #gallery-lightbox {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #gallery-lightbox.is-open {
+      display: flex;
+    }
+
+    /* ── Cards do case study — mesmo padrão dos card-problema da home ── */
+    /* Nota: usam data-tilt + cursor-glow via JS */
+    .card-case {
+      background: rgba(13, 21, 32, 0.6);
+      border: 1px solid rgba(255,255,255,0.07);
+      border-radius: 1rem;
+      padding: 32px;
+      overflow: hidden;
+      transition: box-shadow 0.4s ease, border-color 0.4s ease;
+      position: relative;
+    }
+    .card-case:hover {
+      border-color: rgba(3, 240, 252, 0.35);
+      box-shadow: 0 0 40px rgba(3, 240, 252, 0.12), 0 20px 40px rgba(0,0,0,0.3);
+    }
+
+    /* Glow interno cursor-driven (mesmo padrão de [data-tilt] da home) */
+    .card-case::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(
+        200px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+        rgba(3, 240, 252, 0.10),
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .card-case:hover::after { opacity: 1; }
+    .card-case > * { position: relative; z-index: 2; }
+
+    /* Animação de entrada dos cards */
+    .card-case { opacity: 0; transform: translateY(22px); filter: blur(6px); }
+    .card-case.animate { animation: elegantRise 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .card-case:nth-child(1) { animation-delay: 0ms; }
+    .card-case:nth-child(2) { animation-delay: 120ms; }
+    .card-case:nth-child(3) { animation-delay: 240ms; }
+
+    /* ── Resultado Scroll Reveal ──────────────────────── */
+    .resultado-wrapper {
+      position: relative;
+      height: 190vh;
+      z-index: 10;
+    }
+    .resultado-sticky {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      background: #111827;
+    }
+    .resultado-header {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px clamp(16px, 4vw, 40px) 20px;
+      position: relative;
+      z-index: 2;
+    }
+    .resultado-frame-area {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 0 92px 42px;
+      will-change: padding;
+    }
+    .resultado-browser {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      display: flex;
+      flex-direction: column;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #1C1C1E;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.07);
+      will-change: border-radius;
+      transition: box-shadow 0.4s ease;
+    }
+    .resultado-browser:hover {
+      box-shadow: 0 40px 100px rgba(0,0,0,0.8), 0 0 0 1px rgba(255,255,255,0.10);
+    }
+    .resultado-bar {
+      height: 38px;
+      background: #2C2C2E;
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      gap: 8px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 3;
+    }
+    /* Glare sutil — acima da tela */
+    .resultado-browser::after {
+      content: "";
+      position: absolute;
+      top: var(--resultado-bar-offset, 38px);
+      left: 0;
+      right: 0;
+      height: 45%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+    .resultado-screen {
+      flex: 1;
+      min-height: 0;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      background: #0D1829;
+    }
+    .resultado-screen img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center center;
+      display: block;
+    }
+
+    /* ═══ Performance: GPU layers para animações contínuas ═══ */
+    @keyframes auroraFloat1 { 0%, 100% { transform: translate(0,0) scale(1); } }
+    [style*="auroraFloat"] { will-change: transform; }
+    [style*="beamFall"]    { will-change: transform, opacity; }
+    .grain-overlay         { will-change: unset; transform: translateZ(0); }
+  </style>
+  <link rel="stylesheet" href="../assets/mobile-layout.css" />
+</head>
+<body class="bg-bg text-[#F0F4FF] font-body antialiased overflow-x-hidden page-projeto page-qdelicia">
+
+  <div class="grain-overlay"></div>
+  <div class="scroll-progress" id="scroll-progress"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- WhatsApp floating -->
+  <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20entender%20melhor%20como%20voc%C3%AAs%20trabalham." target="_blank" rel="noopener noreferrer"
+     class="fixed bottom-6 right-6 z-[500] flex items-center gap-3 group" aria-label="Falar no WhatsApp">
+    <span class="absolute inset-0 w-14 h-14 rounded-full bg-[#25D366]/30 animate-ping"></span>
+    <div class="relative w-14 h-14 rounded-full bg-[#25D366] flex items-center justify-center shadow-[0_8px_30px_rgba(37,211,102,0.4)] transition-transform duration-300 group-hover:scale-110">
+      <svg class="w-7 h-7 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Pill nav -->
+  <div id="site-pill-header" class="fixed top-6 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none">
+    <nav class="pointer-events-auto bg-surface/90 backdrop-blur-md border border-white/10 rounded-full py-2.5 px-5 flex items-center gap-6 shadow-xl shadow-black/50 [animation:fadeSlideIn_0.8s_cubic-bezier(0.2,0.8,0.2,1)_0.1s_both]">
+      <a href="../index.html" class="flex items-center mr-2">
+        <img src="../assets/logo.png" alt="MXC Digital" class="h-8 object-contain">
+      </a>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="../index.html#servicos"  class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Serviços</a>
+        <a href="../index.html#portfolio" class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Portfolio</a>
+        <a href="../index.html#sobre"     class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Sobre</a>
+        <a href="../index.html#planos"    class="text-[10px] font-display uppercase tracking-widest text-white/50 hover:text-white transition-colors">Planos</a>
+      </div>
+      <a href="../contato.html"
+         class="btn-shimmer relative overflow-hidden text-[10px] font-display font-bold uppercase tracking-widest text-white rounded-full px-4 py-2 ml-2 transition-all duration-300"
+         style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 8px 20px -4px rgba(47,103,252,0.4); --border-gradient: linear-gradient(180deg, rgba(100,150,255,0.8), rgba(47,103,252,0.3), rgba(100,150,255,0.6)); --border-radius-before: 9999px;">
+        <span class="relative z-10">Iniciar Projeto</span>
+      </a>
+    </nav>
+  </div>
+
+  <!-- Aurora background (mais sutil para case study) -->
+  <div class="fixed inset-0 z-0 overflow-hidden pointer-events-none" style="transform:translateZ(0);">
+    <div class="absolute inset-0 dot-grid opacity-60"></div>
+    <div class="absolute w-[700px] h-[700px] rounded-full bg-brand/15 blur-[140px] -top-48 -left-48" style="animation: auroraFloat1 22s ease-in-out infinite;"></div>
+    <div class="absolute w-[600px] h-[600px] rounded-full bg-cyan/[0.10] blur-[140px] -bottom-32 -right-32" style="animation: auroraFloat2 28s ease-in-out infinite;"></div>
+    <div id="mouse-glow" class="absolute inset-0" style="background: radial-gradient(700px circle at var(--mouse-x,50%) var(--mouse-y,50%), rgba(47,103,252,0.05), transparent 40%);"></div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO FULLSCREEN
+       ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="relative min-h-screen flex flex-col justify-end px-6 md:px-10 pb-20 pt-32 overflow-hidden z-10">
+    <!-- Huge visual background inside the hero -->
+    <div class="absolute inset-0 z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#1C2E5C]/35 via-surface to-[#8090A8]/20"></div>
+      <div class="absolute inset-0 dot-grid opacity-30"></div>
+      <!-- Mock shapes (below Themis); mockup de site só na seção sticky mockup 1 -->
+      <div class="absolute top-32 right-[10%] w-48 h-48 rounded-3xl bg-brand/15 border border-brand/25 backdrop-blur-sm z-[1]"></div>
+      <div class="absolute bottom-32 right-[28%] w-36 h-52 rounded-3xl bg-cyan/15 border border-cyan/25 backdrop-blur-sm z-[1]"></div>
+      <div class="absolute top-48 right-[35%] w-24 h-24 rounded-full bg-white/5 border border-white/10 z-[1]"></div>
+      <!-- Themis — direita, sobre as formas, complemento ao texto -->
+      <div class="pointer-events-none absolute inset-y-5 md:inset-y-7 right-0 w-[54%] min-w-[230px] max-w-5xl flex items-center justify-center z-[2]">
+        <img src="../assets/portfolio/qdelicia-hero-bg.png" alt=""
+             class="h-full max-h-[min(95vh,1000px)] w-auto max-w-[min(100%,620px)] object-contain object-center opacity-50 select-none" loading="eager" />
+      </div>
+      <div class="absolute inset-0 bg-gradient-to-t from-bg via-bg/60 to-transparent z-[3]"></div>
+      <!-- Horizon sweep -->
+      <div class="absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan/80 to-transparent" style="top: 50%; animation: horizonSweep 1.2s cubic-bezier(0.4,0,0.2,1) 0.4s both;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-6xl w-full mx-auto">
+      <!-- Breadcrumb -->
+      <div class="flex items-center gap-2 mb-8 text-[10px] font-display uppercase tracking-[0.2em] text-white/40 [animation:fadeSlideIn_0.8s_ease_0.3s_both]">
+        <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+        <span class="text-white/20">/</span>
+        <a href="../index.html#portfolio" class="hover:text-white transition-colors">Portfolio</a>
+        <span class="text-white/20">/</span>
+        <span class="text-white">QDelícia Frutas</span>
+      </div>
+
+      <!-- Type badge -->
+      <div class="inline-flex items-center gap-2 bg-brand/15 border border-brand/30 text-brand/90 font-display font-semibold text-[10px] uppercase tracking-[0.2em] rounded-full px-4 py-1.5 mb-8 [animation:fadeSlideIn_0.8s_ease_0.5s_both]">
+        <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+        Reformulação · 2026
+      </div>
+
+      <!-- Título -->
+      <h1 class="font-display font-extrabold leading-[0.86] tracking-[-0.04em] text-white mb-8 max-w-4xl" style="font-size: clamp(48px, 7vw, 118px);">
+        <div class="overflow-hidden">
+          <span class="word-inner block bg-gradient-to-r from-white via-[#a0b8ff] to-cyan bg-clip-text text-transparent" style="animation-delay: 0.7s;">QDelícia Frutas</span>
+        </div>
+      </h1>
+
+      <p class="text-lg md:text-xl text-white/55 font-body max-w-xl leading-relaxed [animation:fadeSlideIn_0.9s_ease_1.3s_both]">
+        Como transformamos 22 anos de tradição em uma presença digital que faz distribuidores escolherem a QDelícia antes mesmo de pedir orçamento.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       OVERVIEW STRIP
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-10 border-b border-white/[0.06]">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-8 gap-y-7 lg:gap-x-0">
+
+        <div class="animate-on-scroll text-center lg:pr-8 lg:border-r lg:border-white/[0.07] [animation:fadeSlideIn_0.6s_ease_0.05s_both]">
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-1.5">Cliente</p>
+          <p class="font-display font-semibold text-white text-sm leading-snug">QDelícia Frutas</p>
+        </div>
+
+        <div class="animate-on-scroll text-center lg:px-8 lg:border-r lg:border-white/[0.07] [animation:fadeSlideIn_0.6s_ease_0.1s_both]">
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-1.5">Serviço</p>
+          <p class="font-display font-semibold text-white text-sm">Reformulação</p>
+        </div>
+
+        <div class="animate-on-scroll text-center lg:px-8 lg:border-r lg:border-white/[0.07] [animation:fadeSlideIn_0.6s_ease_0.15s_both]">
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-1.5">Stack</p>
+          <p class="font-display font-semibold text-white text-sm">HTML · Tailwind · JS</p>
+        </div>
+
+        <div class="animate-on-scroll text-center lg:px-8 lg:border-r lg:border-white/[0.07] [animation:fadeSlideIn_0.6s_ease_0.2s_both]">
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-1.5">Prazo</p>
+          <p class="font-display font-semibold text-white text-sm">14 dias</p>
+        </div>
+
+        <div class="animate-on-scroll text-center lg:px-8 lg:border-r lg:border-white/[0.07] [animation:fadeSlideIn_0.6s_ease_0.25s_both]">
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-1.5">Setor</p>
+          <p class="font-display font-semibold text-white text-sm">Distribuição FLV</p>
+        </div>
+
+        <div class="animate-on-scroll text-center lg:pl-8 [animation:fadeSlideIn_0.6s_ease_0.3s_both]">
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-1.5">Site ao vivo</p>
+          <a href="https://mateusxavierr.github.io/site-qdelicia-frutas/" target="_blank" rel="noopener noreferrer"
+             class="font-display font-semibold text-cyan text-sm inline-flex items-center justify-center gap-1.5 hover:underline">
+            Abrir <i data-lucide="external-link" class="w-3 h-3"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       O DESAFIO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-28">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex items-center gap-3 mb-10 animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.05s_both]">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">01 · Desafio</span>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-14 lg:gap-20 items-start">
+        <div class="animate-on-scroll [animation:splitFromLeft_0.8s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]">
+          <h2 class="font-display font-extrabold text-white tracking-[-0.03em] pb-3" style="font-size: clamp(40px, 5vw, 64px); line-height: 0.92;">
+            22 anos de mercado.<br/>
+            <span class="bg-gradient-to-r from-white/60 to-white/30 bg-clip-text text-transparent">Um site que não representava nada disso.</span>
+          </h2>
+        </div>
+        <div class="animate-on-scroll space-y-5 [animation:fadeSlideIn_0.8s_ease_0.2s_both]">
+          <p class="text-white/65 font-body text-lg leading-relaxed">
+            A QDelícia Frutas chegou até nós com uma operação consolidada: 22 anos de mercado, logística própria, presença em cinco estados do Nordeste e um portfólio completo de FLV (frutas, verduras e legumes). O problema era o site. Fundo branco, paleta genérica de roxo e verde, botões quebrados e zero posicionamento para o público B2B.
+          </p>
+          <div class="space-y-4 pl-5 border-l border-brand/30 mt-6">
+            <p class="text-white/50 font-body text-base leading-relaxed">
+              <span class="font-display font-semibold text-white/90">Sem posicionamento B2B</span>: o site antigo parecia voltado para o consumidor final. Mas a QDelícia vende para supermercados, mercearias e restaurantes, não para quem compra uma manga por semana.
+            </p>
+            <p class="text-white/50 font-body text-base leading-relaxed">
+              <span class="font-display font-semibold text-white/90">22 anos invisíveis</span>: a história de José Urbano, que começou em São Vicente Férrer/PE e construiu uma distribuidora que alcança PE, PB, RN, AL e BA, não aparecia em lugar nenhum no site.
+            </p>
+            <p class="text-white/50 font-body text-base leading-relaxed">
+              <span class="font-display font-semibold text-white/90">Nenhuma conversão ativa</span>: não havia um CTA claro, nenhum formulário de orçamento e nenhum elemento que transformasse visitante em lead qualificado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+     ANTES & DEPOIS
+     ═══════════════════════════════════════════════════════════ -->
+<section class="relative z-10 px-6 md:px-10 py-20 border-t border-white/[0.05]">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex items-center gap-3 mb-4 animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.05s_both]">
+      <span class="w-8 h-px bg-brand"></span>
+      <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">02 · Antes &amp; Depois</span>
+    </div>
+
+    <div class="mb-14 animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.1s_both]">
+      <h2 class="font-display font-extrabold text-white tracking-[-0.03em] max-w-2xl" style="font-size: clamp(28px, 3.5vw, 46px); line-height: 0.95;">
+        A distância entre a empresa real<br/>
+        <span class="bg-gradient-to-r from-white/60 to-white/30 bg-clip-text text-transparent">e o que o cliente via.</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- ANTES -->
+      <div class="animate-on-scroll [animation:splitFromLeft_0.8s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center gap-1.5 bg-red-500/10 border border-red-500/20 text-red-400 font-display font-bold text-[10px] uppercase tracking-[0.2em] rounded-full px-3 py-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+            Antes
+          </span>
+        </div>
+        <div class="browser-frame w-full" style="box-shadow: 0 8px 32px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06);">
+          <div class="browser-bar">
+            <div class="browser-dot browser-dot-r"></div>
+            <div class="browser-dot browser-dot-y"></div>
+            <div class="browser-dot browser-dot-g"></div>
+            <div class="flex-1 mx-3 h-5 bg-[#1C1C1E] rounded flex items-center px-2">
+              <span class="text-white/25 font-mono text-[9px]">qdeliciafrutas.com.br</span>
+            </div>
+          </div>
+          <div class="browser-screen antes-depois-screen" style="height: 260px; overflow: hidden; background: #fff;">
+            <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-antes.png" alt="Site antigo da QDelícia Frutas"
+                 style="width:100%; height:260px; object-fit:cover; object-position:top;"
+                 onerror="this.style.display='none';" />
+          </div>
+        </div>
+        <div class="mt-4 space-y-2">
+          <p class="text-white/35 font-body text-sm leading-relaxed">
+            Layout sem hierarquia. Botões quebrados. Sem posicionamento B2B. Sem CTA.
+          </p>
+        </div>
+      </div>
+
+      <!-- DEPOIS -->
+      <div class="animate-on-scroll [animation:splitFromRight_0.8s_cubic-bezier(0.16,1,0.3,1)_0.15s_both]">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center gap-1.5 bg-cyan/10 border border-cyan/20 text-cyan font-display font-bold text-[10px] uppercase tracking-[0.2em] rounded-full px-3 py-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+            Depois
+          </span>
+        </div>
+        <div class="browser-frame w-full" style="box-shadow: 0 8px 32px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06);">
+          <div class="browser-bar">
+            <div class="browser-dot browser-dot-r"></div>
+            <div class="browser-dot browser-dot-y"></div>
+            <div class="browser-dot browser-dot-g"></div>
+            <div class="flex-1 mx-3 h-5 bg-[#1C1C1E] rounded flex items-center px-2">
+              <span class="text-white/25 font-mono text-[9px]">qdeliciafrutas.com.br</span>
+            </div>
+          </div>
+          <div class="browser-screen antes-depois-screen" style="height: 260px; overflow: hidden; background: #f8faf5;">
+            <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-novo.png" alt="Site novo da QDelícia Frutas"
+                 style="width:100%; height:260px; object-fit:cover; object-position:top;"
+                 onerror="this.style.display='none';" />
+          </div>
+        </div>
+        <div class="mt-4 space-y-2">
+          <p class="text-white/35 font-body text-sm leading-relaxed">
+            Identidade nova. Posicionamento B2B claro. CTAs diretos: orçamento e WhatsApp. A empresa real, finalmente visível.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tags de melhoria -->
+    <div class="flex flex-wrap gap-2 mt-10 animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.25s_both]">
+      <span class="inline-flex items-center gap-1.5 bg-surface border border-white/[0.07] text-white/50 font-display text-[10px] uppercase tracking-[0.15em] rounded-full px-3 py-1.5">
+        <i data-lucide="check" class="w-3 h-3 text-cyan"></i>
+        Estrutura completamente redesenhada
+      </span>
+      <span class="inline-flex items-center gap-1.5 bg-surface border border-white/[0.07] text-white/50 font-display text-[10px] uppercase tracking-[0.15em] rounded-full px-3 py-1.5">
+        <i data-lucide="check" class="w-3 h-3 text-cyan"></i>
+        Copy B2B desde o hero
+      </span>
+      <span class="inline-flex items-center gap-1.5 bg-surface border border-white/[0.07] text-white/50 font-display text-[10px] uppercase tracking-[0.15em] rounded-full px-3 py-1.5">
+        <i data-lucide="check" class="w-3 h-3 text-cyan"></i>
+        Formulário de orçamento
+      </span>
+      <span class="inline-flex items-center gap-1.5 bg-surface border border-white/[0.07] text-white/50 font-display text-[10px] uppercase tracking-[0.15em] rounded-full px-3 py-1.5">
+        <i data-lucide="check" class="w-3 h-3 text-cyan"></i>
+        Catálogo de produtos organizado
+      </span>
+    </div>
+
+  </div>
+</section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       O PROCESSO — 3 PASSOS
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-20">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex items-center gap-3 mb-12 animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.05s_both]">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">03 · O Processo</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <div class="card-case animate-on-scroll">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-full bg-cyan/10 border border-cyan/25 flex items-center justify-center flex-shrink-0">
+              <span class="font-display font-bold text-cyan text-xs">01</span>
+            </div>
+            <div class="h-px flex-1 bg-gradient-to-r from-cyan/20 to-transparent"></div>
+          </div>
+          <h3 class="font-display font-bold text-white text-base mb-3 leading-snug">Auditoria & Diagnóstico</h3>
+          <p class="text-white/40 font-body text-sm leading-relaxed">
+            Analisamos o site existente, mapeamos os pontos de abandono e identificamos o que o público B2B precisa ver antes de fechar negócio. Posicionamento antes de pixel.
+          </p>
+        </div>
+
+        <div class="card-case animate-on-scroll">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-full bg-cyan/10 border border-cyan/25 flex items-center justify-center flex-shrink-0">
+              <span class="font-display font-bold text-cyan text-xs">02</span>
+            </div>
+            <div class="h-px flex-1 bg-gradient-to-r from-cyan/20 to-transparent"></div>
+          </div>
+          <h3 class="font-display font-bold text-white text-base mb-3 leading-snug">Redesign Completo</h3>
+          <p class="text-white/40 font-body text-sm leading-relaxed">
+            Mantivemos a identidade da marca e redesenhamos tudo ao redor: estrutura, tipografia, hierarquia de informação e copy. A paleta da QDelícia, finalmente aplicada do jeito certo.
+          </p>
+        </div>
+
+        <div class="card-case animate-on-scroll">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-9 h-9 rounded-full bg-cyan/10 border border-cyan/25 flex items-center justify-center flex-shrink-0">
+              <span class="font-display font-bold text-cyan text-xs">03</span>
+            </div>
+            <div class="h-px flex-1 bg-gradient-to-r from-cyan/20 to-transparent"></div>
+          </div>
+          <h3 class="font-display font-bold text-white text-base mb-3 leading-snug">Entrega em 14 dias</h3>
+          <p class="text-white/40 font-body text-sm leading-relaxed">
+            José Urbano acompanhou cada etapa, do briefing ao site no ar. Design, copy e desenvolvimento na mesma equipe, sem terceirização, sem retrabalho.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       O RESULTADO — SCROLL REVEAL CINEMATOGRÁFICO
+       ═══════════════════════════════════════════════════════════ -->
+  <div class="resultado-wrapper animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.1s_both]" id="resultado-reveal">
+    <div class="resultado-sticky" id="resultado-sticky">
+
+      <div class="resultado-header">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-px bg-cyan"></span>
+          <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/80">04 · O Resultado</span>
+        </div>
+        <a href="https://mateusxavierr.github.io/site-qdelicia-frutas/" target="_blank" rel="noopener noreferrer"
+           class="text-[10px] font-display uppercase tracking-[0.15em] text-white/35 hover:text-cyan transition-colors flex items-center gap-1.5">
+          Ver ao vivo <i data-lucide="external-link" class="w-3 h-3"></i>
+        </a>
+      </div>
+
+      <div class="resultado-frame-area" id="resultado-frame-area">
+
+        <div class="resultado-browser" id="resultado-browser">
+          <div class="resultado-bar" id="resultado-browser-bar">
+            <div class="browser-dot browser-dot-r"></div>
+            <div class="browser-dot browser-dot-y"></div>
+            <div class="browser-dot browser-dot-g"></div>
+          </div>
+          <div class="resultado-screen" id="resultado-screen">
+            <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-mockup-1.png"
+                 alt="QDelícia Frutas — Site completo"
+                 onerror="this.style.display='none';" />
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       DECISÕES DE DESIGN — 3 CARDS
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-28">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="flex items-center gap-3 mb-14 animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.05s_both]">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">05 · Decisões de Design</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+        <!-- Card 1: Paleta -->
+        <div class="card-case animate-on-scroll">
+          <div class="flex gap-2 mb-7">
+            <div class="w-10 h-10 rounded-xl flex-shrink-0" style="background: #FFFFFF; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.20);"></div>
+            <div class="w-10 h-10 rounded-xl flex-shrink-0" style="background: #00a859;"></div>
+            <div class="w-10 h-10 rounded-xl flex-shrink-0" style="background: #6A1B9A;"></div>
+            <div class="w-10 h-10 rounded-xl flex-shrink-0" style="background: #F9A825;"></div>
+          </div>
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-cyan/60 mb-3">Paleta</p>
+          <h3 class="font-display font-bold text-white text-xl mb-4 leading-snug">A paleta da marca.<br/>Aplicada do jeito certo.</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">
+            Verde, roxo, branco e amarelo: a identidade da QDelícia estava lá. O que faltava era hierarquia, consistência e uma aplicação que fizesse sentido para um público B2B.
+          </p>
+        </div>
+
+        <!-- Card 2: Identidade -->
+        <div class="card-case animate-on-scroll">
+          <div class="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-7">
+            <i data-lucide="sparkles" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-cyan/60 mb-3">Identidade Visual</p>
+          <h3 class="font-display font-bold text-white text-xl mb-4 leading-snug">B2B como<br/>linguagem visual.</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">
+            O catálogo de produtos foi estruturado para compradores, não para consumidores. Variedades expandíveis, categorias claras e hierarquia que prioriza a tomada de decisão comercial.
+          </p>
+        </div>
+
+        <!-- Card 3: Copy -->
+        <div class="card-case animate-on-scroll">
+          <div class="w-10 h-10 rounded-xl bg-cyan/10 border border-cyan/20 flex items-center justify-center mb-7">
+            <i data-lucide="pen-tool" class="w-5 h-5 text-cyan"></i>
+          </div>
+          <p class="text-[9px] font-display uppercase tracking-[0.2em] text-cyan/60 mb-3">Copy</p>
+          <h3 class="font-display font-bold text-white text-xl mb-4 leading-snug">Falar com quem<br/>fecha negócio.</h3>
+          <p class="text-white/45 font-body text-sm leading-relaxed">
+            "O frescor do campo. A força do negócio." O hero do site já diz com quem a QDelícia quer conversar. Cada linha foi escrita para o comprador de supermercado, mercearia ou restaurante, não para o consumidor final.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       GALERIA DE PÁGINAS — HORIZONTAL SCROLL
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 py-20">
+    <div class="max-w-6xl mx-auto px-6 md:px-10 mb-8">
+      <div class="flex items-center justify-between animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.05s_both]">
+        <div class="flex items-center gap-3">
+          <span class="w-8 h-px bg-brand"></span>
+          <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">06 · Galeria de Páginas</span>
+        </div>
+        <span class="text-[9px] font-display uppercase tracking-[0.15em] text-white/25 hidden sm:block">← arraste para explorar →</span>
+      </div>
+    </div>
+
+    <div class="gallery-outer pl-6 md:pl-10">
+      <div class="gallery-scroll animate-on-scroll [animation:fadeSlideIn_0.8s_ease_0.2s_both]" id="gallery-drag">
+
+        <div class="gallery-item gallery-item-zoomable" style="width: min(340px, 80vw);"
+             data-gallery-lightbox
+             data-lightbox-src="../assets/portfolio/qdelicia-desktop-home.png"
+             data-lightbox-title="Home"
+             role="button" tabindex="0" title="Clique para ampliar">
+          <div class="browser-frame w-full">
+            <div class="browser-bar">
+              <div class="browser-dot browser-dot-r"></div>
+              <div class="browser-dot browser-dot-y"></div>
+              <div class="browser-dot browser-dot-g"></div>
+            </div>
+            <div class="browser-screen bg-white" style="height: 212px; overflow: hidden;">
+              <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-desktop-home.png" alt="Home"
+                   style="width:100%; height:212px; object-fit:cover; object-position:top;"
+                   onerror="this.style.display='none';" />
+            </div>
+          </div>
+          <p class="text-[10px] font-display uppercase tracking-[0.15em] text-white/30 mt-3 text-center">Home</p>
+        </div>
+
+        <div class="gallery-item gallery-item-zoomable" style="width: min(340px, 80vw);"
+             data-gallery-lightbox
+             data-lightbox-src="../assets/portfolio/qdelicia-desktop-produtos.png"
+             data-lightbox-title="Produtos"
+             role="button" tabindex="0" title="Clique para ampliar">
+          <div class="browser-frame w-full">
+            <div class="browser-bar">
+              <div class="browser-dot browser-dot-r"></div>
+              <div class="browser-dot browser-dot-y"></div>
+              <div class="browser-dot browser-dot-g"></div>
+            </div>
+            <div class="browser-screen bg-white" style="height: 212px; overflow: hidden;">
+              <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-desktop-produtos.png" alt="Produtos"
+                   style="width:100%; height:212px; object-fit:cover; object-position:top;"
+                   onerror="this.style.display='none';" />
+            </div>
+          </div>
+          <p class="text-[10px] font-display uppercase tracking-[0.15em] text-white/30 mt-3 text-center">Produtos</p>
+        </div>
+
+        <div class="gallery-item gallery-item-zoomable" style="width: min(340px, 80vw);"
+             data-gallery-lightbox
+             data-lightbox-src="../assets/portfolio/qdelicia-desktop-distribuicao.png"
+             data-lightbox-title="Distribuição"
+             role="button" tabindex="0" title="Clique para ampliar">
+          <div class="browser-frame w-full">
+            <div class="browser-bar">
+              <div class="browser-dot browser-dot-r"></div>
+              <div class="browser-dot browser-dot-y"></div>
+              <div class="browser-dot browser-dot-g"></div>
+            </div>
+            <div class="browser-screen bg-white" style="height: 212px; overflow: hidden;">
+              <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-desktop-distribuicao.png" alt="Distribuição"
+                   style="width:100%; height:212px; object-fit:cover; object-position:top;"
+                   onerror="this.style.display='none';" />
+            </div>
+          </div>
+          <p class="text-[10px] font-display uppercase tracking-[0.15em] text-white/30 mt-3 text-center">Distribuição</p>
+        </div>
+
+        <div class="gallery-item gallery-item-zoomable" style="width: min(340px, 80vw);"
+             data-gallery-lightbox
+             data-lightbox-src="../assets/portfolio/qdelicia-desktop-quem-somos.png"
+             data-lightbox-title="Quem Somos"
+             role="button" tabindex="0" title="Clique para ampliar">
+          <div class="browser-frame w-full">
+            <div class="browser-bar">
+              <div class="browser-dot browser-dot-r"></div>
+              <div class="browser-dot browser-dot-y"></div>
+              <div class="browser-dot browser-dot-g"></div>
+            </div>
+            <div class="browser-screen bg-white" style="height: 212px; overflow: hidden;">
+              <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-desktop-quem-somos.png" alt="Quem Somos"
+                   style="width:100%; height:212px; object-fit:cover; object-position:top;"
+                   onerror="this.style.display='none';" />
+            </div>
+          </div>
+          <p class="text-[10px] font-display uppercase tracking-[0.15em] text-white/30 mt-3 text-center">Quem Somos</p>
+        </div>
+
+        <div class="gallery-item gallery-item-zoomable" style="width: min(340px, 80vw);"
+             data-gallery-lightbox
+             data-lightbox-src="../assets/portfolio/qdelicia-desktop-orcamento.png"
+             data-lightbox-title="Orçamento"
+             role="button" tabindex="0" title="Clique para ampliar">
+          <div class="browser-frame w-full">
+            <div class="browser-bar">
+              <div class="browser-dot browser-dot-r"></div>
+              <div class="browser-dot browser-dot-y"></div>
+              <div class="browser-dot browser-dot-g"></div>
+            </div>
+            <div class="browser-screen bg-white" style="height: 212px; overflow: hidden;">
+              <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-desktop-orcamento.png" alt="Orçamento"
+                   style="width:100%; height:212px; object-fit:cover; object-position:top;"
+                   onerror="this.style.display='none';" />
+            </div>
+          </div>
+          <p class="text-[10px] font-display uppercase tracking-[0.15em] text-white/30 mt-3 text-center">Orçamento</p>
+        </div>
+
+        <div class="flex-shrink-0 w-6 md:w-10"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       MOBILE — SPLIT LAYOUT
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-28 overflow-visible">
+    <div class="max-w-6xl mx-auto overflow-visible">
+
+      <div class="flex items-center gap-3 mb-16 animate-on-scroll [animation:fadeSlideIn_0.6s_ease_0.05s_both]">
+        <span class="w-8 h-px bg-cyan"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-cyan/80">07 · Mobile First</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-20 items-center overflow-visible">
+
+        <div class="animate-on-scroll [animation:splitFromLeft_0.9s_cubic-bezier(0.16,1,0.3,1)_0.1s_both]">
+          <h2 class="font-display font-extrabold text-white tracking-[-0.03em] mb-8 pb-2" style="font-size: clamp(36px, 4.5vw, 58px); line-height: 0.92;">
+            Perfeito em qualquer tela. Especialmente no celular.
+          </h2>
+          <div class="space-y-4">
+            <p class="text-white/60 font-body text-base leading-relaxed">
+              O comprador que vai fechar pedido com a QDelícia pesquisa fornecedores pelo celular. Avalia portfólio, compara preços e decide na tela pequena, muitas vezes antes de ligar para qualquer pessoa. Por isso o site foi construído mobile-first desde o primeiro pixel, não adaptado depois.
+            </p>
+            <p class="text-white/45 font-body text-base leading-relaxed">
+              Formulário de orçamento integrado, botão de WhatsApp flutuante, catálogo de produtos com navegação por categorias e tipografia que mantém hierarquia clara mesmo em 375px.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-4 mt-10">
+            <div class="bg-surface border border-white/[0.07] rounded-xl p-4">
+              <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-2">Seções</p>
+              <p class="font-display font-bold text-white text-2xl">5</p>
+              <p class="text-white/35 font-body text-xs mt-1">todas responsivas</p>
+            </div>
+            <div class="bg-surface border border-white/[0.07] rounded-xl p-4">
+              <p class="text-[9px] font-display uppercase tracking-[0.2em] text-white/30 mb-2">Entrega</p>
+              <p class="font-display font-bold text-white text-2xl">14 dias</p>
+              <p class="text-white/35 font-body text-xs mt-1">da reformulação ao ar</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- splitFromRight usa clip-path e corta sombra + ghost; fadeSlideIn mantém entrada suave -->
+        <div class="animate-on-scroll flex w-full justify-center overflow-visible [animation:fadeSlideIn_0.9s_cubic-bezier(0.16,1,0.3,1)_0.15s_both]">
+
+          <div class="phone-mockup-wallach">
+
+            <div aria-hidden="true" style="
+              position: absolute;
+              inset: 0;
+              background: rgba(30, 30, 40, 0.78);
+              border-radius: 50px;
+              border: 1px solid rgba(255,255,255,0.07);
+              box-shadow: 0 24px 56px rgba(0,0,0,0.55);
+              opacity: 0.72;
+              transform: translate(16px, 22px) rotate(6deg) scale(0.88);
+              pointer-events: none;
+              z-index: 0;
+            "></div>
+
+            <div class="phone-frame" style="width: 270px; position: relative; z-index: 1;">
+              <div class="phone-screen-wrap" style="min-height: 480px;">
+                <img loading="lazy" decoding="async" src="../assets/portfolio/qdelicia-mobile.png"
+                     alt="QDelícia Frutas — Mobile"
+                     onerror="this.closest('.phone-screen-wrap').style.background='linear-gradient(180deg, #0D1829 0%, #1C2E5C 100%)'; this.style.display='none';" />
+                <div class="phone-island"></div>
+                <div class="phone-home-bar"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NÚMEROS FINAIS
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-20 border-t border-white/[0.05]">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+        <div class="animate-on-scroll [animation:elegantRise_0.7s_ease_0.1s_both]">
+          <div class="font-display font-extrabold text-white mb-3" style="font-size: clamp(48px, 6vw, 80px); line-height: 1;">
+            <span data-target="22" data-suffix="+">22+</span>
+          </div>
+          <p class="font-display font-semibold text-white/60 text-sm mb-1">Anos de mercado</p>
+          <p class="text-white/25 font-body text-xs">fundada por José Urbano</p>
+        </div>
+
+        <div class="animate-on-scroll [animation:elegantRise_0.7s_ease_0.15s_both]">
+          <div class="font-display font-extrabold bg-gradient-to-r from-brand to-cyan bg-clip-text text-transparent mb-3" style="font-size: clamp(48px, 6vw, 80px); line-height: 1;">
+            <span data-target="5" data-suffix="">5</span>
+          </div>
+          <p class="font-display font-semibold text-white/60 text-sm mb-1">Estados atendidos</p>
+          <p class="text-white/25 font-body text-xs">PE · PB · RN · AL · BA</p>
+        </div>
+
+        <div class="animate-on-scroll [animation:elegantRise_0.7s_ease_0.2s_both]">
+          <div class="font-display font-extrabold text-cyan mb-3" style="font-size: clamp(48px, 6vw, 80px); line-height: 1;">
+            <span data-target="3" data-suffix="">3</span>
+          </div>
+          <p class="font-display font-semibold text-white/60 text-sm mb-1">Categorias FLV</p>
+          <p class="text-white/25 font-body text-xs">frutas, verduras e legumes</p>
+        </div>
+
+        <div class="animate-on-scroll [animation:elegantRise_0.7s_ease_0.25s_both]">
+          <div class="font-display font-extrabold text-white mb-3" style="font-size: clamp(48px, 6vw, 80px); line-height: 1;">
+            <span data-target="14" data-suffix="d">14d</span>
+          </div>
+          <p class="font-display font-semibold text-white/60 text-sm mb-1">Prazo de entrega</p>
+          <p class="text-white/25 font-body text-xs">do briefing ao site no ar</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CTA FINAL
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 py-24">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8 border-t border-white/[0.06] pt-16">
+      <div>
+        <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/35 mb-3">Seu cliente está buscando agora</p>
+        <h2 class="font-display font-extrabold text-white leading-[0.92] tracking-tight mb-4" style="font-size: clamp(32px, 4vw, 52px);">
+          Quando ele te encontrar,<br/>o que ele vai ver?
+        </h2>
+        <p class="text-white/45 font-body text-sm max-w-sm leading-relaxed">
+          A MXC Digital constrói do zero: design system exclusivo, stack moderna, copy que posiciona. Sem template, sem terceirização, sem telefone sem fio.
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row gap-4 flex-shrink-0">
+        <a href="../contato.html"
+           class="btn-shimmer relative overflow-hidden font-display font-bold text-xs uppercase tracking-widest text-white rounded-full px-8 py-4 flex items-center gap-2 transition-all duration-300 hover:scale-[1.03]"
+           style="background: linear-gradient(180deg, rgba(47,103,252,0.35) 0%, rgba(47,103,252,0.18) 50%, rgba(47,103,252,0.35) 100%); box-shadow: 0 0 0 1px rgba(47,103,252,0.4), 0 8px 20px -4px rgba(47,103,252,0.4);">
+          <span class="relative z-10 flex items-center gap-2">Iniciar projeto <i data-lucide="arrow-right" class="w-4 h-4"></i></span>
+        </a>
+        <a href="../portfolio.html"
+           class="btn-shimmer font-display font-bold text-xs uppercase tracking-widest text-white/60 rounded-full px-8 py-4 flex items-center gap-2 transition-all duration-300 hover:text-white border border-white/10 hover:border-white/25">
+          <span class="flex items-center gap-2"><i data-lucide="arrow-left" class="w-4 h-4"></i> Ver todos os trabalhos</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       PRÓXIMO PROJETO
+       ═══════════════════════════════════════════════════════════ -->
+  <section class="relative z-10 px-6 md:px-10 pb-24">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-8 h-px bg-brand"></span>
+        <span class="text-[10px] font-display font-bold uppercase tracking-[0.2em] text-brand/70">Próximo projeto</span>
+      </div>
+      <a href="../portfolio/wallach.html"
+         class="group block relative overflow-hidden rounded-3xl border border-white/[0.07] hover:border-white/20 transition-all duration-500"
+         data-cursor-hover>
+        <div class="aspect-[21/8] md:aspect-[21/6] bg-gradient-to-br from-[#1C2E5C]/20 via-surface to-[#8090A8]/15 relative overflow-hidden next-proj-inner">
+          <!-- Mobile: imagem de fundo do próximo projeto -->
+          <img src="../assets/portfolio/wallach-card-home.png" alt="" aria-hidden="true" loading="lazy"
+               class="md:hidden absolute inset-0 w-full h-full object-cover select-none pointer-events-none next-proj-photo" />
+          <div class="absolute inset-0 dot-grid opacity-30"></div>
+          <div class="absolute top-1/2 left-[10%] -translate-y-1/2 w-28 h-40 rounded-2xl bg-cyan/15 border border-cyan/25 backdrop-blur-sm"></div>
+          <div class="absolute top-1/2 right-[15%] -translate-y-1/2 w-44 h-24 rounded-2xl bg-brand/20 border border-brand/30"></div>
+          <div class="absolute inset-0 bg-bg/40 group-hover:bg-transparent transition-all duration-700 next-proj-overlay"></div>
+          <!-- Overlay content -->
+          <div class="absolute inset-0 flex items-center justify-between px-8 md:px-14">
+            <div>
+              <span class="text-[9px] font-display uppercase tracking-[0.2em] text-cyan/70 block mb-3">Próximo · Criação do Zero</span>
+              <h3 class="font-display font-extrabold text-white leading-[0.9] tracking-tight" style="font-size: clamp(32px, 5vw, 64px);">Wallach Assessoria Jurídica</h3>
+              <p class="text-white/50 font-body text-sm mt-3 max-w-sm">Advocacia · Recife, PE</p>
+            </div>
+            <div class="hidden md:flex w-16 h-16 rounded-full bg-surface/80 border border-white/15 items-center justify-center group-hover:bg-brand group-hover:border-brand group-hover:scale-110 transition-all duration-500 flex-shrink-0">
+              <i data-lucide="arrow-right" class="w-7 h-7 text-white"></i>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 px-6 md:px-10 py-16 border-t border-white/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div class="md:col-span-1">
+          <div class="flex items-center mb-4">
+            <img src="../assets/logo.png" alt="MXC Digital" class="h-12 object-contain">
+          </div>
+          <p class="text-white/35 font-body text-sm leading-relaxed max-w-xs">
+            Criamos e reformulamos sites para empresas que querem crescer de verdade.
+          </p>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Navegação</p>
+          <div class="space-y-3">
+            <a href="../criacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Criação de Sites</a>
+            <a href="../reformulacao-de-sites.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Reformulação</a>
+            <a href="portfolio.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Portfólio</a>
+            <a href="../index.html#planos" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Planos de Manutenção</a>
+            <a href="../contato.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Contato</a>
+            <a href="../politica-de-privacidade.html" class="block text-sm font-body text-white/40 hover:text-white transition-colors">Política de Privacidade</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-[10px] font-display uppercase tracking-[0.2em] text-white/25 mb-5">Contato</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/5581991167922?text=Ol%C3%A1!%20Ol%C3%A1!%20Vi%20o%20site%20da%20MXC%20Digital%20e%20quero%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+            </a>
+            <a href="mailto:contato@mxcdigital.com.br" class="flex items-center gap-2 text-sm font-body text-white/40 hover:text-white transition-colors">
+              <i data-lucide="mail" class="w-4 h-4"></i> contato@mxcdigital.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-white/20 font-body text-xs">© 2026 MXC Digital. Todos os direitos reservados.</p>
+        <div class="flex items-center gap-2">
+          <span class="w-1.5 h-1.5 rounded-full bg-cyan animate-pulse"></span>
+          <span class="text-white/20 font-body text-xs">Disponível para novos projetos</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox — Galeria de Páginas -->
+  <div id="gallery-lightbox" class="fixed inset-0 z-[600] p-4 pt-16 sm:p-8" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="gallery-lightbox-caption">
+    <div id="gallery-lightbox-backdrop" class="absolute inset-0 bg-black/92 backdrop-blur-md"></div>
+    <button type="button" id="gallery-lightbox-close" class="absolute top-4 right-4 z-[20] flex h-11 w-11 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/85 transition-colors hover:bg-white/12 hover:text-white" aria-label="Fechar">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="relative z-10 flex w-full max-w-[min(96vw,1440px)] flex-col items-center justify-center px-2">
+      <img loading="lazy" decoding="async" id="gallery-lightbox-img" class="gallery-lightbox-img max-h-[min(82vh,900px)] w-auto max-w-full rounded-lg object-contain shadow-[0_40px_100px_rgba(0,0,0,0.65)]"
+           src="" alt="" decoding="async" />
+      <p id="gallery-lightbox-caption" class="mt-5 max-w-2xl text-center text-[10px] font-display uppercase tracking-[0.18em] text-white/55"></p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons({ attrs: { 'stroke-width': 1.5 } });
+
+    // ═══ Custom cursor — apenas anel, instantâneo, sem lerp ═══
+    (function() {
+      const ring = document.getElementById('cursor-ring');
+      if (!ring) return;
+
+      var _cx=0,_cy=0;
+      function _rp(){var h=ring.classList.contains('hovering')?28:16;ring.style.transform='translate('+(_cx-h)+'px,'+(_cy-h)+'px)';}
+      document.addEventListener('mousemove',function(e){_cx=e.clientX;_cy=e.clientY;_rp();});
+      document.addEventListener('mouseleave',function(){ring.style.opacity='0';});
+      document.addEventListener('mouseenter',function(){ring.style.opacity='1';});
+      const hoverTargets = 'a, button, [data-cursor-hover], [data-gallery-lightbox], input, textarea, select, label';
+      document.querySelectorAll(hoverTargets).forEach(el => {
+        el.addEventListener('mouseenter',function(){ring.classList.add('hovering');_rp();});
+        el.addEventListener('mouseleave',function(){ring.classList.remove('hovering');_rp();});
+      });
+    })();
+
+    window.addEventListener('scroll', () => {
+      const pct = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight) * 100;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = pct + '%';
+    });
+
+    // Mouse glow com rAF throttle — evita repaint a cada pixel (Safari fix)
+    (function(){
+      var ticking=false;
+      document.addEventListener('mousemove',function(e){
+        if(!ticking){
+          requestAnimationFrame(function(){
+            document.documentElement.style.setProperty('--mouse-x',(e.clientX/window.innerWidth*100).toFixed(1)+'%');
+            document.documentElement.style.setProperty('--mouse-y',(e.clientY/window.innerHeight*100).toFixed(1)+'%');
+            ticking=false;
+          });
+          ticking=true;
+        }
+      });
+    })();
+
+    (function(){
+      var _ao=document.querySelectorAll('.animate-on-scroll');
+      function _ck(){_ao.forEach(function(el){if(el.classList.contains('animate'))return;var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.95&&r.bottom>0)el.classList.add('animate');});}
+      window.addEventListener('scroll',_ck,{passive:true});
+      window.addEventListener('resize',_ck,{passive:true});
+      if(document.readyState==='complete'){setTimeout(_ck,80);}else{window.addEventListener('load',function(){setTimeout(_ck,80);});}
+    })();
+
+    function scramble(el) {
+      const final = el.dataset.scramble || el.textContent;
+      if (!el.dataset.scramble) el.dataset.scramble = final;
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+      let i = 0;
+      const iv = setInterval(() => {
+        el.textContent = final.split('').map((c, j) => j < i ? final[j] : chars[Math.floor(Math.random() * chars.length)]).join('');
+        if (i >= final.length) { el.textContent = final; clearInterval(iv); }
+        i += 0.4;
+      }, 25);
+    }
+    document.querySelectorAll('[data-scramble]').forEach(el => {
+      el.dataset.scramble = el.textContent;
+      el.addEventListener('mouseenter', () => scramble(el));
+    });
+
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        const el = entry.target;
+        const target = parseFloat(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const dur = 1800;
+        const start = performance.now();
+        function step(now) {
+          const p = Math.min((now - start) / dur, 1);
+          const ease = 1 - Math.pow(1 - p, 3);
+          const v = ease * target;
+          const display = Number.isInteger(target) ? Math.floor(v) : v.toFixed(1);
+          el.textContent = display + suffix;
+          if (p < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+        counterObs.unobserve(el);
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
+
+    setTimeout(() => {
+      document.querySelectorAll('#hero .word-inner').forEach(el => el.classList.add('is-visible'));
+    }, 100);
+
+    // ═══ Gallery drag-to-scroll + lightbox ampliar imagem ═══
+    (function() {
+      const el = document.getElementById('gallery-drag');
+      if (!el) return;
+      let isDown = false;
+      let startX = 0;
+      let scrollLeft = 0;
+      let dragPx = 0;
+      let dragLastX = 0;
+
+      el.addEventListener('mousedown', e => {
+        isDown = true;
+        dragPx = 0;
+        dragLastX = e.clientX;
+        el.style.userSelect = 'none';
+        startX = e.pageX - el.offsetLeft;
+        scrollLeft = el.scrollLeft;
+      });
+      el.addEventListener('mouseleave', () => {
+        isDown = false;
+        dragLastX = 0;
+      });
+      el.addEventListener('mouseup', () => {
+        isDown = false;
+        el.style.userSelect = '';
+        dragLastX = 0;
+      });
+      el.addEventListener('mousemove', e => {
+        if (!isDown) return;
+        e.preventDefault();
+        dragPx += Math.abs(e.clientX - dragLastX);
+        dragLastX = e.clientX;
+        const x = e.pageX - el.offsetLeft;
+        el.scrollLeft = scrollLeft - (x - startX) * 1.4;
+      });
+
+      const lb = document.getElementById('gallery-lightbox');
+      const lbImg = document.getElementById('gallery-lightbox-img');
+      const lbCap = document.getElementById('gallery-lightbox-caption');
+      const lbClose = document.getElementById('gallery-lightbox-close');
+      const lbBackdrop = document.getElementById('gallery-lightbox-backdrop');
+      const DRAG_CLICK_THRESHOLD = 14;
+
+      function openLightbox(src, title, altText) {
+        if (!lb || !lbImg || !lbCap) return;
+        lbImg.src = src;
+        lbImg.alt = altText || title || '';
+        lbCap.textContent = title || '';
+        lb.classList.add('is-open');
+        lb.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        if (lbClose) lbClose.focus();
+      }
+
+      function closeLightbox() {
+        if (!lb || !lbImg) return;
+        lb.classList.remove('is-open');
+        lb.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        lbImg.removeAttribute('src');
+        lbImg.alt = '';
+        if (lbCap) lbCap.textContent = '';
+      }
+
+      document.querySelectorAll('[data-gallery-lightbox]').forEach(card => {
+        card.addEventListener('click', () => {
+          if (dragPx > DRAG_CLICK_THRESHOLD) return;
+          const src = card.getAttribute('data-lightbox-src');
+          const title = card.getAttribute('data-lightbox-title') || '';
+          const thumb = card.querySelector('img');
+          const altText = thumb ? thumb.getAttribute('alt') || '' : '';
+          if (src) openLightbox(src, title, altText);
+        });
+        card.addEventListener('keydown', ev => {
+          if (ev.key === 'Enter' || ev.key === ' ') {
+            ev.preventDefault();
+            const src = card.getAttribute('data-lightbox-src');
+            const title = card.getAttribute('data-lightbox-title') || '';
+            const thumb = card.querySelector('img');
+            const altText = thumb ? thumb.getAttribute('alt') || '' : '';
+            if (src) openLightbox(src, title, altText);
+          }
+        });
+      });
+
+      lbClose?.addEventListener('click', e => { e.stopPropagation(); closeLightbox(); });
+      lbBackdrop?.addEventListener('click', closeLightbox);
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && lb?.classList.contains('is-open')) closeLightbox();
+      });
+    })();
+
+    // ═══ Cursor-glow nos card-case (mesmo padrão data-tilt da home) ═══
+    (function() {
+      document.querySelectorAll('.card-case').forEach(card => {
+        card.addEventListener('mousemove', e => {
+          const rect = card.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width * 100).toFixed(1) + '%';
+          const y = ((e.clientY - rect.top) / rect.height * 100).toFixed(1) + '%';
+          card.style.setProperty('--glow-x', x);
+          card.style.setProperty('--glow-y', y);
+        });
+      });
+    })();
+
+    // ═══ Registrar card-case no IntersectionObserver de scroll ═══
+    (function() {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('animate'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      document.querySelectorAll('.card-case').forEach(el => obs.observe(el));
+    })();
+
+    // ═══ Scroll Reveal Cinematográfico — Seção O Resultado ═══
+    (function () {
+      const wrapper = document.getElementById('resultado-reveal');
+      const frameArea = document.getElementById('resultado-frame-area');
+      const browser = document.getElementById('resultado-browser');
+      const resultadoScreen = document.getElementById('resultado-screen');
+      const resultadoImg = document.querySelector('#resultado-screen img');
+      const sitePillHeader = document.getElementById('site-pill-header');
+      const resultadoBar = document.getElementById('resultado-browser-bar');
+      if (!wrapper || !frameArea || !browser) return;
+
+      /** mesma proporção de wallach-mockup-1.png (evita listra com object-fit: contain) */
+      const MOCKUP_ASPECT = '2736 / 1470';
+      const EXPAND_OBJECTFIT = 0.88;
+      const mqCoarse = window.matchMedia('(max-width: 767.98px)');
+
+      function ease(t) {
+        return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+      }
+      function lerp(a, b, t) { return a + (b - a) * t; }
+      function clamp(v, min, max) { return Math.min(max, Math.max(min, v)); }
+
+      function headerOpacityNeptuneStyle(rawP, expandT) {
+        var textFadeOutBy = 0.22;
+        var textBackFrom = 0.72;
+        if (mqCoarse.matches) return 1;
+        if (rawP < 0.65) {
+          if (expandT <= 0) return 1;
+          return expandT >= textFadeOutBy ? 0 : 1 - ease(expandT / textFadeOutBy);
+        }
+        var pExit = (rawP - 0.65) / 0.35;
+        if (pExit < textBackFrom) return 0;
+        return ease((pExit - textBackFrom) / (1 - textBackFrom));
+      }
+
+      let raf = null;
+      let lastProgress = -1;
+
+      function update() {
+        raf = null;
+        const rect = wrapper.getBoundingClientRect();
+        const wh = window.innerHeight;
+        const wrapperH = wrapper.offsetHeight;
+        const totalScroll = Math.max(1, wrapperH - wh);
+
+        const rawP = clamp(-rect.top / totalScroll, 0, 1);
+
+        if (Math.abs(rawP - lastProgress) < 0.0005) return;
+        lastProgress = rawP;
+
+        let expandT;
+        if (rawP < 0.35) {
+          expandT = ease(rawP / 0.35);
+        } else if (rawP < 0.65) {
+          expandT = 1;
+        } else {
+          expandT = ease(1 - (rawP - 0.65) / 0.35);
+        }
+
+        const sidePad = Math.round(lerp(150, 0, expandT));
+        frameArea.style.padding = `0 ${sidePad}px ${Math.round(lerp(75, 0, expandT))}px`;
+
+        browser.style.borderRadius = lerp(12, 0, expandT).toFixed(1) + 'px';
+
+        const shadowAlpha = lerp(0.7, 0.15, expandT).toFixed(2);
+        const shadowBorder = lerp(0.07, 0, expandT).toFixed(2);
+        browser.style.boxShadow = `0 40px 100px rgba(0,0,0,${shadowAlpha}), 0 0 0 1px rgba(255,255,255,${shadowBorder})`;
+
+        const compact = expandT < EXPAND_OBJECTFIT;
+        if (resultadoScreen) {
+          if (compact) {
+            resultadoScreen.style.flex = '0 0 auto';
+            resultadoScreen.style.aspectRatio = MOCKUP_ASPECT;
+            resultadoScreen.style.width = '100%';
+          } else {
+            resultadoScreen.style.flex = '';
+            resultadoScreen.style.aspectRatio = '';
+            resultadoScreen.style.width = '';
+          }
+        }
+        if (resultadoImg) {
+          resultadoImg.style.objectFit = 'contain';
+        }
+
+        var fadeChrome = headerOpacityNeptuneStyle(rawP, expandT);
+        var fadeChromeStr = fadeChrome.toFixed(3);
+        if (sitePillHeader) {
+          sitePillHeader.style.opacity = fadeChromeStr;
+        }
+        if (resultadoBar) {
+          resultadoBar.style.opacity = fadeChromeStr;
+          if (mqCoarse.matches) {
+            resultadoBar.style.height = '';
+            resultadoBar.style.minHeight = '';
+            resultadoBar.style.overflow = '';
+          } else {
+            resultadoBar.style.minHeight = '0';
+            resultadoBar.style.overflow = 'hidden';
+            resultadoBar.style.height = Math.round(38 * fadeChrome) + 'px';
+          }
+        }
+        if (browser) {
+          browser.style.height = compact ? 'auto' : '';
+          if (mqCoarse.matches) {
+            browser.style.removeProperty('--resultado-bar-offset');
+          } else {
+            browser.style.setProperty(
+              '--resultado-bar-offset',
+              Math.round(38 * fadeChrome) + 'px'
+            );
+          }
+        }
+      }
+
+      function onScroll() {
+        if (!raf) raf = requestAnimationFrame(update);
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', onScroll, { passive: true });
+      if (mqCoarse.addEventListener) {
+        mqCoarse.addEventListener('change', () => { lastProgress = -1; onScroll(); });
+      } else if (mqCoarse.addListener) {
+        mqCoarse.addListener(() => { lastProgress = -1; onScroll(); });
+      }
+
+      requestAnimationFrame(() => requestAnimationFrame(update));
+    })();
+
+    // Pausa animações quando aba está em background (economia de CPU/GPU)
+    document.addEventListener('visibilitychange',function(){
+      var s=document.hidden?'paused':'running';
+      document.querySelectorAll('[style*="auroraFloat"],[style*="beamFall"],[style*="moonPulse"],[style*="moonRingPulse"]').forEach(function(el){
+        el.style.animationPlayState=s;
+      });
+    });
+  </script>
+</body>
+</html>
